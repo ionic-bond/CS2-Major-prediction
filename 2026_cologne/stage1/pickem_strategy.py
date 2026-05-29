@@ -1,194 +1,315 @@
 """
-IEM Cologne Major 2026 - Stage 1 Pick'Em 策略模拟
+IEM Cologne Major 2026 - Stage 1 Pick'Em 最优组合搜索 v4
+直接暴力搜索所有合理组合，找到P(≥5)最高的picks
 """
 import random
 import math
+import numpy as np
+from itertools import combinations
 
 random.seed(42)
 SIMULATIONS = 200000
 
-# ==================== 各队概率估计 ====================
-# 基于综合分析(HLTV排名+近期战绩+Polymarket赔率)
-
-team_probs = {
-    #                    晋级概率   3-0概率   0-3概率
-    "GamerLegion":      (0.93,     0.28,     0.00),
-    "BetBoom":          (0.88,     0.22,     0.00),
-    "B8":               (0.83,     0.15,     0.01),
-    "Heroic":           (0.72,     0.10,     0.02),
-    "TYLOO":            (0.68,     0.09,     0.03),
-    "Team Liquid":      (0.62,     0.07,     0.04),
-    "BIG":              (0.58,     0.06,     0.05),
-    "SINNERS":          (0.52,     0.05,     0.06),
-    # --- 晋级线 ---
-    "MIBR":             (0.48,     0.04,     0.08),
-    "M80":              (0.42,     0.03,     0.10),
-    "NRG":              (0.28,     0.02,     0.18),
-    "Lynn Vision":      (0.20,     0.01,     0.25),
-    "Sharks":           (0.15,     0.01,     0.32),
-    "Gaimin Gladiators":(0.12,     0.01,     0.38),
-    "FlyQuest":         (0.10,     0.00,     0.42),
-    "THUNDER dOWNUNDER":(0.05,     0.00,     0.58),
+teams_data = {
+    "GamerLegion":        {"score": 84.5},
+    "BetBoom":            {"score": 75.5},
+    "B8":                 {"score": 70.9},
+    "Heroic":             {"score": 59.5},
+    "TYLOO":              {"score": 57.8},
+    "Team Liquid":        {"score": 56.8},
+    "BIG":                {"score": 56.0},
+    "SINNERS":            {"score": 53.8},
+    "MIBR":               {"score": 53.6},
+    "M80":                {"score": 51.1},
+    "NRG":                {"score": 45.1},
+    "Lynn Vision":        {"score": 40.3},
+    "Sharks":             {"score": 38.7},
+    "Gaimin Gladiators":  {"score": 37.6},
+    "FlyQuest":           {"score": 34.0},
+    "THUNDER dOWNUNDER":  {"score": 20.3},
 }
 
-# ==================== 策略定义 ====================
+R1_MATCHES = [
+    ("GamerLegion", "NRG"),
+    ("B8", "TYLOO"),
+    ("Heroic", "Sharks"),
+    ("BetBoom", "Gaimin Gladiators"),
+    ("BIG", "Team Liquid"),
+    ("M80", "Lynn Vision"),
+    ("MIBR", "THUNDER dOWNUNDER"),
+    ("SINNERS", "FlyQuest"),
+]
 
-strategies = {
-    "策略A: 铁壁 (最保守)": {
-        "desc": "3-0当废票，全力保晋级和0-3",
-        "logic": "用最弱的两队填3-0(纯bonus)，6个晋级位放最强6队，0-3放最明显的两队",
-        "picks_3_0": ["MIBR", "M80"],
-        "picks_advance": ["GamerLegion", "BetBoom", "B8", "Heroic", "TYLOO", "Team Liquid"],
-        "picks_0_3": ["THUNDER dOWNUNDER", "Gaimin Gladiators"],
-    },
-    "策略B: 稳健 (保守)": {
-        "desc": "牺牲1个top队到3-0，换取多cover一支边缘队",
-        "logic": "GL放3-0(~28%命中)，腾出1个晋级位给BIG；另一个3-0随便放",
-        "picks_3_0": ["GamerLegion", "MIBR"],
-        "picks_advance": ["BetBoom", "B8", "Heroic", "TYLOO", "Team Liquid", "BIG"],
-        "picks_0_3": ["THUNDER dOWNUNDER", "Gaimin Gladiators"],
-    },
-    "策略C: 平衡 (中等风险)": {
-        "desc": "两个top队放3-0，大幅增加cover面",
-        "logic": "GL+BB放3-0，晋级位多cover两支中等队；0-3选最弱两队",
-        "picks_3_0": ["GamerLegion", "BetBoom"],
-        "picks_advance": ["B8", "Heroic", "TYLOO", "Team Liquid", "BIG", "SINNERS"],
-        "picks_0_3": ["THUNDER dOWNUNDER", "Gaimin Gladiators"],
-    },
-    "策略D: 冒险 (激进)": {
-        "desc": "最大化覆盖面，尝试押中更多队",
-        "logic": "GL+BB放3-0，0-3选TdU+FQ，晋级位向下延伸到MIBR",
-        "picks_3_0": ["GamerLegion", "BetBoom"],
-        "picks_advance": ["B8", "Heroic", "TYLOO", "Team Liquid", "BIG", "MIBR"],
-        "picks_0_3": ["THUNDER dOWNUNDER", "FlyQuest"],
-    },
-    "策略E: 赌狗 (极端激进)": {
-        "desc": "GL+B8放3-0，0-3选冷门，追求高分",
-        "logic": "赌GL和B8都3-0，0-3放TdU+Sharks，晋级cover更多中等队",
-        "picks_3_0": ["GamerLegion", "B8"],
-        "picks_advance": ["BetBoom", "Heroic", "TYLOO", "Team Liquid", "BIG", "SINNERS"],
-        "picks_0_3": ["THUNDER dOWNUNDER", "Sharks"],
-    },
+POLYMARKET_R1 = {
+    ("GamerLegion", "NRG"): 0.71,
+    ("B8", "TYLOO"): 0.56,
+    ("Heroic", "Sharks"): 0.61,
+    ("BetBoom", "Gaimin Gladiators"): 0.71,
+    ("BIG", "Team Liquid"): 0.53,
+    ("M80", "Lynn Vision"): 0.59,
+    ("MIBR", "THUNDER dOWNUNDER"): 0.71,
+    ("SINNERS", "FlyQuest"): 0.55,
 }
 
+team_names = list(teams_data.keys())
+team_idx = {name: i for i, name in enumerate(team_names)}
 
-def simulate_tournament():
-    """模拟一次Swiss赛制的结果"""
+
+def fit_k():
+    best_k, best_err = 40, float('inf')
+    for k_try in [x * 0.5 for x in range(20, 200)]:
+        err = 0
+        for (t1, t2), pm_p in POLYMARKET_R1.items():
+            s1 = teams_data[t1]["score"]
+            s2 = teams_data[t2]["score"]
+            pred_p = 1 / (1 + math.exp(-(s1 - s2) / k_try))
+            err += (pred_p - pm_p) ** 2
+        if err < best_err:
+            best_err = err
+            best_k = k_try
+    return best_k
+
+
+K = fit_k()
+
+
+def win_prob_bo1(team_a, team_b):
+    sa = teams_data[team_a]["score"]
+    sb = teams_data[team_b]["score"]
+    return 1 / (1 + math.exp(-(sa - sb) / K))
+
+
+def win_prob_bo3(team_a, team_b):
+    p = win_prob_bo1(team_a, team_b)
+    return p * p * (3 - 2 * p)
+
+
+def play_match(team_a, team_b, bo3=False):
+    p = win_prob_bo3(team_a, team_b) if bo3 else win_prob_bo1(team_a, team_b)
+    return team_a if random.random() < p else team_b
+
+
+def simulate_swiss():
+    records = {t: [0, 0] for t in teams_data}
+
+    r1_winners, r1_losers = [], []
+    for t1, t2 in R1_MATCHES:
+        winner = play_match(t1, t2)
+        loser = t2 if winner == t1 else t1
+        records[winner][0] += 1
+        records[loser][1] += 1
+        r1_winners.append(winner)
+        r1_losers.append(loser)
+
+    def pair_and_play(pool, bo3=False):
+        random.shuffle(pool)
+        winners, losers = [], []
+        for i in range(0, len(pool), 2):
+            if i + 1 < len(pool):
+                winner = play_match(pool[i], pool[i+1], bo3)
+                loser = pool[i+1] if winner == pool[i] else pool[i]
+                records[winner][0] += 1
+                records[loser][1] += 1
+                winners.append(winner)
+                losers.append(loser)
+        return winners, losers
+
+    r2_high_w, r2_high_l = pair_and_play(r1_winners)
+    r2_low_w, r2_low_l = pair_and_play(r1_losers)
+
+    advanced, eliminated = [], []
+    pool_2_0 = r2_high_w
+    pool_0_2 = r2_low_l
+    pool_1_1 = r2_high_l + r2_low_w
+
+    r3_20_w, r3_20_l = pair_and_play(pool_2_0, bo3=True)
+    advanced.extend(r3_20_w)
+    r3_02_w, r3_02_l = pair_and_play(pool_0_2, bo3=True)
+    eliminated.extend(r3_02_l)
+    r3_11_w, r3_11_l = pair_and_play(pool_1_1)
+
+    pool_2_1 = r3_20_l + r3_11_w
+    pool_1_2 = r3_02_w + r3_11_l
+
+    r4_21_w, r4_21_l = pair_and_play(pool_2_1, bo3=True)
+    advanced.extend(r4_21_w)
+    r4_12_w, r4_12_l = pair_and_play(pool_1_2, bo3=True)
+    eliminated.extend(r4_12_l)
+
+    pool_2_2 = r4_21_l + r4_12_w
+    r5_w, r5_l = pair_and_play(pool_2_2, bo3=True)
+    advanced.extend(r5_w)
+    eliminated.extend(r5_l)
+
     results = {}
-    for team, (adv_p, p30, p03) in team_probs.items():
-        r = random.random()
-        if r < p30:
-            results[team] = "3-0"
-        elif r < p30 + p03:
-            results[team] = "0-3"
-        elif r < adv_p:
-            # 晋级但不是3-0 (3-1 or 3-2)
-            results[team] = "advance"
+    for t in teams_data:
+        w, l = records[t]
+        if w == 3 and l == 0:
+            results[t] = 0  # 3-0
+        elif w == 0 and l == 3:
+            results[t] = 2  # 0-3
+        elif w == 3:
+            results[t] = 1  # 3-1/3-2
         else:
-            # 被淘汰但不是0-3 (1-3 or 2-3)
-            results[team] = "eliminated"
+            results[t] = 3  # eliminated (non 0-3)
     return results
 
 
-def evaluate_picks(strategy, tournament_result):
-    """评估一组picks在某次模拟中的得分"""
-    correct = 0
-    details = []
+# ==================== 模拟 ====================
+print("模拟Swiss赛制中...")
 
-    for team in strategy["picks_3_0"]:
-        hit = tournament_result[team] == "3-0"
-        if hit:
-            correct += 1
-        details.append(("3-0", team, hit))
+# outcome_matrix[sim][team] = 0(3-0), 1(3-1/3-2), 2(0-3), 3(eliminated)
+outcome_matrix = np.zeros((SIMULATIONS, len(team_names)), dtype=np.int8)
 
-    for team in strategy["picks_advance"]:
-        hit = tournament_result[team] in ("3-0", "advance")
-        if hit:
-            correct += 1
-        details.append(("晋级", team, hit))
+for sim_i in range(SIMULATIONS):
+    result = simulate_swiss()
+    for t, outcome in result.items():
+        outcome_matrix[sim_i, team_idx[t]] = outcome
 
-    for team in strategy["picks_0_3"]:
-        hit = tournament_result[team] == "0-3"
-        if hit:
-            correct += 1
-        details.append(("0-3", team, hit))
+# 预计算布尔矩阵
+is_30 = (outcome_matrix == 0)    # shape: (SIMS, 16)
+is_312 = (outcome_matrix == 1)
+is_03 = (outcome_matrix == 2)
 
-    return correct, details
+# 各队概率
+print()
+print("=" * 80)
+print("  各队概率")
+print("=" * 80)
+print()
+print(f"  {'队伍':<22} {'3-0':>6} {'3-1/3-2':>8} {'0-3':>6} {'淘汰':>6}")
+print(f"  {'-'*50}")
 
+p30_by_team = {}
+p312_by_team = {}
+p03_by_team = {}
+for i, name in enumerate(team_names):
+    p30 = is_30[:, i].mean() * 100
+    p312 = is_312[:, i].mean() * 100
+    p03 = is_03[:, i].mean() * 100
+    elim = 100 - p30 - p312 - p03
+    p30_by_team[name] = p30
+    p312_by_team[name] = p312
+    p03_by_team[name] = p03
+    print(f"  {name:<22} {p30:>5.1f}% {p312:>7.1f}% {p03:>5.1f}% {elim:>5.1f}%")
 
-# ==================== 运行模拟 ====================
+# ==================== 暴力搜索 ====================
+print()
+print("=" * 80)
+print("  暴力搜索最优组合")
+print("=" * 80)
+print()
 
-print("=" * 85)
-print("  IEM Cologne Major 2026 Stage 1 — Pick'Em 策略分析")
-print("  Monte Carlo模拟 ×", f"{SIMULATIONS:,}")
-print("=" * 85)
+# 3-0候选: 取3-0概率前8的队伍
+top30_candidates = sorted(range(len(team_names)), key=lambda i: is_30[:, i].sum(), reverse=True)[:8]
+# 0-3候选: 取0-3概率前6的队伍
+top03_candidates = sorted(range(len(team_names)), key=lambda i: is_03[:, i].sum(), reverse=True)[:6]
 
-for name, strategy in strategies.items():
-    score_dist = [0] * 11  # 0-10分的分布
-    total_score = 0
+print(f"  3-0候选 ({len(top30_candidates)}): {[team_names[i] for i in top30_candidates]}")
+print(f"  0-3候选 ({len(top03_candidates)}): {[team_names[i] for i in top03_candidates]}")
+print()
 
-    for _ in range(SIMULATIONS):
-        result = simulate_tournament()
-        score, _ = evaluate_picks(strategy, result)
-        score_dist[score] += 1
-        total_score += score
+best_p5 = 0
+best_combo = None
+best_avg = 0
+total_combos = 0
+top_results = []
 
-    avg = total_score / SIMULATIONS
-    p5 = sum(score_dist[5:]) / SIMULATIONS * 100
-    p6 = sum(score_dist[6:]) / SIMULATIONS * 100
-    p7 = sum(score_dist[7:]) / SIMULATIONS * 100
+for combo_30 in combinations(top30_candidates, 2):
+    for combo_03 in combinations(top03_candidates, 2):
+        # 检查3-0和0-3没有重叠
+        if set(combo_30) & set(combo_03):
+            continue
 
+        used = set(combo_30) | set(combo_03)
+        remaining = [i for i in range(len(team_names)) if i not in used]
+
+        # 对remaining按3-1/3-2概率排序，取前6
+        remaining_sorted = sorted(remaining, key=lambda i: is_312[:, i].sum(), reverse=True)
+
+        # 尝试top6和几种替换
+        candidates_312 = [remaining_sorted[:6]]
+        # 也尝试把第7名换入
+        if len(remaining_sorted) > 6:
+            for swap_pos in range(6):
+                alt = list(remaining_sorted[:6])
+                alt[swap_pos] = remaining_sorted[6]
+                candidates_312.append(alt)
+
+        for combo_312 in candidates_312:
+            # 计算得分
+            score = np.zeros(SIMULATIONS, dtype=np.int8)
+            for t in combo_30:
+                score += is_30[:, t]
+            for t in combo_312:
+                score += is_312[:, t]
+            for t in combo_03:
+                score += is_03[:, t]
+
+            p5 = (score >= 5).mean() * 100
+            avg = score.mean()
+            total_combos += 1
+
+            if p5 > best_p5 or (p5 == best_p5 and avg > best_avg):
+                best_p5 = p5
+                best_avg = avg
+                best_combo = (combo_30, tuple(combo_312), combo_03)
+
+            if p5 >= best_p5 - 2:  # 记录接近最优的
+                top_results.append((p5, avg, combo_30, tuple(combo_312), combo_03))
+
+print(f"  搜索了 {total_combos:,} 种组合")
+print()
+
+# 去重排序
+top_results.sort(key=lambda x: (-x[0], -x[1]))
+seen = set()
+unique_top = []
+for r in top_results:
+    key = (r[2], r[3], r[4])
+    if key not in seen:
+        seen.add(key)
+        unique_top.append(r)
+
+print("=" * 80)
+print("  TOP 10 最优组合")
+print("=" * 80)
+print()
+
+for rank, (p5, avg, c30, c312, c03) in enumerate(unique_top[:10], 1):
+    names_30 = [team_names[i] for i in c30]
+    names_312 = [team_names[i] for i in c312]
+    names_03 = [team_names[i] for i in c03]
+    marker = " ⭐" if rank == 1 else ""
+    print(f"  #{rank}{marker}  P(≥5)={p5:.1f}%  期望={avg:.2f}")
+    print(f"       3-0:     {', '.join(names_30)}")
+    print(f"       3-1/3-2: {', '.join(names_312)}")
+    print(f"       0-3:     {', '.join(names_03)}")
     print()
-    print(f"  {'─'*80}")
-    print(f"  {name}")
-    print(f"  {strategy['desc']}")
-    print(f"  逻辑: {strategy['logic']}")
-    print(f"  {'─'*80}")
-    print(f"  3-0: {', '.join(strategy['picks_3_0'])}")
-    print(f"  晋级: {', '.join(strategy['picks_advance'])}")
-    print(f"  0-3: {', '.join(strategy['picks_0_3'])}")
-    print()
-    print(f"  期望得分: {avg:.2f}/10")
-    print(f"  ✅ P(≥5分): {p5:.1f}%   |  P(≥6分): {p6:.1f}%   |  P(≥7分): {p7:.1f}%")
-    print()
 
-    # 得分分布柱状图
-    print(f"  得分分布:")
-    max_pct = max(score_dist) / SIMULATIONS * 100
-    for s in range(11):
-        pct = score_dist[s] / SIMULATIONS * 100
-        bar = "█" * int(pct / max_pct * 30) if max_pct > 0 else ""
-        marker = " ← 目标" if s == 5 else ""
-        print(f"    {s:>2}分: {pct:5.1f}% {bar}{marker}")
+# 最优方案详细分布
+print("=" * 80)
+print("  最优方案得分分布")
+print("=" * 80)
+print()
 
-# ==================== 策略对比总结 ====================
+c30, c312, c03 = best_combo
+score = np.zeros(SIMULATIONS, dtype=np.int8)
+for t in c30:
+    score += is_30[:, t]
+for t in c312:
+    score += is_312[:, t]
+for t in c03:
+    score += is_03[:, t]
+
+for s in range(11):
+    pct = (score == s).mean() * 100
+    bar = "█" * int(pct * 2)
+    marker = " ← 目标" if s == 5 else ""
+    print(f"    {s:>2}分: {pct:5.1f}% {bar}{marker}")
 
 print()
-print("=" * 85)
-print("  策略对比总结")
-print("=" * 85)
-print()
-print(f"  {'策略':<30} {'期望分':<10} {'P(≥5)':<10} {'P(≥6)':<10} {'P(≥7)':<10}")
-print(f"  {'─'*68}")
-
-for name, strategy in strategies.items():
-    score_dist = [0] * 11
-    total = 0
-    for _ in range(SIMULATIONS):
-        result = simulate_tournament()
-        score, _ = evaluate_picks(strategy, result)
-        score_dist[score] += 1
-        total += score
-    avg = total / SIMULATIONS
-    p5 = sum(score_dist[5:]) / SIMULATIONS * 100
-    p6 = sum(score_dist[6:]) / SIMULATIONS * 100
-    p7 = sum(score_dist[7:]) / SIMULATIONS * 100
-    short_name = name.split(":")[0].strip() + name.split("(")[1].replace(")", "").strip() if "(" in name else name
-    print(f"  {name:<30} {avg:<10.2f} {p5:<10.1f}% {p6:<10.1f}% {p7:<10.1f}%")
-
-print()
-print("  💡 建议:")
-print("  • 目标是'对5个': 选择P(≥5)最高的策略")
-print("  • 如果P(≥5)差距不大(<3%): 选期望分更高的策略(上限更高)")
-print("  • 0-3位的关键抉择: GG vs FQ — GG排名更低但FQ状态更差")
-print("  • 3-0位的核心问题: 把GL放3-0等于用~28%概率的pick换取多cover一支~55-60%的边缘队")
+p5 = (score >= 5).mean() * 100
+p6 = (score >= 6).mean() * 100
+p7 = (score >= 7).mean() * 100
+print(f"  P(≥5) = {p5:.1f}%  |  P(≥6) = {p6:.1f}%  |  P(≥7) = {p7:.1f}%")

@@ -1,29 +1,57 @@
-# CS2 Major Pick'Em 分析工具
+# CS2 Major Pick'Em 分析
 
 对CS2 Major通行证竞猜进行数据驱动的分析和策略模拟。
 
 ## 目录结构
 
 ```
-CS/
+CS2-Major-prediction/
 ├── README.md
-└── 2026_cologne/          # IEM Cologne Major 2026
-    ├── stage1/            # Stage 1 (Challenger Stage)
-    │   ├── README.md      # 分析总结 & 事后复盘
-    │   ├── team_rating.py # 队伍综合评分脚本
-    │   └── pickem_strategy.py  # Pick'Em策略模拟
-    ├── stage2/            # Stage 2 (Legends Stage)
-    └── stage3/            # Stage 3 (Champions Stage)
+└── 2026_cologne/
+    ├── stage1/
+    │   ├── README.md              # 分析总结 & 复盘
+    │   ├── team_rating.py         # 队伍综合评分 (数据收集+加权打分)
+    │   └── pickem_strategy.py     # Pick'Em最优组合搜索 (Swiss模拟+暴力搜索)
+    ├── stage2/
+    └── stage3/
 ```
 
-## 分析方法
+## 分析流程
 
-1. **数据收集**: HLTV排名、近期战绩、Polymarket赔率、阵容变动
-2. **综合评分**: 多维度加权 (市场30% + HLTV 25% + 战绩25% + 阵容10% + 赛区10%)
-3. **策略模拟**: Monte Carlo模拟评估各策略的P(≥5)
+### 1. 数据收集 → 综合评分 (`team_rating.py`)
+
+对每队打0-100的综合分，加权维度:
+
+| 维度 | 权重 | 来源 |
+|:---|:---:|:---|
+| 市场隐含实力 | 30% | Polymarket赔率 → Bradley-Terry反推 |
+| HLTV排名 | 25% | hltv.org |
+| 近期战绩 | 25% | 手动评估，考虑对手强度/赛事级别/时间衰减 |
+| 阵容稳定度 | 10% | 换人数量 |
+| 赛区加成 | 10% | EU/CIS > NA/SA > Asia > OCE |
+
+### 2. Swiss赛制模拟 → 最优组合 (`pickem_strategy.py`)
+
+1. 用综合分拟合Bradley-Terry参数K，使预测胜率匹配Polymarket赔率
+2. 模拟完整Swiss赛制(5轮，R1固定对阵，R2+按战绩配对，Bo3用于晋级/淘汰局)
+3. 200,000次Monte Carlo得出每队的3-0/3-1or3-2/0-3概率
+4. 暴力搜索所有合理pick组合，找P(≥5)最大的方案
+
+### Pick'Em 规则
+
+- **3-0位 (2队)**: 该队最终3-0才得分
+- **3-1/3-2位 (6队)**: 该队最终3-1或3-2才得分，3-0不算
+- **0-3位 (2队)**: 该队最终0-3才得分
+- 目标: 10个pick中答对≥5个
+
+### 关键策略原则
+
+- **强队应放3-0位**: 3-1/3-2位不含3-0结果，强队3-0概率高会"浪费"3-1/3-2位
+- **避免pick间的关联性**: 若两个pick的队伍首轮直接对阵，一方输会同时废掉两个pick
+- **用暴力搜索而非手动**: 搜索空间~3000种组合，直接算最优解
 
 ## 赛事记录
 
-| 赛事 | 日期 | 策略 | 结果 |
-|:---|:---|:---|:---|
-| 2026 Cologne Stage 1 | 2026-06-02~05 | 铁壁 (策略A) | 待定 |
+| 赛事 | 日期 | 方案 | P(≥5) | 结果 |
+|:---|:---|:---|:---:|:---|
+| 2026 Cologne Stage 1 | 06-02~05 | GL+BB 3-0 / B8,HR,TL,LQ,MB,BG 312 / TdU,GG 0-3 | 33.0% | 待定 |

@@ -4,33 +4,42 @@
 - 赛事日期: 2026-06-02 ~ 06-05
 - 赛制: 16队Swiss制, 前8晋级Stage 2, 后8淘汰
 
+## Pick'Em 规则
+
+- **3-0位 (2队)**: 该队最终3-0才得分
+- **3-1/3-2位 (6队)**: 该队最终3-1或3-2才得分，**3-0不算**
+- **0-3位 (2队)**: 该队最终0-3才得分
+- 目标: 10个pick中答对≥5个
+
 ## 数据来源
 
-1. **HLTV排名** (2026-05-25更新)
-2. **Polymarket首轮Bo1赔率** (2026-05-29截取)
-3. **近半年赛事成绩** (重点: IEM Atlanta 2026, ESL Challenger League, CS Asia Championships等)
-4. **阵容变动** (考虑换人带来的置信度折扣)
+1. **HLTV排名** (2026-05-25)
+2. **Polymarket首轮Bo1赔率** (2026-05-29)
+3. **近半年赛事成绩** (IEM Atlanta 2026, ESL Challenger League等)
+4. **阵容变动** (换人折扣置信度)
 
-## 16队综合实力排名
+## 综合评分
 
-| # | 队伍 | 综合分 | HLTV | 层级 |
-|:---:|:---|:---:|:---:|:---:|
-| 1 | GamerLegion | 84.5 | #11 | 🟢T1 |
-| 2 | BetBoom | 75.5 | #20 | 🟢T1 |
-| 3 | B8 | 70.9 | #15 | 🟢T1 |
-| 4 | Heroic | 59.5 | #25 | 🟡T2 |
-| 5 | TYLOO | 57.8 | #30 | 🟡T2 |
-| 6 | Team Liquid | 56.8 | #26 | 🟡T2 |
-| 7 | BIG | 56.0 | #32 | 🟡T2 |
-| 8 | SINNERS | 53.8 | #32 | 🟡T2 |
-| 9 | MIBR | 53.6 | #28 | 🟠T3 |
-| 10 | M80 | 51.1 | #35 | 🟠T3 |
-| 11 | NRG | 45.1 | #34 | 🔴T4 |
-| 12 | Lynn Vision | 40.3 | #45 | 🔴T4 |
-| 13 | Sharks | 38.7 | #50 | 🔴T4 |
-| 14 | Gaimin Gladiators | 37.6 | #46 | 🔴T4 |
-| 15 | FlyQuest | 34.0 | #56 | 🔴T4 |
-| 16 | THUNDER dOWNUNDER | 20.3 | #80 | 🔴T4 |
+加权: Polymarket市场隐含实力 30% + HLTV排名 25% + 近期战绩 25% + 阵容稳定 10% + 赛区 10%
+
+| # | 队伍 | 综合分 | HLTV |
+|:---:|:---|:---:|:---:|
+| 1 | GamerLegion | 84.5 | #11 |
+| 2 | BetBoom | 75.5 | #20 |
+| 3 | B8 | 70.9 | #15 |
+| 4 | Heroic | 59.5 | #25 |
+| 5 | TYLOO | 57.8 | #30 |
+| 6 | Team Liquid | 56.8 | #26 |
+| 7 | BIG | 56.0 | #32 |
+| 8 | SINNERS | 53.8 | #32 |
+| 9 | MIBR | 53.6 | #28 |
+| 10 | M80 | 51.1 | #35 |
+| 11 | NRG | 45.1 | #34 |
+| 12 | Lynn Vision | 40.3 | #45 |
+| 13 | Sharks | 38.7 | #50 |
+| 14 | Gaimin Gladiators | 37.6 | #46 |
+| 15 | FlyQuest | 34.0 | #56 |
+| 16 | THUNDER dOWNUNDER | 20.3 | #80 |
 
 ## 首轮对阵 (Polymarket赔率)
 
@@ -45,59 +54,56 @@
 | MIBR vs THUNDER dOWNUNDER | 71% - 29% |
 | SINNERS vs FlyQuest | 55% - 45% |
 
-## 策略模拟结果 (Monte Carlo × 200,000)
+## Swiss赛制模拟概率 (Monte Carlo × 200,000)
 
-| 策略 | 期望分 | P(≥5) | P(≥6) | P(≥7) |
+用Bradley-Terry模型(K=44.0)计算任意两队胜率，模拟完整Swiss赛制(R1固定对阵→R2按战绩配对→...→R5)，Bo3场次放大强队优势。
+
+| 队伍 | 3-0 | 3-1/3-2 | 0-3 | 淘汰 |
 |:---|:---:|:---:|:---:|:---:|
-| A: 铁壁 (最保守) | 5.59 | **81.3%** | 54.1% | 23.4% |
-| B: 稳健 | 5.44 | 75.5% | 48.7% | 22.0% |
-| C: 平衡 | 5.20 | 68.4% | 42.2% | 18.9% |
-| D: 冒险 | 5.18 | 67.9% | 41.7% | 18.6% |
-| E: 赌狗 | 5.13 | 66.9% | 40.1% | 17.0% |
+| GamerLegion | **34.2%** | 52.6% | 1.9% | 11.3% |
+| BetBoom | **27.9%** | 52.4% | 2.9% | 16.8% |
+| B8 | 20.7% | **52.5%** | 4.6% | 22.2% |
+| Heroic | 15.8% | **46.3%** | 6.7% | 31.3% |
+| TYLOO | 11.0% | **43.6%** | 9.7% | 35.7% |
+| Team Liquid | 12.2% | **43.4%** | 8.9% | 35.6% |
+| BIG | 11.9% | **42.8%** | 9.3% | 36.1% |
+| MIBR | 14.6% | **42.8%** | 7.1% | 35.6% |
+| SINNERS | 13.3% | 42.1% | 8.2% | 36.4% |
+| M80 | 11.2% | 39.3% | 9.9% | 39.6% |
+| NRG | 5.5% | 30.0% | 18.1% | 46.4% |
+| Lynn Vision | 6.1% | 28.4% | 16.7% | 48.8% |
+| Sharks | 5.2% | 25.9% | 19.2% | 49.8% |
+| Gaimin Gladiators | 4.2% | 23.5% | **22.3%** | 50.0% |
+| FlyQuest | 4.3% | 22.3% | **21.8%** | 51.6% |
+| THUNDER dOWNUNDER | 2.0% | 12.1% | **32.8%** | 53.1% |
 
-## 各策略详细picks
+## 最优组合 (暴力搜索2940种组合)
 
-### 策略A: 铁壁 (最保守) — P(≥5) = 81.3%, 期望5.59分
+搜索空间: 3-0前8队 C(8,2)=28 × 0-3后6队 C(6,2)=15 × 3-1/3-2若干变体
 
-| 位置 | 选择 |
-|:---|:---|
-| 3-0 | MIBR, M80 |
-| 晋级 | GamerLegion, BetBoom, B8, Heroic, TYLOO, Team Liquid |
-| 0-3 | THUNDER dOWNUNDER, Gaimin Gladiators |
+| # | P(≥5) | 期望 | 3-0 | 3-1/3-2 | 0-3 |
+|:---:|:---:|:---:|:---|:---|:---|
+| 1 ⭐ | **33.0%** | 3.88 | GL, BB | B8, Heroic, TYLOO, Liquid, MIBR, BIG | TdU, GG |
+| 2 | 32.9% | 3.88 | GL, BB | B8, Heroic, TYLOO, Liquid, MIBR, SINNERS | TdU, GG |
+| 3 | 32.8% | 3.88 | GL, BB | B8, Heroic, TYLOO, SINNERS, MIBR, BIG | TdU, GG |
+| 4 | 32.8% | 3.88 | GL, BB | B8, Heroic, TYLOO, Liquid, SINNERS, BIG | TdU, GG |
+| 5 | 32.7% | 3.88 | GL, BB | B8, Heroic, TYLOO, Liquid, MIBR, BIG | TdU, FQ |
 
-### 策略B: 稳健 (保守) — P(≥5) = 75.5%, 期望5.44分
-
-| 位置 | 选择 |
-|:---|:---|
-| 3-0 | GamerLegion, MIBR |
-| 晋级 | BetBoom, B8, Heroic, TYLOO, Team Liquid, BIG |
-| 0-3 | THUNDER dOWNUNDER, Gaimin Gladiators |
-
-### 策略C: 平衡 (中等风险) — P(≥5) = 68.4%, 期望5.20分
-
-| 位置 | 选择 |
-|:---|:---|
-| 3-0 | GamerLegion, BetBoom |
-| 晋级 | B8, Heroic, TYLOO, Team Liquid, BIG, SINNERS |
-| 0-3 | THUNDER dOWNUNDER, Gaimin Gladiators |
-
-### 策略D: 冒险 (激进) — P(≥5) = 67.9%, 期望5.18分
+## 最终选择
 
 | 位置 | 选择 |
 |:---|:---|
-| 3-0 | GamerLegion, BetBoom |
-| 晋级 | B8, Heroic, TYLOO, Team Liquid, BIG, MIBR |
-| 0-3 | THUNDER dOWNUNDER, FlyQuest |
+| **3-0** | GamerLegion, BetBoom |
+| **3-1/3-2** | B8, Heroic, TYLOO, Team Liquid, MIBR, BIG |
+| **0-3** | THUNDER dOWNUNDER, Gaimin Gladiators |
 
-### 策略E: 赌狗 (极端激进) — P(≥5) = 66.9%, 期望5.13分
+P(≥5) = 33.0%, 期望 = 3.88/10
 
-| 位置 | 选择 |
-|:---|:---|
-| 3-0 | GamerLegion, B8 |
-| 晋级 | BetBoom, Heroic, TYLOO, Team Liquid, BIG, SINNERS |
-| 0-3 | THUNDER dOWNUNDER, Sharks |
+### 策略要点
 
-## 最终选择: 策略A (铁壁)
+- **强队放3-0而非3-1/3-2**: GL放3-1/3-2位只有52.6%命中(34.2%的时间GL打出3-0会浪费这个pick)，放3-0位有34.2%命中且释放3-1/3-2位给其他队
+- **0-3选GG而非FQ**: 虽然FQ的0-3概率(21.8%)接近GG(22.3%)，但若将FQ选入0-3且SINNERS选入3-0，两者首轮直接对阵(SINNERS vs FlyQuest)，45%概率SINNERS输导致两个pick同时废掉(关联性风险)
+- **MIBR优于SINNERS作为第6个3-1/3-2位**: MIBR的3-1/3-2概率(42.8%)略高于SINNERS(42.1%)
 
 ## 事后复盘
 
@@ -124,20 +130,19 @@
 | FlyQuest | |
 | THUNDER dOWNUNDER | |
 
-### 各策略得分对比
+### 各方案得分对比
 
-| 策略 | 预测P(≥5) | 实际得分 | 达标? |
-|:---|:---:|:---:|:---:|
-| A: 铁壁 ⭐已选 | 81.3% | /10 | |
-| B: 稳健 | 75.5% | /10 | |
-| C: 平衡 | 68.4% | /10 | |
-| D: 冒险 | 67.9% | /10 | |
-| E: 赌狗 | 66.9% | /10 | |
+| # | 方案 | P(≥5) | 实际得分 | 达标? |
+|:---|:---|:---:|:---:|:---:|
+| 1 ⭐已选 | GL+BB / B8,HR,TL,LQ,MB,BG / TdU,GG | 33.0% | /10 | |
+| 2 | GL+BB / B8,HR,TL,LQ,MB,SN / TdU,GG | 32.9% | /10 | |
+| 3 | GL+BB / B8,HR,TL,SN,MB,BG / TdU,GG | 32.8% | /10 | |
+| 4 | GL+BB / B8,HR,TL,LQ,SN,BG / TdU,GG | 32.8% | /10 | |
 
 ### 反思
 <!-- 赛后填写:
 - 模型哪里准确/失误?
-- 哪些因素被低估/高估?
-- 策略选择是否最优? 如果选了其他策略结果会怎样?
+- 综合评分的权重是否合理?
+- Bradley-Terry K值是否需要调整?
 - 对Stage 2分析的改进建议?
 -->
