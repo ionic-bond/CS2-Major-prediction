@@ -139,13 +139,13 @@ teams = {
 
 # Polymarket 首轮赔率 (2026-05-29)
 polymarket_odds = {
-    ("GamerLegion", "NRG"): (0.71, 0.29),
-    ("B8", "TYLOO"): (0.56, 0.44),
-    ("Heroic", "Sharks"): (0.61, 0.39),
-    ("BetBoom", "Gaimin Gladiators"): (0.71, 0.29),
-    ("BIG", "Team Liquid"): (0.53, 0.47),
-    ("M80", "Lynn Vision"): (0.59, 0.41),
-    ("MIBR", "THUNDER dOWNUNDER"): (0.71, 0.29),
+    ("GamerLegion", "NRG"): (0.70, 0.30),
+    ("B8", "TYLOO"): (0.59, 0.41),
+    ("Heroic", "Sharks"): (0.62, 0.38),
+    ("BetBoom", "Gaimin Gladiators"): (0.72, 0.28),
+    ("BIG", "Team Liquid"): (0.54, 0.46),
+    ("M80", "Lynn Vision"): (0.57, 0.43),
+    ("MIBR", "THUNDER dOWNUNDER"): (0.75, 0.25),
     ("SINNERS", "FlyQuest"): (0.55, 0.45),
 }
 

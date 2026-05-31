@@ -12,20 +12,20 @@ SIMULATIONS = 200000
 
 teams_data = {
     "GamerLegion":        {"score": 84.5},
-    "BetBoom":            {"score": 75.5},
-    "B8":                 {"score": 70.9},
-    "Heroic":             {"score": 59.5},
-    "TYLOO":              {"score": 57.8},
-    "Team Liquid":        {"score": 56.8},
-    "BIG":                {"score": 56.0},
-    "SINNERS":            {"score": 53.8},
-    "MIBR":               {"score": 53.6},
-    "M80":                {"score": 51.1},
-    "NRG":                {"score": 45.1},
-    "Lynn Vision":        {"score": 40.3},
-    "Sharks":             {"score": 38.7},
-    "Gaimin Gladiators":  {"score": 37.6},
-    "FlyQuest":           {"score": 34.0},
+    "BetBoom":            {"score": 76.8},
+    "B8":                 {"score": 73.0},
+    "Heroic":             {"score": 60.6},
+    "TYLOO":              {"score": 57.5},
+    "Team Liquid":        {"score": 57.1},
+    "BIG":                {"score": 57.1},
+    "MIBR":               {"score": 55.9},
+    "SINNERS":            {"score": 54.5},
+    "M80":                {"score": 51.0},
+    "NRG":                {"score": 46.1},
+    "Lynn Vision":        {"score": 41.5},
+    "Sharks":             {"score": 39.1},
+    "Gaimin Gladiators":  {"score": 37.9},
+    "FlyQuest":           {"score": 34.6},
     "THUNDER dOWNUNDER":  {"score": 20.3},
 }
 
@@ -41,13 +41,13 @@ R1_MATCHES = [
 ]
 
 POLYMARKET_R1 = {
-    ("GamerLegion", "NRG"): 0.71,
-    ("B8", "TYLOO"): 0.56,
-    ("Heroic", "Sharks"): 0.61,
-    ("BetBoom", "Gaimin Gladiators"): 0.71,
-    ("BIG", "Team Liquid"): 0.53,
-    ("M80", "Lynn Vision"): 0.59,
-    ("MIBR", "THUNDER dOWNUNDER"): 0.71,
+    ("GamerLegion", "NRG"): 0.70,
+    ("B8", "TYLOO"): 0.59,
+    ("Heroic", "Sharks"): 0.62,
+    ("BetBoom", "Gaimin Gladiators"): 0.72,
+    ("BIG", "Team Liquid"): 0.54,
+    ("M80", "Lynn Vision"): 0.57,
+    ("MIBR", "THUNDER dOWNUNDER"): 0.75,
     ("SINNERS", "FlyQuest"): 0.55,
 }
 
@@ -91,6 +91,45 @@ def play_match(team_a, team_b, bo3=False):
 
 def simulate_swiss():
     records = {t: [0, 0] for t in teams_data}
+    history = {t: set() for t in teams_data}
+    initial_seed = {t: i for i, t in enumerate(sorted(teams_data, key=lambda x: teams_data[x]["score"], reverse=True))}
+
+    def get_valid_matching(pool_sorted):
+        if not pool_sorted:
+            return []
+        t1 = pool_sorted[0]
+        for i in range(len(pool_sorted) - 1, 0, -1):
+            t2 = pool_sorted[i]
+            if t2 not in history[t1]:
+                remaining = pool_sorted[1:i] + pool_sorted[i+1:]
+                sub = get_valid_matching(remaining)
+                if sub is not None:
+                    return [(t1, t2)] + sub
+        return None
+
+    def pair_and_play(pool, round_num, bo3=False):
+        if round_num <= 2:
+            pool_sorted = sorted(pool, key=lambda t: initial_seed[t])
+        else:
+            def buchholz(t):
+                return sum(records[opp][0] - records[opp][1] for opp in history[t])
+            pool_sorted = sorted(pool, key=lambda t: (-buchholz(t), initial_seed[t]))
+
+        matchings = get_valid_matching(pool_sorted)
+        if matchings is None:
+            matchings = [(pool_sorted[i], pool_sorted[len(pool_sorted)-1-i]) for i in range(len(pool_sorted)//2)]
+
+        winners, losers = [], []
+        for t1, t2 in matchings:
+            winner = play_match(t1, t2, bo3)
+            loser = t2 if winner == t1 else t1
+            records[winner][0] += 1
+            records[loser][1] += 1
+            history[t1].add(t2)
+            history[t2].add(t1)
+            winners.append(winner)
+            losers.append(loser)
+        return winners, losers
 
     r1_winners, r1_losers = [], []
     for t1, t2 in R1_MATCHES:
@@ -98,46 +137,35 @@ def simulate_swiss():
         loser = t2 if winner == t1 else t1
         records[winner][0] += 1
         records[loser][1] += 1
+        history[t1].add(t2)
+        history[t2].add(t1)
         r1_winners.append(winner)
         r1_losers.append(loser)
 
-    def pair_and_play(pool, bo3=False):
-        random.shuffle(pool)
-        winners, losers = [], []
-        for i in range(0, len(pool), 2):
-            if i + 1 < len(pool):
-                winner = play_match(pool[i], pool[i+1], bo3)
-                loser = pool[i+1] if winner == pool[i] else pool[i]
-                records[winner][0] += 1
-                records[loser][1] += 1
-                winners.append(winner)
-                losers.append(loser)
-        return winners, losers
-
-    r2_high_w, r2_high_l = pair_and_play(r1_winners)
-    r2_low_w, r2_low_l = pair_and_play(r1_losers)
+    r2_high_w, r2_high_l = pair_and_play(r1_winners, 2)
+    r2_low_w, r2_low_l = pair_and_play(r1_losers, 2)
 
     advanced, eliminated = [], []
     pool_2_0 = r2_high_w
     pool_0_2 = r2_low_l
     pool_1_1 = r2_high_l + r2_low_w
 
-    r3_20_w, r3_20_l = pair_and_play(pool_2_0, bo3=True)
+    r3_20_w, r3_20_l = pair_and_play(pool_2_0, 3, bo3=True)
     advanced.extend(r3_20_w)
-    r3_02_w, r3_02_l = pair_and_play(pool_0_2, bo3=True)
+    r3_02_w, r3_02_l = pair_and_play(pool_0_2, 3, bo3=True)
     eliminated.extend(r3_02_l)
-    r3_11_w, r3_11_l = pair_and_play(pool_1_1)
+    r3_11_w, r3_11_l = pair_and_play(pool_1_1, 3)
 
     pool_2_1 = r3_20_l + r3_11_w
     pool_1_2 = r3_02_w + r3_11_l
 
-    r4_21_w, r4_21_l = pair_and_play(pool_2_1, bo3=True)
+    r4_21_w, r4_21_l = pair_and_play(pool_2_1, 4, bo3=True)
     advanced.extend(r4_21_w)
-    r4_12_w, r4_12_l = pair_and_play(pool_1_2, bo3=True)
+    r4_12_w, r4_12_l = pair_and_play(pool_1_2, 4, bo3=True)
     eliminated.extend(r4_12_l)
 
     pool_2_2 = r4_21_l + r4_12_w
-    r5_w, r5_l = pair_and_play(pool_2_2, bo3=True)
+    r5_w, r5_l = pair_and_play(pool_2_2, 5, bo3=True)
     advanced.extend(r5_w)
     eliminated.extend(r5_l)
 
