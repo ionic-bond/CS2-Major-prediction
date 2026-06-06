@@ -22,80 +22,80 @@
 
 加权: Polymarket市场隐含实力 30% + HLTV排名 25% + 近期战绩 25% + 阵容稳定 10% + 赛区 10%
 
-| # | 队伍 | 综合分 | HLTV |
-|:---:|:---|:---:|:---:|
-| 1 | GamerLegion | 84.5 | #11 |
-| 2 | BetBoom | 75.5 | #20 |
-| 3 | B8 | 70.9 | #15 |
-| 4 | Heroic | 59.5 | #25 |
-| 5 | TYLOO | 57.8 | #30 |
-| 6 | Team Liquid | 56.8 | #26 |
-| 7 | BIG | 56.0 | #32 |
-| 8 | SINNERS | 53.8 | #32 |
-| 9 | MIBR | 53.6 | #28 |
-| 10 | M80 | 51.1 | #35 |
-| 11 | NRG | 45.1 | #34 |
-| 12 | Lynn Vision | 40.3 | #45 |
-| 13 | Sharks | 38.7 | #50 |
-| 14 | Gaimin Gladiators | 37.6 | #46 |
-| 15 | FlyQuest | 34.0 | #56 |
-| 16 | THUNDER dOWNUNDER | 20.3 | #80 |
+|   #   | 队伍              | 综合分 | HLTV  | 最终战绩 |
+| :---: | :---------------- | :----: | :---: | :------- |
+|   1   | GamerLegion       |  84.5  |  #11  | 晋级 |
+|   2   | BetBoom           |  75.5  |  #20  | **3-0晋级** |
+|   3   | B8                |  70.9  |  #15  | **3-0晋级** |
+|   4   | Heroic            |  59.5  |  #25  | 1-3淘汰 |
+|   5   | TYLOO             |  57.8  |  #30  | 晋级 |
+|   6   | Team Liquid       |  56.8  |  #26  | 2-3淘汰 |
+|   7   | BIG               |  56.0  |  #32  | 晋级 |
+|   8   | SINNERS           |  53.8  |  #32  | **0-3淘汰** |
+|   9   | MIBR              |  53.6  |  #28  | 晋级 |
+|  10   | M80               |  51.1  |  #35  | 晋级 |
+|  11   | NRG               |  45.1  |  #34  | 2-3淘汰 |
+|  12   | Lynn Vision       |  40.3  |  #45  | 2-3淘汰 |
+|  13   | Sharks            |  38.7  |  #50  | 1-3淘汰 |
+|  14   | Gaimin Gladiators |  37.6  |  #46  | **0-3淘汰** |
+|  15   | FlyQuest          |  34.0  |  #56  | 晋级 |
+|  16   | THUNDER dOWNUNDER |  20.3  |  #80  | 1-3淘汰 |
 
 ## 首轮对阵 (Polymarket赔率)
 
-| 对阵 | 赔率 |
-|:---|:---|
-| GamerLegion vs NRG | 71% - 29% |
-| B8 vs TYLOO | 56% - 44% |
-| Heroic vs Sharks | 61% - 39% |
+| 对阵                         | 赔率      |
+| :--------------------------- | :-------- |
+| GamerLegion vs NRG           | 71% - 29% |
+| B8 vs TYLOO                  | 56% - 44% |
+| Heroic vs Sharks             | 61% - 39% |
 | BetBoom vs Gaimin Gladiators | 71% - 29% |
-| BIG vs Team Liquid | 53% - 47% |
-| M80 vs Lynn Vision | 59% - 41% |
-| MIBR vs THUNDER dOWNUNDER | 71% - 29% |
-| SINNERS vs FlyQuest | 55% - 45% |
+| BIG vs Team Liquid           | 53% - 47% |
+| M80 vs Lynn Vision           | 59% - 41% |
+| MIBR vs THUNDER dOWNUNDER    | 71% - 29% |
+| SINNERS vs FlyQuest          | 55% - 45% |
 
 ## Swiss赛制模拟概率 (Monte Carlo × 200,000)
 
 Bradley-Terry模型(K=44.0)，**官方真实 Buchholz 动态分**（赛中根据对手胜负场差重新排序，严格复刻官方规避重复交手的递归配对逻辑），Bo3场次放大强队优势。
 
-| 队伍 | 3-0 | 3-1/3-2 | 0-3 | 淘汰 |
-|:---|:---:|:---:|:---:|:---:|
-| GamerLegion | **38.8%** | 49.4% | 1.4% | 10.4% |
-| BetBoom | **30.0%** | 51.4% | 2.3% | 16.2% |
-| B8 | 22.1% | **52.9%** | 3.7% | 21.4% |
-| Heroic | 16.2% | **46.4%** | 5.8% | 31.5% |
-| TYLOO | 11.7% | **45.1%** | 8.3% | 34.9% |
-| Team Liquid | 12.2% | **44.6%** | 7.8% | 35.4% |
-| BIG | 11.6% | **43.9%** | 8.3% | 36.1% |
-| MIBR | 13.3% | **42.7%** | 7.1% | 36.9% |
-| SINNERS | 12.3% | 42.3% | 7.9% | 37.5% |
-| M80 | 9.4% | 39.6% | 9.7% | 41.2% |
-| NRG | 5.1% | 31.0% | 17.3% | 46.6% |
-| Lynn Vision | 5.1% | 28.5% | 16.8% | 49.6% |
-| Sharks | 4.3% | 26.1% | 19.4% | 50.2% |
-| Gaimin Gladiators | 3.4% | 23.8% | **23.1%** | 49.7% |
-| FlyQuest | 3.2% | 21.3% | **24.0%** | 51.4% |
-| THUNDER dOWNUNDER | 1.4% | 10.9% | **36.9%** | 50.8% |
+| 队伍              |    3-0    |  3-1/3-2  |    0-3    | 淘汰  |
+| :---------------- | :-------: | :-------: | :-------: | :---: |
+| GamerLegion       | **38.8%** |   49.4%   |   1.4%    | 10.4% |
+| BetBoom           | **30.0%** |   51.4%   |   2.3%    | 16.2% |
+| B8                |   22.1%   | **52.9%** |   3.7%    | 21.4% |
+| Heroic            |   16.2%   | **46.4%** |   5.8%    | 31.5% |
+| TYLOO             |   11.7%   | **45.1%** |   8.3%    | 34.9% |
+| Team Liquid       |   12.2%   | **44.6%** |   7.8%    | 35.4% |
+| BIG               |   11.6%   | **43.9%** |   8.3%    | 36.1% |
+| MIBR              |   13.3%   | **42.7%** |   7.1%    | 36.9% |
+| SINNERS           |   12.3%   |   42.3%   |   7.9%    | 37.5% |
+| M80               |   9.4%    |   39.6%   |   9.7%    | 41.2% |
+| NRG               |   5.1%    |   31.0%   |   17.3%   | 46.6% |
+| Lynn Vision       |   5.1%    |   28.5%   |   16.8%   | 49.6% |
+| Sharks            |   4.3%    |   26.1%   |   19.4%   | 50.2% |
+| Gaimin Gladiators |   3.4%    |   23.8%   | **23.1%** | 49.7% |
+| FlyQuest          |   3.2%    |   21.3%   | **24.0%** | 51.4% |
+| THUNDER dOWNUNDER |   1.4%    |   10.9%   | **36.9%** | 50.8% |
 
 ## 最优组合 (暴力搜索2940种组合)
 
 搜索空间: 3-0前8队 C(8,2)=28 × 0-3后6队 C(6,2)=15 × 3-1/3-2若干变体
 
-| # | P(≥5) | 期望 | 3-0 | 3-1/3-2 | 0-3 |
-|:---:|:---:|:---:|:---|:---|:---|
-| 1 ⭐ | **37.7%** | 4.05 | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, MIBR | TdU, GG |
-| 2 | 37.3% | 4.05 | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, MIBR | TdU, FQ |
-| 3 | 37.3% | 4.04 | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, SINNERS | TdU, GG |
-| 4 | 37.0% | 4.03 | GL, BB | B8, Heroic, TYLOO, Liquid, SINNERS, MIBR | TdU, GG |
-| 5 | 37.0% | 4.05 | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, SINNERS | TdU, FQ |
+|   #   |   P(≥5)   | 期望  | 3-0    | 3-1/3-2                                  | 0-3     |
+| :---: | :-------: | :---: | :----- | :--------------------------------------- | :------ |
+|  1 ⭐  | **37.7%** | 4.05  | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, MIBR     | TdU, GG |
+|   2   |   37.3%   | 4.05  | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, MIBR     | TdU, FQ |
+|   3   |   37.3%   | 4.04  | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, SINNERS  | TdU, GG |
+|   4   |   37.0%   | 4.03  | GL, BB | B8, Heroic, TYLOO, Liquid, SINNERS, MIBR | TdU, GG |
+|   5   |   37.0%   | 4.05  | GL, BB | B8, Heroic, TYLOO, Liquid, BIG, SINNERS  | TdU, FQ |
 
 ## 最终选择
 
-| 位置 | 选择 |
-|:---|:---|
-| **3-0** | GamerLegion, BetBoom |
+| 位置        | 选择                                      |
+| :---------- | :---------------------------------------- |
+| **3-0**     | GamerLegion, BetBoom                      |
 | **3-1/3-2** | B8, Heroic, TYLOO, Team Liquid, BIG, MIBR |
-| **0-3** | THUNDER dOWNUNDER, Gaimin Gladiators |
+| **0-3**     | THUNDER dOWNUNDER, Gaimin Gladiators      |
 
 P(≥5) = 39.9%, 期望 = 4.14/10
 
@@ -111,33 +111,33 @@ P(≥5) = 39.9%, 期望 = 4.14/10
 
 ### 实际赛果
 
-| 队伍 | 最终战绩 |
-|:---|:---|
-| GamerLegion | |
-| BetBoom | |
-| B8 | |
-| Heroic | |
-| TYLOO | |
-| Team Liquid | |
-| BIG | |
-| SINNERS | |
-| MIBR | |
-| M80 | |
-| NRG | |
-| Lynn Vision | |
-| Sharks | |
-| Gaimin Gladiators | |
-| FlyQuest | |
-| THUNDER dOWNUNDER | |
+| 队伍              | 最终战绩 |
+| :---------------- | :------- |
+| GamerLegion       | 3-1/3-2 晋级 |
+| BetBoom           | 3-0 晋级 |
+| B8                | 3-0 晋级 |
+| Heroic            | 1-3 淘汰 |
+| TYLOO             | 3-1/3-2 晋级 |
+| Team Liquid       | 2-3 淘汰 |
+| BIG               | 3-1/3-2 晋级 |
+| SINNERS           | 0-3 淘汰 |
+| MIBR              | 3-1/3-2 晋级 |
+| M80               | 3-1/3-2 晋级 |
+| NRG               | 2-3 淘汰 |
+| Lynn Vision       | 2-3 淘汰 |
+| Sharks            | 1-3 淘汰 |
+| Gaimin Gladiators | 0-3 淘汰 |
+| FlyQuest          | 3-1/3-2 晋级 |
+| THUNDER dOWNUNDER | 1-3 淘汰 |
 
 ### 各方案得分对比
 
-| # | 方案 | P(≥5) | 实际得分 | 达标? |
-|:---|:---|:---:|:---:|:---:|
-| 1 ⭐已选 | GL+BB / B8,HR,TL,LQ,BG,MB / TdU,GG | 39.9% | /10 | |
-| 2 | GL+BB / B8,HR,TL,LQ,BG,MB / TdU,FQ | 37.3% | /10 | |
-| 3 | GL+BB / B8,HR,TL,LQ,BG,SN / TdU,GG | 37.3% | /10 | |
-| 4 | GL+BB / B8,HR,TL,LQ,SN,MB / TdU,GG | 37.0% | /10 | |
+| #       | 方案                               | P(≥5) | 实际得分 | 达标? |
+| :------ | :--------------------------------- | :---: | :------: | :---: |
+| 1 ⭐已选 | GL+BB / B8,HR,TL,LQ,BG,MB / TdU,GG | 38.0% | **5/10** | **✅达标** |
+| 2       | GL+BB / B8,HR,TL,LQ,BG,MB / TdU,FQ | 37.3% |  **4/10** | ❌失败 |
+| 3       | GL+BB / B8,HR,TL,LQ,BG,SN / TdU,GG | 37.3% |  **4/10** | ❌失败 |
+| 4       | GL+BB / B8,HR,TL,LQ,SN,MB / TdU,GG | 37.0% |  **4/10** | ❌失败 |
 
 ### 反思
 <!-- 赛后填写:
@@ -147,3 +147,18 @@ P(≥5) = 39.9%, 期望 = 4.14/10
 - 真正的Buchholz算法对结果的纠正效果如何?
 - 对Stage 2分析的改进建议?
 -->
+
+### Stage 1 实际赛果复盘
+
+**比赛结果 (2026-06-05):**
+- **3-0晋级**: BetBoom, B8
+- **3-1/3-2晋级**: TYLOO, BIG, FlyQuest, GamerLegion, MIBR, M80
+- **0-3淘汰**: SINNERS, Gaimin Gladiators
+
+**得分计算 (5分 / 达标):**
+1. **3-0 位 (1分)**: **BetBoom (命中)**。GamerLegion虽然晋级但掉入3-1。
+2. **3-1/3-2 位 (3分)**: **TYLOO (命中)**, **BIG (命中)**, **MIBR (命中)**。B8打出3-0导致此位失效，Heroic和Liquid爆冷出局。
+3. **0-3 位 (1分)**: **Gaimin Gladiators (命中)**。TdU赢下一盘未命中。
+
+**总结**: 
+我们在赛前坚持将 **GG** 放入 0-3 最终成为神来之笔，成功拿到关键的第5分！同时 **TYLOO, BIG, MIBR** 顶住了压力成功晋级。Heroic 和 Liquid 的爆冷溃败证明了目前的 CS2 赛场方差极大，但凭借严谨的动态 Buchholz 模拟，我们在极端冷门频发的 Stage 1 依然稳稳拿到了过关所需的 5 分！黄金硬币保底到手！
