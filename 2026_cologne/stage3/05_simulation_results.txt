@@ -1,0 +1,573 @@
+================================================================================
+  验证: 模拟晋级率 vs 市场赔率
+================================================================================
+  队伍                      模拟      市场      差异
+  ------------------ ------- ------- -------
+  Vitality            91.8%  96.0%  -4.2% 
+  Spirit              89.3%  90.0%  -0.7% 
+  Natus Vincere       66.2%  84.0% -17.8% ⚠️
+  FURIA               56.2%  78.0% -21.8% ⚠️
+  Falcons             73.2%  76.0%  -2.8% 
+  Aurora              54.4%  60.0%  -5.6% 
+  MOUZ                50.7%  55.0%  -4.3% 
+  FUT                 35.5%  53.0% -17.5% ⚠️
+  G2                  42.0%  53.0% -11.0% ⚠️
+  Legacy              46.8%  43.0%  +3.8% 
+  The MongolZ         47.0%  37.0% +10.0% ⚠️
+  BetBoom             34.2%  35.0%  -0.8% 
+  PARIVISION          34.2%  33.0%  +1.2% 
+  9z                  35.2%  23.0% +12.2% ⚠️
+  Monte               22.0%  13.0%  +9.0% ⚠️
+  B8                  21.4%   7.0% +14.4% ⚠️
+
+================================================================================
+  暴力搜索最优 Pick'Em 组合
+================================================================================
+
+================================================================================
+  暴力搜索最优 Pick'Em 组合 (Top 100)
+================================================================================
+
+  #1  P(≥5)=36.4%  期望=4.01
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, Monte
+
+  #2  P(≥5)=36.0%  期望=4.00
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     B8, Monte
+
+  #3  P(≥5)=35.4%  期望=3.98
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, G2
+       0-3:     B8, Monte
+
+  #4  P(≥5)=35.4%  期望=3.97
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #5  P(≥5)=35.3%  期望=3.97
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #6  P(≥5)=34.9%  期望=3.95
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, G2
+       0-3:     B8, Monte
+
+  #7  P(≥5)=34.8%  期望=3.95
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #8  P(≥5)=34.8%  期望=3.95
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, FUT
+
+  #9  P(≥5)=34.7%  期望=3.95
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, G2
+       0-3:     B8, Monte
+
+  #10  P(≥5)=34.4%  期望=3.94
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, The MongolZ, G2
+       0-3:     B8, Monte
+
+  #11  P(≥5)=34.4%  期望=3.94
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, The MongolZ, G2
+       0-3:     B8, Monte
+
+  #12  P(≥5)=34.4%  期望=3.94
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, Monte
+
+  #13  P(≥5)=34.4%  期望=3.94
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, Legacy, G2
+       0-3:     B8, Monte
+
+  #14  P(≥5)=34.3%  期望=3.94
+       3-0:     Vitality, Aurora
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, MOUZ, Legacy
+       0-3:     B8, Monte
+
+  #15  P(≥5)=34.3%  期望=3.93
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     Monte, FUT
+
+  #16  P(≥5)=34.3%  期望=3.93
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     B8, FUT
+
+  #17  P(≥5)=34.0%  期望=3.93
+       3-0:     Vitality, The MongolZ
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, MOUZ
+       0-3:     B8, Monte
+
+  #18  P(≥5)=34.0%  期望=3.94
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, FUT
+       0-3:     B8, Monte
+
+  #19  P(≥5)=34.0%  期望=3.92
+       3-0:     Vitality, Aurora
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, MOUZ, The MongolZ
+       0-3:     B8, Monte
+
+  #20  P(≥5)=34.0%  期望=3.93
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     B8, Monte
+
+  #21  P(≥5)=33.9%  期望=3.92
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, BetBoom
+
+  #22  P(≥5)=33.9%  期望=3.92
+       3-0:     Vitality, FURIA
+       3-1/3-2: Spirit, Natus Vincere, Falcons, Aurora, MOUZ, Legacy
+       0-3:     B8, Monte
+
+  #23  P(≥5)=33.9%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     Monte, FUT
+
+  #24  P(≥5)=33.9%  期望=3.92
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, The MongolZ, G2
+       0-3:     B8, Monte
+
+  #25  P(≥5)=33.8%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, G2
+       0-3:     B8, FUT
+
+  #26  P(≥5)=33.8%  期望=3.92
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, 9z
+       0-3:     B8, Monte
+
+  #27  P(≥5)=33.7%  期望=3.92
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, 9z
+
+  #28  P(≥5)=33.7%  期望=3.91
+       3-0:     Vitality, Legacy
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, MOUZ
+       0-3:     B8, Monte
+
+  #29  P(≥5)=33.7%  期望=3.91
+       3-0:     Vitality, FURIA
+       3-1/3-2: Spirit, Natus Vincere, Falcons, Aurora, MOUZ, The MongolZ
+       0-3:     B8, Monte
+
+  #30  P(≥5)=33.7%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Legacy, The MongolZ, G2
+       0-3:     B8, Monte
+
+  #31  P(≥5)=33.6%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, The MongolZ
+       0-3:     B8, FUT
+
+  #32  P(≥5)=33.6%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, PARIVISION
+
+  #33  P(≥5)=33.6%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, FUT
+       0-3:     B8, Monte
+
+  #34  P(≥5)=33.5%  期望=3.90
+       3-0:     Vitality, Aurora
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, MOUZ, G2
+       0-3:     B8, Monte
+
+  #35  P(≥5)=33.5%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, The MongolZ
+       0-3:     B8, FUT
+
+  #36  P(≥5)=33.5%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, G2
+       0-3:     Monte, FUT
+
+  #37  P(≥5)=33.5%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     B8, BetBoom
+
+  #38  P(≥5)=33.4%  期望=3.92
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, FUT
+       0-3:     B8, Monte
+
+  #39  P(≥5)=33.4%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     Monte, BetBoom
+
+  #40  P(≥5)=33.4%  期望=3.91
+       3-0:     Vitality, The MongolZ
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, MOUZ, Legacy
+       0-3:     B8, Monte
+
+  #41  P(≥5)=33.3%  期望=3.91
+       3-0:     Vitality, The MongolZ
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, Legacy
+       0-3:     B8, Monte
+
+  #42  P(≥5)=33.3%  期望=3.90
+       3-0:     Vitality, Aurora
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #43  P(≥5)=33.3%  期望=3.90
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #44  P(≥5)=33.3%  期望=3.91
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, G2
+
+  #45  P(≥5)=33.3%  期望=3.90
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, Aurora, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #46  P(≥5)=33.3%  期望=3.91
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, Aurora, MOUZ, G2
+       0-3:     B8, Monte
+
+  #47  P(≥5)=33.3%  期望=3.90
+       3-0:     Vitality, G2
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, MOUZ
+       0-3:     B8, Monte
+
+  #48  P(≥5)=33.2%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     B8, 9z
+
+  #49  P(≥5)=33.2%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     Monte, 9z
+
+  #50  P(≥5)=33.2%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, The MongolZ
+       0-3:     Monte, FUT
+
+  #51  P(≥5)=33.2%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, 9z
+       0-3:     B8, Monte
+
+  #52  P(≥5)=33.2%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, The MongolZ, FUT
+       0-3:     B8, Monte
+
+  #53  P(≥5)=33.2%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, 9z
+       0-3:     B8, Monte
+
+  #54  P(≥5)=33.2%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, Legacy, The MongolZ
+       0-3:     B8, FUT
+
+  #55  P(≥5)=33.2%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, MOUZ, Legacy, The MongolZ, G2
+       0-3:     B8, Monte
+
+  #56  P(≥5)=33.2%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, Legacy, The MongolZ, G2
+       0-3:     B8, Monte
+
+  #57  P(≥5)=33.1%  期望=3.90
+       3-0:     Vitality, MOUZ
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, Legacy
+       0-3:     B8, Monte
+
+  #58  P(≥5)=33.1%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     Monte, PARIVISION
+
+  #59  P(≥5)=33.1%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, G2
+       0-3:     B8, FUT
+
+  #60  P(≥5)=33.1%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, The MongolZ, FUT
+       0-3:     B8, Monte
+
+  #61  P(≥5)=33.1%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, G2
+       0-3:     B8, FUT
+
+  #62  P(≥5)=33.1%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     Monte, BetBoom
+
+  #63  P(≥5)=33.1%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, The MongolZ
+       0-3:     Monte, FUT
+
+  #64  P(≥5)=33.1%  期望=3.89
+       3-0:     Vitality, FURIA
+       3-1/3-2: Spirit, Natus Vincere, Falcons, Aurora, MOUZ, G2
+       0-3:     B8, Monte
+
+  #65  P(≥5)=33.0%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     B8, PARIVISION
+
+  #66  P(≥5)=33.0%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, G2
+       0-3:     B8, BetBoom
+
+  #67  P(≥5)=33.0%  期望=3.90
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, Legacy, FUT
+       0-3:     B8, Monte
+
+  #68  P(≥5)=33.0%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, FURIA, Aurora, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #69  P(≥5)=32.9%  期望=3.89
+       3-0:     Vitality, MOUZ
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, The MongolZ
+       0-3:     B8, Monte
+
+  #70  P(≥5)=32.9%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     Monte, 9z
+
+  #71  P(≥5)=32.9%  期望=3.87
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, Aurora, MOUZ, Legacy
+       0-3:     B8, FUT
+
+  #72  P(≥5)=32.9%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, Legacy
+       0-3:     Monte, G2
+
+  #73  P(≥5)=32.9%  期望=3.89
+       3-0:     Vitality, The MongolZ
+       3-1/3-2: Spirit, Natus Vincere, Falcons, Aurora, MOUZ, Legacy
+       0-3:     B8, Monte
+
+  #74  P(≥5)=32.9%  期望=3.88
+       3-0:     Vitality, Aurora
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Legacy, G2
+       0-3:     B8, Monte
+
+  #75  P(≥5)=32.8%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Falcons, FURIA, Aurora, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #76  P(≥5)=32.8%  期望=3.89
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     B8, G2
+
+  #77  P(≥5)=32.8%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, The MongolZ
+       0-3:     B8, BetBoom
+
+  #78  P(≥5)=32.8%  期望=3.88
+       3-0:     Vitality, FURIA
+       3-1/3-2: Spirit, Natus Vincere, Falcons, Aurora, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #79  P(≥5)=32.8%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, G2
+       0-3:     B8, 9z
+
+  #80  P(≥5)=32.8%  期望=3.88
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, Aurora, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #81  P(≥5)=32.8%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, The MongolZ, 9z
+       0-3:     B8, Monte
+
+  #82  P(≥5)=32.8%  期望=3.88
+       3-0:     Vitality, FURIA
+       3-1/3-2: Spirit, Natus Vincere, Falcons, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #83  P(≥5)=32.8%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, Legacy, G2
+       0-3:     Monte, FUT
+
+  #84  P(≥5)=32.8%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, The MongolZ
+       0-3:     B8, BetBoom
+
+  #85  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, Legacy, G2
+       0-3:     B8, FUT
+
+  #86  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, Legacy, The MongolZ
+       0-3:     Monte, FUT
+
+  #87  P(≥5)=32.7%  期望=3.88
+       3-0:     Vitality, Aurora
+       3-1/3-2: Spirit, Natus Vincere, Falcons, MOUZ, Legacy, The MongolZ
+       0-3:     B8, Monte
+
+  #88  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, The MongolZ, G2
+       0-3:     B8, FUT
+
+  #89  P(≥5)=32.7%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, The MongolZ
+       0-3:     Monte, PARIVISION
+
+  #90  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, Legacy, 9z
+       0-3:     B8, Monte
+
+  #91  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, The MongolZ, 9z
+       0-3:     B8, Monte
+
+  #92  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, MOUZ, The MongolZ, G2
+       0-3:     B8, FUT
+
+  #93  P(≥5)=32.7%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, Aurora, MOUZ, The MongolZ, FUT
+       0-3:     B8, Monte
+
+  #94  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, Legacy, G2
+       0-3:     Monte, FUT
+
+  #95  P(≥5)=32.7%  期望=3.87
+       3-0:     Vitality, Legacy
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, The MongolZ
+       0-3:     B8, Monte
+
+  #96  P(≥5)=32.6%  期望=3.88
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, Aurora, Legacy, G2
+       0-3:     B8, Monte
+
+  #97  P(≥5)=32.6%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, G2, FUT
+       0-3:     B8, Monte
+
+  #98  P(≥5)=32.6%  期望=3.87
+       3-0:     Vitality, The MongolZ
+       3-1/3-2: Spirit, Natus Vincere, Falcons, FURIA, Aurora, G2
+       0-3:     B8, Monte
+
+  #99  P(≥5)=32.6%  期望=3.88
+       3-0:     Vitality, Spirit
+       3-1/3-2: Natus Vincere, Falcons, FURIA, Aurora, MOUZ, G2
+       0-3:     B8, PARIVISION
+
+  #100  P(≥5)=32.6%  期望=3.88
+       3-0:     Vitality, Falcons
+       3-1/3-2: Spirit, Natus Vincere, FURIA, MOUZ, Legacy, G2
+       0-3:     B8, Monte
+
+================================================================================
+  低概率组合采样 (反面教材展示)
+================================================================================
+
+  #156697 (排位)  P(≥5)=15.2%  期望=3.18
+       3-0:     FURIA, Aurora
+       3-1/3-2: Spirit, Falcons, Legacy, The MongolZ, G2, FUT
+       0-3:     Monte, 9z
+
+  #235045 (排位)  P(≥5)=12.7%  期望=3.10
+       3-0:     Natus Vincere, MOUZ
+       3-1/3-2: Spirit, Falcons, Vitality, FURIA, G2, BetBoom
+       0-3:     9z, The MongolZ
+
+  #282054 (排位)  P(≥5)=11.2%  期望=2.96
+       3-0:     Natus Vincere, Aurora
+       3-1/3-2: Spirit, Falcons, FURIA, FUT, 9z, PARIVISION
+       0-3:     BetBoom, Legacy
+
+  #310260 (排位)  P(≥5)=10.1%  期望=2.91
+       3-0:     Natus Vincere, Aurora
+       3-1/3-2: Falcons, FURIA, MOUZ, The MongolZ, FUT, 9z
+       0-3:     BetBoom, Legacy
+
+  #313393 (排位)  P(≥5)=10.0%  期望=2.87
+       3-0:     Falcons, Aurora
+       3-1/3-2: Spirit, FURIA, MOUZ, FUT, BetBoom, PARIVISION
+       0-3:     Legacy, The MongolZ
+
+================================================================================
+  最优方案得分分布
+================================================================================
+     0分:  0.3% 
+     1分:  3.3% █
+     2分: 11.4% █████
+     3分: 22.0% ███████████
+     4分: 26.5% █████████████
+     5分: 20.9% ██████████
+     6分: 10.8% █████
+     7分:  3.7% █
+     8分:  0.9% 
+     9分:  0.1% 
+    10分:  0.0% 

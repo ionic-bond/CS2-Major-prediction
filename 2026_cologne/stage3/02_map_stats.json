@@ -1,0 +1,642 @@
+{
+  "Vitality|Inferno": {
+    "wins": 4.345627261728483,
+    "losses": 1.6774052565249598,
+    "count": 40
+  },
+  "Vitality|Nuke": {
+    "wins": 5.251616028224523,
+    "losses": 1.9371640177705154,
+    "count": 34
+  },
+  "Vitality|Dust2": {
+    "wins": 9.774423105617817,
+    "losses": 0.738678129792673,
+    "count": 40
+  },
+  "Vitality|Train": {
+    "wins": 0.38184711398859883,
+    "losses": 0.32109598057303157,
+    "count": 14
+  },
+  "Vitality|Mirage": {
+    "wins": 6.531337087018416,
+    "losses": 1.943620081195419,
+    "count": 37
+  },
+  "Vitality|Overpass": {
+    "wins": 5.2477908148249455,
+    "losses": 0.874288567764458,
+    "count": 25
+  },
+  "Vitality|Ancient": {
+    "wins": 0.7638173534077007,
+    "losses": 0.08439687163551186,
+    "count": 3
+  },
+  "Vitality|Anubis": {
+    "wins": 1.713957794998262,
+    "losses": 1.4391496291593602,
+    "count": 7
+  },
+  "Natus Vincere|Inferno": {
+    "wins": 4.109138903700196,
+    "losses": 3.694731262293499,
+    "count": 36
+  },
+  "Natus Vincere|Train": {
+    "wins": 0.7217603581483247,
+    "losses": 0.2528373823432012,
+    "count": 15
+  },
+  "Natus Vincere|Anubis": {
+    "wins": 3.4503991469178326,
+    "losses": 1.6652197256729067,
+    "count": 12
+  },
+  "Natus Vincere|Mirage": {
+    "wins": 6.786005534267998,
+    "losses": 3.9626480809115763,
+    "count": 41
+  },
+  "Natus Vincere|Nuke": {
+    "wins": 3.1664031614461114,
+    "losses": 2.166861541614139,
+    "count": 32
+  },
+  "Natus Vincere|Ancient": {
+    "wins": 6.493239310239055,
+    "losses": 2.068948486022385,
+    "count": 33
+  },
+  "Natus Vincere|Dust2": {
+    "wins": 5.557472097486069,
+    "losses": 4.955283623326193,
+    "count": 31
+  },
+  "Natus Vincere|Default": {
+    "wins": 0.04903650611854693,
+    "losses": 0.0,
+    "count": 1
+  },
+  "Falcons|Nuke": {
+    "wins": 3.8418366188785944,
+    "losses": 0.9326541026182511,
+    "count": 24
+  },
+  "Falcons|Mirage": {
+    "wins": 4.414495850290633,
+    "losses": 4.1678137417300825,
+    "count": 33
+  },
+  "Falcons|Dust2": {
+    "wins": 7.2854803431649735,
+    "losses": 4.314897163688881,
+    "count": 33
+  },
+  "Falcons|Train": {
+    "wins": 0.12989777279945974,
+    "losses": 0.15091649331940266,
+    "count": 8
+  },
+  "Falcons|Ancient": {
+    "wins": 5.040958204042417,
+    "losses": 2.338774320048108,
+    "count": 28
+  },
+  "Falcons|Inferno": {
+    "wins": 2.0057875506938494,
+    "losses": 2.05003190509422,
+    "count": 29
+  },
+  "Falcons|Anubis": {
+    "wins": 0.8845151787294696,
+    "losses": 0.23515844350025966,
+    "count": 6
+  },
+  "The MongolZ|Inferno": {
+    "wins": 4.390239977743035,
+    "losses": 2.257542362373909,
+    "count": 30
+  },
+  "The MongolZ|Nuke": {
+    "wins": 4.21091941006552,
+    "losses": 2.298824397771581,
+    "count": 31
+  },
+  "The MongolZ|Ancient": {
+    "wins": 3.3593351027976626,
+    "losses": 3.4720860493354335,
+    "count": 38
+  },
+  "The MongolZ|Anubis": {
+    "wins": 0.0200978175380723,
+    "losses": 0.007919030405011065,
+    "count": 3
+  },
+  "The MongolZ|Dust2": {
+    "wins": 3.6507709339522343,
+    "losses": 3.3172132674928174,
+    "count": 34
+  },
+  "The MongolZ|Mirage": {
+    "wins": 5.963669510655257,
+    "losses": 6.316120263227412,
+    "count": 51
+  },
+  "The MongolZ|Overpass": {
+    "wins": 0.9955341488126429,
+    "losses": 1.5715044636242772,
+    "count": 12
+  },
+  "PARIVISION|Dust2": {
+    "wins": 8.208456725096735,
+    "losses": 4.578809979150754,
+    "count": 53
+  },
+  "PARIVISION|Anubis": {
+    "wins": 0.8038015159448099,
+    "losses": 0.9629444492708177,
+    "count": 10
+  },
+  "PARIVISION|Ancient": {
+    "wins": 4.692810101378466,
+    "losses": 3.4918743803119496,
+    "count": 51
+  },
+  "PARIVISION|Mirage": {
+    "wins": 3.6977204483500326,
+    "losses": 6.741653087624423,
+    "count": 57
+  },
+  "PARIVISION|Train": {
+    "wins": 0.22603021285052127,
+    "losses": 0.19479376117400737,
+    "count": 16
+  },
+  "PARIVISION|Inferno": {
+    "wins": 3.4140159254328903,
+    "losses": 3.368039135587069,
+    "count": 40
+  },
+  "PARIVISION|Overpass": {
+    "wins": 0.4920197315393725,
+    "losses": 1.0403527752681536,
+    "count": 12
+  },
+  "Aurora|Dust2": {
+    "wins": 5.720862865404364,
+    "losses": 4.529751759629128,
+    "count": 42
+  },
+  "Aurora|Anubis": {
+    "wins": 2.367277514718497,
+    "losses": 1.102048973379948,
+    "count": 11
+  },
+  "Aurora|Inferno": {
+    "wins": 3.259838333538551,
+    "losses": 1.9133590702566305,
+    "count": 27
+  },
+  "Aurora|Train": {
+    "wins": 0.24094509828055474,
+    "losses": 0.23164289536088178,
+    "count": 12
+  },
+  "Aurora|Mirage": {
+    "wins": 4.2407579714349675,
+    "losses": 2.752910138296646,
+    "count": 38
+  },
+  "Aurora|Nuke": {
+    "wins": 2.028216769523121,
+    "losses": 4.708624622543105,
+    "count": 30
+  },
+  "Aurora|Overpass": {
+    "wins": 2.767697633453925,
+    "losses": 2.080829408208073,
+    "count": 24
+  },
+  "Aurora|Ancient": {
+    "wins": 0.0,
+    "losses": 0.2279306221395542,
+    "count": 1
+  },
+  "FURIA|Dust2": {
+    "wins": 4.84026042399638,
+    "losses": 4.383324133847481,
+    "count": 43
+  },
+  "FURIA|Inferno": {
+    "wins": 4.980472269345162,
+    "losses": 2.4485174523471605,
+    "count": 48
+  },
+  "FURIA|Mirage": {
+    "wins": 6.195495922391173,
+    "losses": 5.209310851919639,
+    "count": 48
+  },
+  "FURIA|Train": {
+    "wins": 0.5002562053225724,
+    "losses": 0.3416015678861344,
+    "count": 16
+  },
+  "FURIA|Nuke": {
+    "wins": 3.970174601469123,
+    "losses": 3.4037886844695726,
+    "count": 31
+  },
+  "FURIA|Anubis": {
+    "wins": 0.636425295554777,
+    "losses": 0.30307302448044326,
+    "count": 6
+  },
+  "FURIA|Ancient": {
+    "wins": 0.08439687163551186,
+    "losses": 0.5582405739624475,
+    "count": 3
+  },
+  "FURIA|Overpass": {
+    "wins": 3.4342919867032276,
+    "losses": 2.753716955803159,
+    "count": 30
+  },
+  "MOUZ|Ancient": {
+    "wins": 2.6061796965557136,
+    "losses": 1.8823458565295388,
+    "count": 24
+  },
+  "MOUZ|Mirage": {
+    "wins": 5.034714456070241,
+    "losses": 1.5106712760571712,
+    "count": 42
+  },
+  "MOUZ|Dust2": {
+    "wins": 2.0530877003077697,
+    "losses": 3.57157629831135,
+    "count": 23
+  },
+  "MOUZ|Nuke": {
+    "wins": 3.8194197457295043,
+    "losses": 2.78699798356078,
+    "count": 26
+  },
+  "MOUZ|Train": {
+    "wins": 0.20768465323688065,
+    "losses": 0.0059928429191499185,
+    "count": 11
+  },
+  "MOUZ|Inferno": {
+    "wins": 3.3863251470948748,
+    "losses": 2.2923664744044694,
+    "count": 41
+  },
+  "MOUZ|Overpass": {
+    "wins": 4.033073675648958,
+    "losses": 0.09819046256201577,
+    "count": 20
+  },
+  "Spirit|Dust2": {
+    "wins": 8.444377548894956,
+    "losses": 1.1134546575768165,
+    "count": 39
+  },
+  "Spirit|Anubis": {
+    "wins": 0.9020055512783188,
+    "losses": 0.8994731364568211,
+    "count": 6
+  },
+  "Spirit|Train": {
+    "wins": 0.0748403763699444,
+    "losses": 0.050023440033022205,
+    "count": 3
+  },
+  "Spirit|Mirage": {
+    "wins": 7.7015748468403284,
+    "losses": 2.555408928349073,
+    "count": 38
+  },
+  "Spirit|Nuke": {
+    "wins": 2.854532823633158,
+    "losses": 1.3604544095619797,
+    "count": 22
+  },
+  "Spirit|Ancient": {
+    "wins": 5.059114683136781,
+    "losses": 1.0094547643768366,
+    "count": 29
+  },
+  "Spirit|Overpass": {
+    "wins": 1.7557970617289929,
+    "losses": 1.3550177462576785,
+    "count": 13
+  },
+  "FUT|Dust2": {
+    "wins": 4.337596225824042,
+    "losses": 3.581806045614796,
+    "count": 46
+  },
+  "FUT|Ancient": {
+    "wins": 7.317179398299665,
+    "losses": 3.375189227532873,
+    "count": 46
+  },
+  "FUT|Nuke": {
+    "wins": 2.4771762174719125,
+    "losses": 2.4748033173946746,
+    "count": 28
+  },
+  "FUT|Inferno": {
+    "wins": 0.12780630286930292,
+    "losses": 0.21706183808313687,
+    "count": 9
+  },
+  "FUT|Mirage": {
+    "wins": 7.43650015759607,
+    "losses": 2.9590086615393374,
+    "count": 63
+  },
+  "FUT|Overpass": {
+    "wins": 4.661377848518375,
+    "losses": 3.6568815784283424,
+    "count": 24
+  },
+  "FUT|Train": {
+    "wins": 0.5127998918365292,
+    "losses": 0.09807301223709383,
+    "count": 6
+  },
+  "FUT|Anubis": {
+    "wins": 1.7947598168242531,
+    "losses": 1.4289823575492686,
+    "count": 9
+  },
+  "G2|Nuke": {
+    "wins": 0.0,
+    "losses": 0.0019076007938545452,
+    "count": 1
+  },
+  "G2|Inferno": {
+    "wins": 3.972747702307312,
+    "losses": 3.1181168688133365,
+    "count": 38
+  },
+  "G2|Dust2": {
+    "wins": 6.028708499475826,
+    "losses": 5.724149658233304,
+    "count": 47
+  },
+  "G2|Mirage": {
+    "wins": 7.109430738347172,
+    "losses": 4.3885177824218164,
+    "count": 41
+  },
+  "G2|Anubis": {
+    "wins": 0.788615082380816,
+    "losses": 2.8188336189797827,
+    "count": 11
+  },
+  "G2|Ancient": {
+    "wins": 6.874192540666471,
+    "losses": 2.9967701621811322,
+    "count": 36
+  },
+  "G2|Train": {
+    "wins": 0.20150471383411345,
+    "losses": 0.12427430570144793,
+    "count": 10
+  },
+  "G2|Overpass": {
+    "wins": 4.0111453707397295,
+    "losses": 1.170115305010128,
+    "count": 20
+  },
+  "G2|Default": {
+    "wins": 0.46096952920104145,
+    "losses": 0.0,
+    "count": 2
+  },
+  "BetBoom|Nuke": {
+    "wins": 6.687474749753867,
+    "losses": 2.4052591345151755,
+    "count": 67
+  },
+  "BetBoom|Train": {
+    "wins": 0.3435079421354861,
+    "losses": 0.155991009768443,
+    "count": 22
+  },
+  "BetBoom|Anubis": {
+    "wins": 2.477663610152859,
+    "losses": 0.7271355180719715,
+    "count": 15
+  },
+  "BetBoom|Ancient": {
+    "wins": 2.931210877777314,
+    "losses": 1.9367010971677816,
+    "count": 49
+  },
+  "BetBoom|Mirage": {
+    "wins": 2.863609101112098,
+    "losses": 4.673473959237744,
+    "count": 64
+  },
+  "BetBoom|Dust2": {
+    "wins": 7.091492234089156,
+    "losses": 1.0323115493779171,
+    "count": 43
+  },
+  "BetBoom|Overpass": {
+    "wins": 1.8694248255361319,
+    "losses": 2.0738297297856647,
+    "count": 31
+  },
+  "BetBoom|Default": {
+    "wins": 0.08199230326241833,
+    "losses": 0.0,
+    "count": 2
+  },
+  "BetBoom|Inferno": {
+    "wins": 0.0,
+    "losses": 0.04073195394263757,
+    "count": 1
+  },
+  "9z|Dust2": {
+    "wins": 8.371406354196218,
+    "losses": 3.742800156153671,
+    "count": 57
+  },
+  "9z|Inferno": {
+    "wins": 8.046061724346204,
+    "losses": 3.808330759146715,
+    "count": 49
+  },
+  "9z|Nuke": {
+    "wins": 9.120094074328053,
+    "losses": 5.1777301625108105,
+    "count": 69
+  },
+  "9z|Ancient": {
+    "wins": 5.425080270390577,
+    "losses": 3.0747105069953107,
+    "count": 52
+  },
+  "9z|Train": {
+    "wins": 0.14743702890356908,
+    "losses": 0.029721495436743493,
+    "count": 19
+  },
+  "9z|Mirage": {
+    "wins": 2.3573000962491975,
+    "losses": 3.7177499709825494,
+    "count": 17
+  },
+  "9z|Default": {
+    "wins": 0.01265619839349878,
+    "losses": 0.3435481489938927,
+    "count": 7
+  },
+  "9z|Overpass": {
+    "wins": 8.787863142433544,
+    "losses": 3.0115556922724687,
+    "count": 40
+  },
+  "9z|Anubis": {
+    "wins": 0.43027571862216507,
+    "losses": 0.5877739531418044,
+    "count": 2
+  },
+  "Monte|Nuke": {
+    "wins": 5.4442349859433,
+    "losses": 5.569080289434204,
+    "count": 67
+  },
+  "Monte|Ancient": {
+    "wins": 3.4613956940641204,
+    "losses": 2.4544461187274833,
+    "count": 38
+  },
+  "Monte|Mirage": {
+    "wins": 4.979542731879636,
+    "losses": 3.379631551969215,
+    "count": 44
+  },
+  "Monte|Train": {
+    "wins": 0.6869687055542757,
+    "losses": 0.1749348718436565,
+    "count": 25
+  },
+  "Monte|Overpass": {
+    "wins": 0.08615945952788262,
+    "losses": 1.7631565626789976,
+    "count": 11
+  },
+  "Monte|Dust2": {
+    "wins": 8.461545624005307,
+    "losses": 5.320842502934976,
+    "count": 50
+  },
+  "Monte|Default": {
+    "wins": 0.06592424039778907,
+    "losses": 0.018660659830736157,
+    "count": 3
+  },
+  "Monte|Inferno": {
+    "wins": 1.3882633629167371,
+    "losses": 1.06317693434113,
+    "count": 12
+  },
+  "Monte|Anubis": {
+    "wins": 1.4734855362300276,
+    "losses": 0.40612619817811774,
+    "count": 4
+  },
+  "B8|Mirage": {
+    "wins": 8.415211625621636,
+    "losses": 7.3693874766687415,
+    "count": 45
+  },
+  "B8|Inferno": {
+    "wins": 3.626385873627074,
+    "losses": 3.09713502288323,
+    "count": 24
+  },
+  "B8|Dust2": {
+    "wins": 4.230811740073415,
+    "losses": 3.9601437603564547,
+    "count": 29
+  },
+  "B8|Ancient": {
+    "wins": 8.705786987729258,
+    "losses": 6.228716022020908,
+    "count": 40
+  },
+  "B8|Train": {
+    "wins": 0.12108154209039794,
+    "losses": 0.3040669353479504,
+    "count": 10
+  },
+  "B8|Overpass": {
+    "wins": 3.167861928147823,
+    "losses": 2.5643151809319256,
+    "count": 14
+  },
+  "B8|Nuke": {
+    "wins": 3.483776391179549,
+    "losses": 3.4164824686539763,
+    "count": 12
+  },
+  "B8|Anubis": {
+    "wins": 0.0,
+    "losses": 0.6674644642352711,
+    "count": 2
+  },
+  "Legacy|Ancient": {
+    "wins": 5.0551612374343815,
+    "losses": 6.0033938913541505,
+    "count": 35
+  },
+  "Legacy|Inferno": {
+    "wins": 8.430595327223136,
+    "losses": 3.3183028233795056,
+    "count": 48
+  },
+  "Legacy|Anubis": {
+    "wins": 0.6042467979251955,
+    "losses": 0.44061685249200827,
+    "count": 4
+  },
+  "Legacy|Dust2": {
+    "wins": 9.058210326759117,
+    "losses": 4.314878479376221,
+    "count": 43
+  },
+  "Legacy|Nuke": {
+    "wins": 5.5652303400118575,
+    "losses": 4.242093617683009,
+    "count": 36
+  },
+  "Legacy|Mirage": {
+    "wins": 9.669785726591947,
+    "losses": 2.2583262921853455,
+    "count": 41
+  },
+  "Legacy|Train": {
+    "wins": 0.10595094587251436,
+    "losses": 0.18407182024358834,
+    "count": 8
+  },
+  "Legacy|Overpass": {
+    "wins": 1.8243835483859376,
+    "losses": 0.5977402051901777,
+    "count": 9
+  },
+  "Legacy|Default": {
+    "wins": 0.02817830290215393,
+    "losses": 0.0,
+    "count": 1
+  }
+}
