@@ -1,0 +1,3 @@
+# Optional: the BO3 / Valve / legacy commands remain standard-library only.
+beautifulsoup4>=4.13,<5
+websocket-client>=1.8,<2

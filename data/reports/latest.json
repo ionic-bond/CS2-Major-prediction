@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "command": "sync-hltv",
+  "started_at": "2026-10-20T12:49:26+00:00",
+  "status": "ok",
+  "result": {
+    "source": "hltv",
+    "attempted": 2,
+    "collected": 2,
+    "already_complete": 0,
+    "pending_unchanged": 0,
+    "existing_import_retained": 0,
+    "forfeits_skipped": 0,
+    "outside_window": 0,
+    "pages": 0,
+    "errors": [],
+    "stats_missing_matches": [],
+    "window_complete": false,
+    "requested_urls_complete": true,
+    "stop_reason": "requested_urls_complete",
+    "selection": "explicit_urls",
+    "collection_scope": "match_page_scoreboards",
+    "observed_before_utc": "2026-10-20T12:49:26.822403+00:00",
+    "results_date_filters": {
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-21"
+    },
+    "coverage_note": "Scanned provider result pages; UTC starts checked locally; exact completion times unavailable."
+  },
+  "quality": {
+    "window": {
+      "since": "2026-10-18",
+      "until": "2026-10-20",
+      "timezone": "UTC; legacy date may have day precision"
+    },
+    "coverage": {
+      "matches": 23,
+      "maps_played": 50,
+      "matches_with_vetoes": 11,
+      "matches_with_ten_players": 17,
+      "series_player_rows": 170,
+      "map_player_rows": 380,
+      "player_id_missing": 0,
+      "matches_with_series_player_stats": 17,
+      "matches_with_map_player_stats": 17,
+      "matches_with_issues": 8,
+      "hltv_rating_rows": 360,
+      "bo3_rating_rows": 190,
+      "metric_missing": {
+        "kast": 0,
+        "adr": 0
+      }
+    },
+    "earliest_match": "2026-10-18",
+    "latest_match": "2026-10-20",
+    "issue_examples": [
+      {
+        "match_id": "bo3:129773",
+        "issues": [
+          "some_maps_not_demo_parsed"
+        ]
+      },
+      {
+        "match_id": "bo3:132392",
+        "issues": [
+          "some_maps_not_demo_parsed"
+        ]
+      },
+      {
+        "match_id": "bo3:132394",
+        "issues": [
+          "some_maps_not_demo_parsed"
+        ]
+      },
+      {
+        "match_id": "bo3:132397",
+        "issues": [
+          "some_maps_not_demo_parsed"
+        ]
+      },
+      {
+        "match_id": "bo3:131183",
+        "issues": [
+          "some_maps_not_demo_parsed"
+        ]
+      },
+      {
+        "match_id": "bo3:131852",
+        "issues": [
+          "some_maps_not_demo_parsed"
+        ]
+      },
+      {
+        "match_id": "bo3:131960",
+        "issues": [
+          "some_maps_not_demo_parsed",
+          "map_score_may_be_placeholder_or_forfeit"
+        ]
+      },
+      {
+        "match_id": "hltv:2399485",
+        "issues": [
+          "reported_series_score_differs_from_played_maps",
+          "default_maps_present"
+        ]
+      }
+    ]
+  },
+  "database": {
+    "matches": {
+      "count": 3299,
+      "earliest": "2025-01-10",
+      "latest": "2026-10-20"
+    },
+    "player_stats": {
+      "count": 104904,
+      "earliest": "2025-01-10",
+      "latest": "2026-10-20"
+    },
+    "rankings": {
+      "count": 13895,
+      "earliest": "2025-01-06",
+      "latest": "2026-10-05"
+    }
+  },
+  "browser_lifecycle": {
+    "started": true,
+    "closed": true,
+    "pid": 6468,
+    "exit_code": 0
+  },
+  "finished_at": "2026-10-20T12:49:38+00:00",
+  "requests": [
+    {
+      "url": "https://www.hltv.org/matches/2399600/iberian-soul-vs-sashi-digital-crusade-draculan-season-7",
+      "final_url": "https://www.hltv.org/matches/2399600/iberian-soul-vs-sashi-digital-crusade-draculan-season-7",
+      "fetched_at": "2026-10-20T12:49:28+00:00",
+      "status": 200,
+      "sha256": "ad2b340cd07c14bbfa53905f4568548919bf013bba8c2eb95ffe1d9be5e0bf78",
+      "content_type": "text/html",
+      "transport": "chrome_cdp",
+      "representation": "http_response_body",
+      "browser": {
+        "product": "Chrome/155.0.8059.84",
+        "protocolVersion": "1.3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "webdriver": false
+      },
+      "body_file": "ad2b340cd07c14bbfa53905f4568548919bf013bba8c2eb95ffe1d9be5e0bf78.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://www.hltv.org/matches/2399417/furia-vs-betboom-thunderpick-world-championship-2026",
+      "final_url": "https://www.hltv.org/matches/2399417/furia-vs-betboom-thunderpick-world-championship-2026",
+      "fetched_at": "2026-10-20T12:49:37+00:00",
+      "status": 200,
+      "sha256": "1ad1934298e02cacb916ba13f89c27e2064c03c6defd88e95b79f012c8cd82c0",
+      "content_type": "text/html",
+      "transport": "chrome_cdp",
+      "representation": "http_response_body",
+      "browser": {
+        "product": "Chrome/155.0.8059.84",
+        "protocolVersion": "1.3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "webdriver": false
+      },
+      "body_file": "1ad1934298e02cacb916ba13f89c27e2064c03c6defd88e95b79f012c8cd82c0.body",
+      "cache_hit": false
+    }
+  ]
+}

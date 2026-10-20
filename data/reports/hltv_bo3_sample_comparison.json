@@ -1,0 +1,645 @@
+{
+  "sample": "Metizport vs ex-RUSTEC, 2026-10-20",
+  "match_ids": {
+    "hltv": "hltv:2399776",
+    "bo3": "bo3:132318"
+  },
+  "source_urls": {
+    "hltv": "https://www.hltv.org/matches/2399776/metizport-vs-ex-rustec-stake-ranked-episode-6-closed-qualifier",
+    "bo3": "https://bo3.gg/matches/ex-rustec-vs-metizport-20-10-2026"
+  },
+  "identity_rule": "Case-insensitive nickname within this manually identified match only; not a reusable ID crosswalk.",
+  "rows": {
+    "hltv": 30,
+    "bo3": 30
+  },
+  "paired_rows": 24,
+  "rounding_tolerance": {
+    "kills": 0,
+    "deaths": 0,
+    "adr": 0.051,
+    "kast_percentage_points": 0.051
+  },
+  "differences": [
+    {
+      "identity": [
+        "ex-rustec",
+        "bl1x1",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 56.0,
+      "bo3": 57.7
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "bl1x1",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 47.9,
+      "bo3": 48.31818181818182
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "bl1x1",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 51.8,
+      "bo3": 53.009090909090915
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "bl1x1",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 59.5,
+      "bo3": 59.31818181818183
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "brilliance",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 72.6,
+      "bo3": 72.85
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "brilliance",
+        "map",
+        "anubis"
+      ],
+      "field": "kast",
+      "hltv": 50.0,
+      "bo3": 55.00000000000001
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "brilliance",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 52.2,
+      "bo3": 52.72727272727273
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "brilliance",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 61.9,
+      "bo3": 62.78863636363636
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "brilliance",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 50.0,
+      "bo3": 52.5
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "relaxxie",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 62.7,
+      "bo3": 63.5
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "relaxxie",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 65.4,
+      "bo3": 65.63636363636364
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "relaxxie",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 64.1,
+      "bo3": 64.56818181818181
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "relaxxie",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 61.9,
+      "bo3": 62.04545454545455
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "yiksrezo",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 55.4,
+      "bo3": 55.75
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "yiksrezo",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 70.3,
+      "bo3": 70.9090909090909
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "yiksrezo",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 63.2,
+      "bo3": 63.32954545454545
+    },
+    {
+      "identity": [
+        "ex-rustec",
+        "yiksrezo",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 61.9,
+      "bo3": 61.81818181818181
+    },
+    {
+      "identity": [
+        "metizport",
+        "f1ku",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 93.5,
+      "bo3": 94.5
+    },
+    {
+      "identity": [
+        "metizport",
+        "f1ku",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 92.3,
+      "bo3": 92.86363636363636
+    },
+    {
+      "identity": [
+        "metizport",
+        "f1ku",
+        "map",
+        "nuke"
+      ],
+      "field": "kast",
+      "hltv": 86.4,
+      "bo3": 90.9090909090909
+    },
+    {
+      "identity": [
+        "metizport",
+        "f1ku",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 92.9,
+      "bo3": 93.68181818181819
+    },
+    {
+      "identity": [
+        "metizport",
+        "f1ku",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 83.3,
+      "bo3": 85.45454545454545
+    },
+    {
+      "identity": [
+        "metizport",
+        "mail09",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 94.0,
+      "bo3": 94.6
+    },
+    {
+      "identity": [
+        "metizport",
+        "mail09",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 90.4,
+      "bo3": 91.18181818181819
+    },
+    {
+      "identity": [
+        "metizport",
+        "mail09",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 92.1,
+      "bo3": 92.89090909090909
+    },
+    {
+      "identity": [
+        "metizport",
+        "mail09",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 81.0,
+      "bo3": 81.13636363636363
+    },
+    {
+      "identity": [
+        "metizport",
+        "plopski",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 94.9,
+      "bo3": 95.65
+    },
+    {
+      "identity": [
+        "metizport",
+        "plopski",
+        "map",
+        "anubis"
+      ],
+      "field": "kast",
+      "hltv": 80.0,
+      "bo3": 85.0
+    },
+    {
+      "identity": [
+        "metizport",
+        "plopski",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 82.9,
+      "bo3": 83.22727272727273
+    },
+    {
+      "identity": [
+        "metizport",
+        "plopski",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 88.6,
+      "bo3": 89.43863636363636
+    },
+    {
+      "identity": [
+        "metizport",
+        "plopski",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 81.0,
+      "bo3": 83.4090909090909
+    },
+    {
+      "identity": [
+        "metizport",
+        "stanislaw",
+        "map",
+        "anubis"
+      ],
+      "field": "adr",
+      "hltv": 60.7,
+      "bo3": 61.35
+    },
+    {
+      "identity": [
+        "metizport",
+        "stanislaw",
+        "map",
+        "nuke"
+      ],
+      "field": "adr",
+      "hltv": 80.4,
+      "bo3": 81.68181818181819
+    },
+    {
+      "identity": [
+        "metizport",
+        "stanislaw",
+        "series",
+        "all maps"
+      ],
+      "field": "adr",
+      "hltv": 71.0,
+      "bo3": 71.51590909090909
+    },
+    {
+      "identity": [
+        "metizport",
+        "stanislaw",
+        "series",
+        "all maps"
+      ],
+      "field": "kast",
+      "hltv": 76.2,
+      "bo3": 76.13636363636364
+    }
+  ],
+  "unmatched": {
+    "hltv": [
+      [
+        "metizport",
+        "forsyy",
+        "series",
+        "all maps"
+      ],
+      [
+        "metizport",
+        "forsyy",
+        "map",
+        "anubis"
+      ],
+      [
+        "metizport",
+        "forsyy",
+        "map",
+        "nuke"
+      ],
+      [
+        "ex-rustec",
+        "youka",
+        "series",
+        "all maps"
+      ],
+      [
+        "ex-rustec",
+        "youka",
+        "map",
+        "anubis"
+      ],
+      [
+        "ex-rustec",
+        "youka",
+        "map",
+        "nuke"
+      ]
+    ],
+    "bo3": [
+      [
+        "ex-rustec",
+        "hsfest",
+        "series",
+        "all maps"
+      ],
+      [
+        "ex-rustec",
+        "hsfest",
+        "map",
+        "anubis"
+      ],
+      [
+        "ex-rustec",
+        "hsfest",
+        "map",
+        "nuke"
+      ],
+      [
+        "metizport",
+        "ep.-forsyy",
+        "series",
+        "all maps"
+      ],
+      [
+        "metizport",
+        "ep.-forsyy",
+        "map",
+        "anubis"
+      ],
+      [
+        "metizport",
+        "ep.-forsyy",
+        "map",
+        "nuke"
+      ]
+    ]
+  },
+  "series_rating_examples": [
+    {
+      "player": "bl1x1",
+      "hltv_rating": 0.67,
+      "hltv_version": "3.0",
+      "bo3_rating": 4.572125363519235
+    },
+    {
+      "player": "Brilliance",
+      "hltv_rating": 0.75,
+      "hltv_version": "3.0",
+      "bo3_rating": 4.770453292190702
+    },
+    {
+      "player": "relaxxie",
+      "hltv_rating": 0.87,
+      "hltv_version": "3.0",
+      "bo3_rating": 4.807744354434569
+    },
+    {
+      "player": "yiksrezo",
+      "hltv_rating": 1.05,
+      "hltv_version": "3.0",
+      "bo3_rating": 5.757867793719249
+    },
+    {
+      "player": "F1KU",
+      "hltv_rating": 1.37,
+      "hltv_version": "3.0",
+      "bo3_rating": 7.448231938276805
+    },
+    {
+      "player": "MaiL09",
+      "hltv_rating": 1.59,
+      "hltv_version": "3.0",
+      "bo3_rating": 7.856656849545482
+    },
+    {
+      "player": "Plopski",
+      "hltv_rating": 1.32,
+      "hltv_version": "3.0",
+      "bo3_rating": 7.042642473250291
+    },
+    {
+      "player": "stanislaw",
+      "hltv_rating": 0.98,
+      "hltv_version": "3.0",
+      "bo3_rating": 5.719780037346323
+    }
+  ],
+  "note": "One-match collection validation; no inference about predictive accuracy or whole-site coverage.",
+  "checked_at_utc": "2026-10-20T12:51:11+00:00",
+  "rating_scales_interchangeable": false,
+  "validation_summary": {
+    "paired_player_scopes": 24,
+    "kills_or_deaths_differences": 0,
+    "differences_by_field": {
+      "adr": 24,
+      "kast": 11
+    },
+    "unmatched_rows_per_source": {
+      "hltv": 6,
+      "bo3": 6
+    }
+  },
+  "source_responses": [
+    {
+      "url": "https://api.bo3.gg/api/v1/matches/ex-rustec-vs-metizport-20-10-2026/players_stats",
+      "fetched_at": "2026-10-20T11:43:47+00:00",
+      "sha256": "8b094852a7f68742904b65933c3dec3d63f6202266968115ddb63693f13a8e4f"
+    },
+    {
+      "url": "https://api.bo3.gg/api/v1/games/190696/players_stats",
+      "fetched_at": "2026-10-20T11:49:25+00:00",
+      "sha256": "5ace66d73b52098903894ba5fb3d2f129cbb8e8502874aa89178bedb17ec694a"
+    },
+    {
+      "url": "https://api.bo3.gg/api/v1/games/190695/players_stats",
+      "fetched_at": "2026-10-20T11:43:45+00:00",
+      "sha256": "bc56ee79f4534a5710e8571a3820e3c2d64cc28755bb6206a97872657f7a8ee4"
+    },
+    {
+      "url": "https://www.hltv.org/matches/2399776/metizport-vs-ex-rustec-stake-ranked-episode-6-closed-qualifier",
+      "fetched_at": "2026-10-20T12:32:10+00:00",
+      "sha256": "82061075005e13164014661f3b7d2f1ac3aff2cfcd019d9e9042d515cb6609f5",
+      "transport": "chrome_cdp",
+      "representation": "http_response_body"
+    }
+  ],
+  "raw_metric_example": [
+    {
+      "source": "bo3",
+      "player_id": "bo3:29066",
+      "player_nick": "Brilliance",
+      "scope": "series",
+      "map_name": "All maps",
+      "adr": 62.78863636363636,
+      "kast": 52.5
+    },
+    {
+      "source": "bo3",
+      "player_id": "bo3:29066",
+      "player_nick": "Brilliance",
+      "scope": "map",
+      "map_name": "Anubis",
+      "adr": 72.85,
+      "kast": 55.00000000000001
+    },
+    {
+      "source": "bo3",
+      "player_id": "bo3:29066",
+      "player_nick": "Brilliance",
+      "scope": "map",
+      "map_name": "Nuke",
+      "adr": 52.72727272727273,
+      "kast": 50.0
+    },
+    {
+      "source": "hltv",
+      "player_id": "hltv:19297",
+      "player_nick": "Brilliance",
+      "scope": "series",
+      "map_name": "All maps",
+      "adr": 61.9,
+      "kast": 50.0
+    },
+    {
+      "source": "hltv",
+      "player_id": "hltv:19297",
+      "player_nick": "Brilliance",
+      "scope": "map",
+      "map_name": "Anubis",
+      "adr": 72.6,
+      "kast": 50.0
+    },
+    {
+      "source": "hltv",
+      "player_id": "hltv:19297",
+      "player_nick": "Brilliance",
+      "scope": "map",
+      "map_name": "Nuke",
+      "adr": 52.2,
+      "kast": 50.0
+    }
+  ],
+  "series_aggregation_example": {
+    "player": "Brilliance",
+    "map_round_counts": [
+      20,
+      22
+    ],
+    "bo3_reported_series_adr": 62.78863636363636,
+    "bo3_unweighted_mean_map_adr": 62.78863636363636,
+    "bo3_round_weighted_mean_map_adr": 62.30952380952381,
+    "interpretation": "In this sample the reported BO3 series ADR equals the unweighted mean of map ADRs. This explains part of series-level differences, not per-map differences; no site-wide algorithm is inferred."
+  },
+  "identity_note": "Two players per source were left unmatched. Nickname prefixes and differing aliases require separate identity evidence; matching K-D alone is not identity proof."
+}
