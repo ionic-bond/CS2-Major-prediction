@@ -1,0 +1,2 @@
+/data/datasets/**/*.jsonl text eol=lf
+/data/datasets/**/manifest.json text eol=lf

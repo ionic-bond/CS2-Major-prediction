@@ -1,14 +1,16 @@
 """HLTV match-page scoreboards: series, maps, historical participants and Rating labels."""
 
 from datetime import date, datetime, timedelta, timezone
+import json
 import re
 from urllib.parse import urlencode, urljoin, urlsplit
 
-from .core import (FetchError, SCHEMA_VERSION, hltv_id, identity, in_window, match_outcome,
-                   number, stats_key, utc_now)
+from .core import (FetchError, SCHEMA_VERSION, atomic_write, digest, hltv_id, identity, in_window,
+                   json_bytes, match_outcome, number, stats_key, utc_now)
 
 
 ORIGIN = "https://www.hltv.org"
+ADAPTER_VERSION = 3
 
 
 def soup_html(body):
@@ -123,9 +125,14 @@ def parse_match(body, url, metadata):
             raise ValueError("HLTV map name missing")
         round_scores = {}
         picks = []
+        # Forfeits may retain TBA or picked but unplayed slots without result blocks.
+        no_result = holder.select_one(".results,.results-left,.results-right,a.results-stats") is None
+        unplayed_slot = no_result and (name.casefold() == "tba" or holder.select_one(".optional") is not None)
         for position in ("left", "right"):
             block = holder.select_one(".results-" + position)
             if block is None:
+                if unplayed_slot:
+                    continue
                 raise ValueError("HLTV map participant block missing")
             name_at_map = text(block.select_one(".results-teamname"))
             side = next((s for s in teams if teams[s]["name"].casefold() == name_at_map.casefold()), None)
@@ -159,7 +166,7 @@ def parse_match(body, url, metadata):
         issues.append("default_maps_present")
     event = root.select_one('.timeAndEvent .event a[href^="/events/"]')
     event_id = identity("hltv", link_id(event, "events")) if event else None
-    record = {"schema_version": SCHEMA_VERSION, "adapter_version": 1, "source": "hltv",
+    record = {"schema_version": SCHEMA_VERSION, "adapter_version": ADAPTER_VERSION, "source": "hltv",
               "match_id": identity("hltv", hltv_id(url)), "hltv_id": hltv_id(url), "source_url": url,
               "date": start.date().isoformat(), "played_at_utc": start.isoformat(), "completed_at_utc": None,
               "ingested_at": utc_now(), "game": "unknown",
@@ -195,7 +202,7 @@ def parse_match(body, url, metadata):
                     raise ValueError("HLTV player nickname missing")
                 kills, deaths = kd_pair(cell_value(player, "kd"))
                 eco_kills, eco_deaths = kd_pair(cell_value(player, "kd", adjusted=True))
-                row = {"schema_version": SCHEMA_VERSION, "adapter_version": 1, "source": "hltv",
+                row = {"schema_version": SCHEMA_VERSION, "adapter_version": ADAPTER_VERSION, "source": "hltv",
                        "match_id": record["match_id"], "date": record["date"], "team": side,
                        "player_id": pid, "player_nick": nick, "scope": "map" if entry else "series",
                        "map_name": entry["name"] if entry else "All maps", "side": "Both",
@@ -207,7 +214,9 @@ def parse_match(body, url, metadata):
                        "source_metrics": {"round_swing_pct": number(cell_value(player, "roundSwing")),
                                           "eco_kills": eco_kills, "eco_deaths": eco_deaths,
                                           "eco_adr": number(cell_value(player, "adr", adjusted=True)),
-                                          "eco_kast": percentage(cell_value(player, "kast", adjusted=True))}}
+                                          # The provider's adjusted value can exceed 100 (e.g. 104.7%).
+                                          # Retain it as a source metric; ordinary KAST stays bounded above.
+                                          "eco_kast": number(cell_value(player, "kast", adjusted=True))}}
                 scope_rows.append(row)
         if (any(sum(r["team"] == side for r in scope_rows) < 5 for side in teams)
                 or any(r[k] is None for r in scope_rows for k in ("kills", "deaths", "adr", "kast", "hltv_rating"))):
@@ -228,7 +237,8 @@ def parse_match(body, url, metadata):
     return record, rows
 
 
-def collect_match(store, http, url, *, refresh=False, since=None, until=None, before=None):
+def collect_match(store, http, url, *, refresh=False, since=None, until=None, before=None,
+                  replace_legacy=False, allow_partial_legacy=False):
     body, metadata = http.get(url, refresh=refresh)
     match, rows = parse_match(body, url, metadata)
     if since and until and not in_window(match["date"], since, until):
@@ -236,10 +246,29 @@ def collect_match(store, http, url, *, refresh=False, since=None, until=None, be
     if before and datetime.fromisoformat(match["played_at_utc"]) >= before:
         return match, False
     existing = store.get("matches", match["match_id"])
-    if existing and existing["source"] != "hltv":
+    replacing = bool(existing and existing["source"] == "legacy_hltv" and replace_legacy)
+    if existing and existing["source"] != "hltv" and not replacing:
         raise ValueError("Existing imported HLTV record retained; use a separate --data-dir for source comparison")
-    if existing and existing.get("collection_complete") and not match["collection_complete"]:
+    if (existing and existing.get("collection_complete") and not match["collection_complete"]
+            and not (replacing and allow_partial_legacy)):
         raise ValueError("Incomplete HLTV refresh; previous complete data retained")
+    if replacing:
+        # Avoid a full player-table scan chosen to satisfy ORDER BY record_id.
+        previous_rows = [json.loads(row[0]) for row in store.db.execute(
+            "SELECT payload FROM records INDEXED BY records_parent "
+            "WHERE kind='player_stats' AND parent_id=? ORDER BY record_id",
+            (match["match_id"],))]
+        if previous_rows and not match["collection_complete"] and not allow_partial_legacy:
+            raise ValueError("Incomplete HLTV replacement; previous legacy statistics retained")
+        archived = json_bytes({"schema_version": 1, "archived_at": utc_now(),
+                               "match": existing, "player_stats": previous_rows})
+        relative = "raw/legacy-replacements/" + str(match["hltv_id"]) + "/" + digest(archived) + ".json"
+        atomic_write(store.root / relative, archived)
+        match["legacy_archive"] = {"path": relative, "sha256": digest(archived),
+                                   "player_rows": len(previous_rows),
+                                   "replacement_incomplete": not match["collection_complete"]}
+    elif existing and existing.get("legacy_archive"):
+        match["legacy_archive"] = existing["legacy_archive"]
     with store.db:
         store.put("matches", match["match_id"], match["date"], match)
         store.db.execute("DELETE FROM records WHERE kind='player_stats' AND parent_id=?", (match["match_id"],))
@@ -248,9 +277,15 @@ def collect_match(store, http, url, *, refresh=False, since=None, until=None, be
     return match, True
 
 
-def sync_matches(store, http, since, until, *, max_matches=5, max_pages=100, refresh=False, urls=None):
+def sync_matches(store, http, since, until, *, max_matches=5, max_pages=100, refresh=False, urls=None,
+                 stop_requested=None, replace_legacy=False, allow_partial_legacy=None):
+    partial_ids = set(allow_partial_legacy or [])
+    if partial_ids and (not replace_legacy or any(not re.fullmatch(r"hltv:\d+", mid) for mid in partial_ids)):
+        raise ValueError("Partial legacy replacements require --replace-legacy and explicit hltv:<match ID> values")
     report = {"source": "hltv", "attempted": 0, "collected": 0, "already_complete": 0,
-              "pending_unchanged": 0, "existing_import_retained": 0, "forfeits_skipped": 0,
+              "pending_unchanged": 0, "existing_import_retained": 0, "legacy_replaced": 0,
+              "partial_legacy_replaced": 0, "allow_partial_legacy": sorted(partial_ids),
+              "replace_legacy": replace_legacy, "forfeits_skipped": 0,
               "outside_window": 0, "pages": 0, "errors": [], "stats_missing_matches": [],
               "window_complete": False, "requested_urls_complete": False, "stop_reason": None,
               "selection": "explicit_urls" if urls else "results_pages", "collection_scope": "match_page_scoreboards"}
@@ -262,8 +297,17 @@ def sync_matches(store, http, since, until, *, max_matches=5, max_pages=100, ref
     query = {"startDate": (date.fromisoformat(since) - timedelta(days=1)).isoformat(),
              "endDate": (date.fromisoformat(until) + timedelta(days=1)).isoformat()}
     report["results_date_filters"] = query
-    report["coverage_note"] = "Scanned provider result pages; UTC starts checked locally; exact completion times unavailable."
+    report["coverage_note"] = ("Explicit match URL selection; UTC starts checked locally; this does not prove result-window coverage."
+                               if urls else "Scanned provider result pages; UTC starts checked locally; exact completion times unavailable.")
+    def paused():
+        if stop_requested and stop_requested():
+            report["stop_reason"] = "stop_requested"
+            return True
+        return False
+
     for page in range(1 if urls else max_pages):
+        if paused():
+            return report
         if urls:
             candidates = [{"url": match_url(url)} for url in urls]
         else:
@@ -272,6 +316,8 @@ def sync_matches(store, http, since, until, *, max_matches=5, max_pages=100, ref
             candidates = parse_results(body)
             report["pages"] += 1
         for candidate in candidates:
+            if paused():
+                return report
             url = candidate["url"]
             if url in seen:
                 continue
@@ -279,15 +325,13 @@ def sync_matches(store, http, since, until, *, max_matches=5, max_pages=100, ref
             if candidate.get("format") == "def":
                 report["forfeits_skipped"] += 1
                 continue
-            stamp = candidate.get("results_page_timestamp_utc")
-            if stamp and datetime.fromisoformat(stamp) >= observed_before:
-                report["outside_window"] += 1
-                continue
-            existing = store.get("matches", identity("hltv", hltv_id(url)))
-            if existing and existing["source"] != "hltv":
+            mid = identity("hltv", hltv_id(url))
+            existing = store.get("matches", mid)
+            if existing and existing["source"] != "hltv" and not (
+                    replace_legacy and existing["source"] == "legacy_hltv"):
                 report["existing_import_retained"] += 1
                 continue
-            if existing and not refresh:
+            if existing and existing["source"] == "hltv" and not refresh:
                 key = "already_complete" if existing.get("collection_complete") else "pending_unchanged"
                 report[key] += 1
                 continue
@@ -296,12 +340,16 @@ def sync_matches(store, http, since, until, *, max_matches=5, max_pages=100, ref
                 return report
             report["attempted"] += 1
             try:
-                match, saved = collect_match(store, http, url, refresh=refresh or bool(existing), since=since, until=until,
-                                             before=observed_before)
+                match, saved = collect_match(store, http, url, refresh=refresh, since=since, until=until,
+                                             before=observed_before, replace_legacy=replace_legacy,
+                                             allow_partial_legacy=mid in partial_ids)
                 if not saved:
                     report["outside_window"] += 1
                     continue
                 report["collected"] += 1
+                if existing and existing["source"] == "legacy_hltv":
+                    report["legacy_replaced"] += 1
+                    report["partial_legacy_replaced"] += not match["collection_complete"]
                 if match["stats_missing"]:
                     report["stats_missing_matches"].append({"match_id": match["match_id"], "missing": match["stats_missing"]})
             except (FetchError, ValueError, TypeError, KeyError) as error:
@@ -309,6 +357,8 @@ def sync_matches(store, http, since, until, *, max_matches=5, max_pages=100, ref
                 if isinstance(error, FetchError) or len(report["errors"]) >= 3:
                     report["stop_reason"] = "access_error" if isinstance(error, FetchError) else "repeated_errors"
                     return report
+        if paused():
+            return report
         if urls or len(candidates) < 100:
             complete = not (report["errors"] or report["stats_missing_matches"] or report["pending_unchanged"])
             report["requested_urls_complete" if urls else "window_complete"] = complete

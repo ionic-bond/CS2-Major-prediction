@@ -130,7 +130,7 @@ class HttpCache:
 class Store:
     def __init__(self, root=DEFAULT_ROOT):
         self.root = Path(root)
-        self.path = self.root / "processed" / f"v{SCHEMA_VERSION}" / "history.sqlite3"
+        self.path = self.root / "processed" / "history.sqlite3"
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.db = sqlite3.connect(self.path)
         self.db.execute("CREATE TABLE IF NOT EXISTS records (kind TEXT NOT NULL, record_id TEXT NOT NULL, "

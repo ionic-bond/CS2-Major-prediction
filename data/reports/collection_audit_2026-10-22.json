@@ -1,0 +1,215 @@
+{
+  "audit_date_local": "2026-10-22",
+  "checked_at": "2026-10-21T17:46:20+00:00",
+  "description": "Post-cleanup inventory of the existing v1 SQLite collection; no storage-format migration or new data export.",
+  "database": {
+    "path": "data/processed/v1/history.sqlite3",
+    "bytes": 429305856,
+    "sha256": "566770dc0f07e5fb986b03743cc00047c72cfae9ebacb6014c6e3f50eb44fbbf",
+    "git_tracked": false,
+    "ranges": {
+      "matches": {
+        "rows": 9940,
+        "first_date": "2026-01-03",
+        "last_date": "2026-10-20"
+      },
+      "player_stats": {
+        "rows": 320415,
+        "first_date": "2026-01-03",
+        "last_date": "2026-10-20"
+      },
+      "rankings": {
+        "rows": 4792,
+        "first_date": "2026-01-05",
+        "last_date": "2026-10-05"
+      }
+    },
+    "source_counts": [
+      {
+        "kind": "matches",
+        "source": "bo3",
+        "year": "2026",
+        "rows": 12
+      },
+      {
+        "kind": "matches",
+        "source": "hltv",
+        "year": "2026",
+        "rows": 9928
+      },
+      {
+        "kind": "player_stats",
+        "source": "bo3",
+        "year": "2026",
+        "rows": 190
+      },
+      {
+        "kind": "player_stats",
+        "source": "hltv",
+        "year": "2026",
+        "rows": 320225
+      },
+      {
+        "kind": "rankings",
+        "source": "legacy_valve",
+        "year": "2026",
+        "rows": 4032
+      },
+      {
+        "kind": "rankings",
+        "source": "valve_official",
+        "year": "2026",
+        "rows": 760
+      }
+    ],
+    "retained_record_digest": {
+      "rows": 335147,
+      "sha256": "363f8444ee0a2a259417b18c1a69b408db8edec471af2f47b97690697fbaeee0"
+    },
+    "record_digest_definition": "SHA-256 over compact UTF-8 JSON arrays [kind,record_id,record_date,parent_id,payload] plus LF; records ordered by kind,record_id; payload is its stored JSON string."
+  },
+  "quality": {
+    "direct_hltv_matches": 9928,
+    "complete_player_tables": 9762,
+    "incomplete_matches": 166,
+    "unplayed_incomplete_matches": 160,
+    "played_source_gap_ids": [
+      "hltv:2390404",
+      "hltv:2390814",
+      "hltv:2390818",
+      "hltv:2391632",
+      "hltv:2391887",
+      "hltv:2392111"
+    ]
+  },
+  "validation": {
+    "quick_check": "ok",
+    "retained_2026_records_byte_identical": true,
+    "orphan_player_rows": 0,
+    "retained_cache_urls_read_offline": 293,
+    "retained_match_ids": [
+      "hltv:2388807",
+      "hltv:2388821",
+      "hltv:2388840",
+      "hltv:2388926",
+      "hltv:2388959",
+      "hltv:2388968",
+      "hltv:2388970",
+      "hltv:2388985",
+      "hltv:2389053",
+      "hltv:2389058",
+      "hltv:2389182",
+      "hltv:2389356",
+      "hltv:2389431",
+      "hltv:2389438",
+      "hltv:2389798",
+      "hltv:2390076",
+      "hltv:2390219",
+      "hltv:2390281",
+      "hltv:2390404",
+      "hltv:2390814",
+      "hltv:2390818",
+      "hltv:2391400",
+      "hltv:2391559",
+      "hltv:2391632",
+      "hltv:2391887",
+      "hltv:2392111",
+      "hltv:2392129",
+      "hltv:2392156",
+      "hltv:2393282",
+      "hltv:2393323",
+      "hltv:2393347",
+      "hltv:2393350",
+      "hltv:2393546",
+      "hltv:2394034",
+      "hltv:2394578",
+      "hltv:2394772",
+      "hltv:2394839",
+      "hltv:2394897",
+      "hltv:2395065",
+      "hltv:2399417",
+      "hltv:2399485",
+      "hltv:2399600",
+      "hltv:2399776"
+    ],
+    "legacy_archive_references_present": 985
+  },
+  "cleanup": {
+    "removed_2025_records": {
+      "rows": 84196,
+      "sha256": "9521448d402b82498bb7513af009c8bf6a5419e39c92b1c10339e7f86a50cd08"
+    },
+    "database_reclaimed_bytes": 89395200,
+    "removed_file_bytes": 4925895455,
+    "removed_file_count": 20684,
+    "removed_browser_cache_bytes": 803206254,
+    "removed_old_browser_session_bytes": 87560076,
+    "retired_sample_exports": [
+      "data/snapshots/20261020T115825947201Z",
+      "data/snapshots/20261020T125123701791Z"
+    ],
+    "latest_report_archived_to": "data/reports/runs/20261022-commit-prep/latest-before-cleanup.json",
+    "operational_evidence": "data/reports/runs/20261022-commit-prep/",
+    "inaccessible_test_temp_directories_retained": 37,
+    "total_reclaimed_bytes": 5906056985
+  },
+  "retained": {
+    "http_urls": 293,
+    "http_body_bytes": 86871695,
+    "rollback_database": {
+      "path": "data/snapshots/20261021T075707Z-before-2026-h1-rebuild/history.sqlite3",
+      "sha256": "4897b1fce4ee25580b516d45eb80198d41f3ae8fb31d06cd4b5d96dfb1e98600"
+    },
+    "original_cologne_unchanged": true,
+    "remaining_2026_legacy_rankings": 4032,
+    "legacy_replacement_archives": 985
+  },
+  "storage_comparison": {
+    "scope": "Retained 2026 records, compact sorted-key UTF-8 JSONL partitioned by source/month/kind; gzip level 6. Read-only in-memory measurement, not exported files or Git pack sizes.",
+    "rows": 335147,
+    "jsonl_bytes": 296626095,
+    "gzip_bytes": 17822724,
+    "largest_jsonl_partition": {
+      "source": "hltv",
+      "month": "2026-03",
+      "kind": "player_stats",
+      "rows": 48509,
+      "jsonl_bytes": 38882887,
+      "gzip_bytes": 2066471
+    },
+    "migration_implemented": false,
+    "git_clone_restores_database": false
+  },
+  "folder_inventory": {
+    "data/raw": {
+      "bytes": 131671761,
+      "files": 2040,
+      "inaccessible_directories": 0
+    },
+    "data/processed": {
+      "bytes": 429305856,
+      "files": 1,
+      "inaccessible_directories": 37
+    },
+    "data/snapshots": {
+      "bytes": 288415654,
+      "files": 3,
+      "inaccessible_directories": 0
+    },
+    "data/reports": {
+      "bytes": 25210825,
+      "files": 178,
+      "inaccessible_directories": 0
+    },
+    "data/pipeline": {
+      "bytes": 328846,
+      "files": 17,
+      "inaccessible_directories": 0
+    },
+    "2026_cologne": {
+      "bytes": 101404614,
+      "files": 36,
+      "inaccessible_directories": 0
+    }
+  }
+}

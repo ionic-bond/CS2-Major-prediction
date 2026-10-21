@@ -1,0 +1,363 @@
+{
+  "format": "cs2-jsonl",
+  "format_version": 1,
+  "schema_version": 1,
+  "files": {
+    "bo3/2026-10/matches.jsonl": {
+      "kind": "matches",
+      "source": "bo3",
+      "month": "2026-10",
+      "rows": 12,
+      "bytes": 30087,
+      "first_date": "2026-10-19",
+      "last_date": "2026-10-20",
+      "sha256": "0d24b17b47049968510cb5882185c524047b2b79140d6485a8b89d2d6f2da6d6"
+    },
+    "bo3/2026-10/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "bo3",
+      "month": "2026-10",
+      "rows": 190,
+      "bytes": 248780,
+      "first_date": "2026-10-19",
+      "last_date": "2026-10-20",
+      "sha256": "714c855aadc7e9dee6b1c78dcdb0b2230d6cffac1e8387b066d75d5309488f3c"
+    },
+    "hltv/2026-01/legacy_replacements.jsonl": {
+      "kind": "legacy_replacements",
+      "source": "hltv",
+      "month": "2026-01",
+      "rows": 162,
+      "bytes": 4176891,
+      "first_date": "2026-01-03",
+      "last_date": "2026-01-31",
+      "sha256": "b972a97a3ca1eac616a8fc593691264ff805b304c776a60b4d0a7c4c00cfc7f5"
+    },
+    "hltv/2026-01/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-01",
+      "rows": 728,
+      "bytes": 2755013,
+      "first_date": "2026-01-03",
+      "last_date": "2026-01-31",
+      "sha256": "ab9b3db603e5e0edbd4b86db741d51f305bfe15a0ea9b21aa33f71e20eb0b5a7"
+    },
+    "hltv/2026-01/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-01",
+      "rows": 22907,
+      "bytes": 18283185,
+      "first_date": "2026-01-03",
+      "last_date": "2026-01-31",
+      "sha256": "51e8dd2136134430ab848ed9286a938d58eb0c80c91d3d4ef54779233e11b5f2"
+    },
+    "hltv/2026-02/legacy_replacements.jsonl": {
+      "kind": "legacy_replacements",
+      "source": "hltv",
+      "month": "2026-02",
+      "rows": 197,
+      "bytes": 5105324,
+      "first_date": "2026-02-01",
+      "last_date": "2026-02-28",
+      "sha256": "788627a3cbf33a21789f98d2b454433705f3a19436fdbb63b72c56f3b01b0976"
+    },
+    "hltv/2026-02/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-02",
+      "rows": 1124,
+      "bytes": 4378531,
+      "first_date": "2026-02-01",
+      "last_date": "2026-02-28",
+      "sha256": "909621c3d4b01a4077900abae34ada4a338a8569ad5a01afc0a8656cf09e3dfd"
+    },
+    "hltv/2026-02/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-02",
+      "rows": 36430,
+      "bytes": 29229810,
+      "first_date": "2026-02-01",
+      "last_date": "2026-02-28",
+      "sha256": "227aaaceced583cc8a3f1e66e80a361b9f7e202588ebdf567779854e1778ef4d"
+    },
+    "hltv/2026-03/legacy_replacements.jsonl": {
+      "kind": "legacy_replacements",
+      "source": "hltv",
+      "month": "2026-03",
+      "rows": 240,
+      "bytes": 6177572,
+      "first_date": "2026-03-01",
+      "last_date": "2026-03-31",
+      "sha256": "25fe97f646771d48ad57b528e2e45bf0f0017d29024140ca40d8a0c75d3f1f33"
+    },
+    "hltv/2026-03/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-03",
+      "rows": 1535,
+      "bytes": 5835910,
+      "first_date": "2026-03-01",
+      "last_date": "2026-03-31",
+      "sha256": "d60fffd8ca5b7d24c339ee2f2c93e45b08081bef7a799591e711d0fe108fcc9a"
+    },
+    "hltv/2026-03/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-03",
+      "rows": 48509,
+      "bytes": 38882887,
+      "first_date": "2026-03-01",
+      "last_date": "2026-03-31",
+      "sha256": "dce607a7d84d41931eace45663c6d8f3e3bb049fe80ae87353231af027a9c5ce"
+    },
+    "hltv/2026-04/legacy_replacements.jsonl": {
+      "kind": "legacy_replacements",
+      "source": "hltv",
+      "month": "2026-04",
+      "rows": 173,
+      "bytes": 4531914,
+      "first_date": "2026-04-01",
+      "last_date": "2026-04-30",
+      "sha256": "5058983951b4a791869fcae9fd98a2e3e2ae13a8799760114a66209ec48051d8"
+    },
+    "hltv/2026-04/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-04",
+      "rows": 1091,
+      "bytes": 4262725,
+      "first_date": "2026-04-01",
+      "last_date": "2026-04-30",
+      "sha256": "5ad0a9645ea885a7275dab81745256235f28326d4afa7be9a52e6c965d57b42c"
+    },
+    "hltv/2026-04/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-04",
+      "rows": 35382,
+      "bytes": 28361294,
+      "first_date": "2026-04-01",
+      "last_date": "2026-04-30",
+      "sha256": "bbb91120d88653f6614e9bdab7c85961a1e8dac1f791fe39c90d1fc545d18b17"
+    },
+    "hltv/2026-05/legacy_replacements.jsonl": {
+      "kind": "legacy_replacements",
+      "source": "hltv",
+      "month": "2026-05",
+      "rows": 147,
+      "bytes": 3879303,
+      "first_date": "2026-05-01",
+      "last_date": "2026-05-29",
+      "sha256": "af382038a426031f167add348fcd1b95dbd42750e2c6bbc9f96aa498a6992076"
+    },
+    "hltv/2026-05/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-05",
+      "rows": 1029,
+      "bytes": 4060317,
+      "first_date": "2026-05-01",
+      "last_date": "2026-05-31",
+      "sha256": "8d8b67ca118f5e4d6399efcc112021a5e430091bd19b3c1d4dd672ff2d8c81e4"
+    },
+    "hltv/2026-05/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-05",
+      "rows": 34203,
+      "bytes": 27403536,
+      "first_date": "2026-05-01",
+      "last_date": "2026-05-31",
+      "sha256": "4629521fbb8f30d12859833e91cdd16d85356b20af9345d4088206b4a78a3715"
+    },
+    "hltv/2026-06/legacy_replacements.jsonl": {
+      "kind": "legacy_replacements",
+      "source": "hltv",
+      "month": "2026-06",
+      "rows": 66,
+      "bytes": 1367186,
+      "first_date": "2026-06-02",
+      "last_date": "2026-06-09",
+      "sha256": "45e9bb06bf6a345400931cfea99740b2f01e4a9a35b1a0592e7761762d40fdb8"
+    },
+    "hltv/2026-06/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-06",
+      "rows": 576,
+      "bytes": 2214342,
+      "first_date": "2026-06-01",
+      "last_date": "2026-06-30",
+      "sha256": "aad2c1db72b32cf3c154ba8cd8382fe0fb72b955cb327af5492ee972faea1ede"
+    },
+    "hltv/2026-06/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-06",
+      "rows": 18606,
+      "bytes": 14852839,
+      "first_date": "2026-06-01",
+      "last_date": "2026-06-30",
+      "sha256": "dec40e54b266686908769b44b319e8af39d587b5a7c26b51992051460d7c6ae6"
+    },
+    "hltv/2026-07/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-07",
+      "rows": 698,
+      "bytes": 2687570,
+      "first_date": "2026-07-01",
+      "last_date": "2026-07-31",
+      "sha256": "d16ded4c41b2f84f4cce7827f7ee42da63553b0093d1d96679f89bca77ee3e9c"
+    },
+    "hltv/2026-07/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-07",
+      "rows": 22550,
+      "bytes": 18141400,
+      "first_date": "2026-07-01",
+      "last_date": "2026-07-31",
+      "sha256": "6d1dda6edf92a80717c86aa88a3c441e68c6190919c9181fda8ecac545deffdd"
+    },
+    "hltv/2026-08/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-08",
+      "rows": 958,
+      "bytes": 3745796,
+      "first_date": "2026-08-01",
+      "last_date": "2026-08-31",
+      "sha256": "3ef7852c395794c2376b139eabb28c11d44565e60be9251f59f2408c2eb82fd1"
+    },
+    "hltv/2026-08/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-08",
+      "rows": 31666,
+      "bytes": 25452233,
+      "first_date": "2026-08-01",
+      "last_date": "2026-08-31",
+      "sha256": "95110a3fe013f43bde9a86701818e404884cdf30ccd323f026a5adb9d5c33f66"
+    },
+    "hltv/2026-09/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-09",
+      "rows": 1347,
+      "bytes": 5207744,
+      "first_date": "2026-09-01",
+      "last_date": "2026-09-30",
+      "sha256": "b747ad61e1206fb19d838ebbae2c3a0179c3a45cdb5cfae9568dfaae1196743b"
+    },
+    "hltv/2026-09/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-09",
+      "rows": 43843,
+      "bytes": 35211347,
+      "first_date": "2026-09-01",
+      "last_date": "2026-09-30",
+      "sha256": "c31aa643ad44a7f1a527eda2ac0be39fa43bdb9b60b32c99deac4841fd93c67c"
+    },
+    "hltv/2026-10/matches.jsonl": {
+      "kind": "matches",
+      "source": "hltv",
+      "month": "2026-10",
+      "rows": 842,
+      "bytes": 3108406,
+      "first_date": "2026-10-01",
+      "last_date": "2026-10-20",
+      "sha256": "b913c3b0cb3c68da047e68ea80301797860af5ff0232ce0ccd4bb51576b599d0"
+    },
+    "hltv/2026-10/player_stats.jsonl": {
+      "kind": "player_stats",
+      "source": "hltv",
+      "month": "2026-10",
+      "rows": 26129,
+      "bytes": 20944231,
+      "first_date": "2026-10-01",
+      "last_date": "2026-10-20",
+      "sha256": "4e0e2d6391beb9be9d605a1d56da4fa7d56c015ef688af6228d528f19ee8c143"
+    },
+    "valve/2026-01/rankings.jsonl": {
+      "kind": "rankings",
+      "source": "valve",
+      "month": "2026-01",
+      "rows": 590,
+      "bytes": 146110,
+      "first_date": "2026-01-05",
+      "last_date": "2026-01-05",
+      "sha256": "e6125c87d2ad509a8c06b2242f9cb9c8392149f33036d205cd16579985e9e508"
+    },
+    "valve/2026-02/rankings.jsonl": {
+      "kind": "rankings",
+      "source": "valve",
+      "month": "2026-02",
+      "rows": 620,
+      "bytes": 153408,
+      "first_date": "2026-02-02",
+      "last_date": "2026-02-02",
+      "sha256": "64576f2ec23f3be904ef274b0bb666fcc75447ffbb2edfc9f8ba549447c99bea"
+    },
+    "valve/2026-03/rankings.jsonl": {
+      "kind": "rankings",
+      "source": "valve",
+      "month": "2026-03",
+      "rows": 668,
+      "bytes": 165287,
+      "first_date": "2026-03-02",
+      "last_date": "2026-03-02",
+      "sha256": "805e0aafabfea54279da0d9aea877dcc6be56c31da5f0a2fa3b8cc3ce9acc76c"
+    },
+    "valve/2026-04/rankings.jsonl": {
+      "kind": "rankings",
+      "source": "valve",
+      "month": "2026-04",
+      "rows": 714,
+      "bytes": 176257,
+      "first_date": "2026-04-06",
+      "last_date": "2026-04-06",
+      "sha256": "6af2c22a565df0656c2488053d883b1c0bb05367a3dec2ee9620bae0fcc6b0f4"
+    },
+    "valve/2026-05/rankings.jsonl": {
+      "kind": "rankings",
+      "source": "valve",
+      "month": "2026-05",
+      "rows": 712,
+      "bytes": 176294,
+      "first_date": "2026-05-04",
+      "last_date": "2026-05-04",
+      "sha256": "5a7b244265a4bbc439a36227fcca3a5943c4b6ad4121951f37de52fe0d0a19d4"
+    },
+    "valve/2026-06/rankings.jsonl": {
+      "kind": "rankings",
+      "source": "valve",
+      "month": "2026-06",
+      "rows": 728,
+      "bytes": 180199,
+      "first_date": "2026-06-01",
+      "last_date": "2026-06-01",
+      "sha256": "1114c8d5e0afd6cca57f67e933136315594b08e0aa33878b247178a443c98fb3"
+    },
+    "valve/2026-10/rankings.jsonl": {
+      "kind": "rankings",
+      "source": "valve",
+      "month": "2026-10",
+      "rows": 760,
+      "bytes": 330557,
+      "first_date": "2026-10-05",
+      "last_date": "2026-10-05",
+      "sha256": "069a3e298ec8b93c654ffded5208a39c938faaf67daef7a8683c0fa6bc74b31f"
+    }
+  },
+  "record_counts": {
+    "matches": 9940,
+    "player_stats": 320415,
+    "rankings": 4792
+  },
+  "archive_count": 985
+}

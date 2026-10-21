@@ -6,6 +6,8 @@ Maximize `P(total Pick'Em score >= the event's passing threshold)` under the eve
 
 These are design constraints, not an implemented or validated Singapore model. The historical Cologne implementations remain untouched.
 
+Start with the smallest working baseline and improve it using held-out evidence. Add model components, data collection, or infrastructure when they answer a specific prediction question; the stages below are experiments to prioritize, not a checklist of systems to build in advance.
+
 ## Build evidence in stages
 
 1. Establish a team-level baseline using dated results, opposition strength, format, maps, and LAN/online context when known.

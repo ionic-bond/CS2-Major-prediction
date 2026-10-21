@@ -67,6 +67,8 @@ python -m unittest discover -s data/pipeline/tests -v
 
 冻结快照：`data/snapshots/20261020T125123701791Z/manifest.json`，事件标签 `2026_singapore`。包含 3,299 条来源比赛记录、104,904 条选手记录、13,895 条排名记录；包括旧资料、BO3 与此次 HLTV 联调，**同场跨站记录仍分别存在，并非 3,299 场已消重的独立比赛**。JSONL 的行数和 SHA-256 已核验，历史缺口和旧比分问题仍需在建模前处理。
 
+清理注记（2026-10-22）：该联调快照未被任何 stage 使用，旧 JSONL 载荷已清理；保留的 manifest 仅记录当时的行数和校验值，不能作为现存数据集加载。当前数据状态见 [采集计划](../data/collection-plan.md)。
+
 ## 同场 BO3 与 HLTV 数值核对
 
 [样本对照 JSON](../../../data/reports/hltv_bo3_sample_comparison.json) 保存了 Metizport–ex-RUSTEC 的逐项差异及原始响应引用。两站各 30 行，在同一场、同队名、同地图范围内按大小写无关的昵称对上 8 名选手、24 行；两名选手有前缀或不同别名，未仅凭相同 K-D 强行匹配。

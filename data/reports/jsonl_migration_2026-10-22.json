@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-10-21T18:18:11+00:00",
+  "migration_implemented": true,
+  "scope": "Offline canonical JSONL migration; no collection or Git commit performed",
+  "canonical": {
+    "directory": "data/datasets",
+    "manifest_sha256": "df7eedc623fb7cb6830448fbceb451ac02fa5afebaf4b9c9bdbb36e46c8863c4",
+    "format": "cs2-jsonl",
+    "format_version": 1,
+    "files": 35,
+    "record_counts": {
+      "matches": 9940,
+      "player_stats": 320415,
+      "rankings": 4792
+    },
+    "source_counts": {
+      "matches": {
+        "bo3": 12,
+        "hltv": 9928
+      },
+      "player_stats": {
+        "bo3": 190,
+        "hltv": 320225
+      },
+      "rankings": {
+        "legacy_valve": 4032,
+        "valve_official": 760
+      }
+    },
+    "summary": {
+      "matches": {
+        "count": 9940,
+        "earliest": "2026-01-03",
+        "latest": "2026-10-20"
+      },
+      "player_stats": {
+        "count": 320415,
+        "earliest": "2026-01-03",
+        "latest": "2026-10-20"
+      },
+      "rankings": {
+        "count": 4792,
+        "earliest": "2026-01-05",
+        "latest": "2026-10-05"
+      }
+    },
+    "partition_bytes": 321864285,
+    "main_record_bytes": 296626095,
+    "archive_envelope_bytes": 25238190,
+    "manifest_bytes": 11397,
+    "largest_file": {
+      "path": "hltv/2026-03/player_stats.jsonl",
+      "bytes": 38882887
+    },
+    "legacy_archive_count": 985,
+    "archived_player_rows": 31552
+  },
+  "working_database": {
+    "path": "data/processed/history.sqlite3",
+    "git_ignored": true,
+    "sha256_before_and_after": "566770dc0f07e5fb986b03743cc00047c72cfae9ebacb6014c6e3f50eb44fbbf",
+    "bytes": 429305856
+  },
+  "validation": {
+    "unit_tests": {
+      "passed": 43,
+      "python": "3.14.7",
+      "environment_wrapper": "Windows temporary-directory ACL: inherited mkdir mode 0o777; assertions unchanged"
+    },
+    "fresh_copy_full_verify": {
+      "manifest_sha256": "df7eedc623fb7cb6830448fbceb451ac02fa5afebaf4b9c9bdbb36e46c8863c4",
+      "files": 35,
+      "records": {
+        "matches": 9940,
+        "player_stats": 320415,
+        "rankings": 4792
+      },
+      "archives": 985
+    },
+    "direct_status_without_database": true,
+    "stage_export_without_database": {
+      "since": "2026-10-01",
+      "until": "2026-10-20",
+      "files": {
+        "matches.jsonl": {
+          "sha256": "3473a207be3488f9b705032bf284d519c9f0d9c9c1e41c96b1ea5a8d6526acf0",
+          "rows": 854,
+          "bytes": 3406281
+        },
+        "player_stats.jsonl": {
+          "sha256": "d4df5ccf66e1e9b1dfe042c1872215a3ba7260b5fa368da78a99ed24a1e2592e",
+          "rows": 26319,
+          "bytes": 22808920
+        },
+        "rankings.jsonl": {
+          "sha256": "fdd50edd966ebdcb2e32d0d617c12f51383f348a681d04e12cbd5e967dd5e2b2",
+          "rows": 760,
+          "bytes": 349435
+        }
+      }
+    },
+    "restored_sqlite_quick_check": "ok",
+    "all_record_keys_dates_parents_and_payloads_equal": true,
+    "records_compared": {
+      "matches": 9940,
+      "player_stats": 320415,
+      "rankings": 4792
+    },
+    "all_archives_byte_identical": true,
+    "roundtrip_manifest_sha256": "df7eedc623fb7cb6830448fbceb451ac02fa5afebaf4b9c9bdbb36e46c8863c4",
+    "roundtrip_changed_files": 0,
+    "original_database_unchanged": true,
+    "temporary_clone_removed": true,
+    "canonical_git_checkout_eol": "lf",
+    "canonical_files_git_ignored": false,
+    "cologne_paths_changed": false
+  },
+  "timings_local_machine": {
+    "verify_seconds": 5.872,
+    "direct_status_and_october_snapshot_seconds": 5.891,
+    "restore_database_and_archives_seconds": 17.698,
+    "compare_all_records_and_archive_bytes_seconds": 16.33,
+    "deterministic_roundtrip_export_seconds": 14.741,
+    "total_seconds": 61.237
+  },
+  "notes": [
+    "Payload equality compares decoded JSON; SQLite payload whitespace/key ordering is not a storage contract.",
+    "Historical archives are stored separately and are not blended into current player rows.",
+    "HTTP response bodies and local rollback databases are not required to read canonical data.",
+    "JSONL is deterministic UTF-8/LF; Git pack size and future history growth are not measured.",
+    "Collection gaps in the preceding collection audit are unchanged by serialization.",
+    "On October 22 the unused v1 directory layer was removed from datasets and processed. All 43 tests, full JSONL verification, and an unchanged export passed at the direct paths; manifest and database hashes stayed identical."
+  ]
+}

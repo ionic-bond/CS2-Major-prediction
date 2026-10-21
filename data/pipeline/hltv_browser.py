@@ -1,6 +1,7 @@
 """Isolated Chrome transport for public HLTV pages; optional websocket-client dependency."""
 
 from base64 import b64decode
+from collections import Counter
 import json
 import os
 from pathlib import Path
@@ -116,7 +117,7 @@ class HltvBrowser(HttpCache):
             time.sleep(0.25)
         if target is None:
             raise FetchError("Chrome debugging endpoint did not start within 15 seconds")
-        self.channel = websocket.create_connection(target["webSocketDebuggerUrl"], timeout=5, suppress_origin=True)
+        self.channel = websocket.create_connection(target["webSocketDebuggerUrl"], timeout=15, suppress_origin=True)
         info = self._call("Browser.getVersion")
         self.browser_info = {key: info.get(key) for key in ("product", "protocolVersion", "userAgent")}
         self.browser_info["webdriver"] = self._call("Runtime.evaluate", {"expression": "navigator.webdriver", "returnByValue": True}).get("result", {}).get("value")
@@ -126,11 +127,27 @@ class HltvBrowser(HttpCache):
     def _call(self, method, params=None):
         self.sequence += 1
         message_id = self.sequence
+        started = time.monotonic()
+        events = Counter()
+        dialogs = []
+        loading_errors = []
+        def remember_failure(error):
+            self.lifecycle["last_protocol_failure"] = {
+                "method": method, "at": utc_now(), "seconds": round(time.monotonic() - started, 3),
+                "error": str(error), "events": dict(events), "dialogs": dialogs,
+                "document_loading_errors": loading_errors}
         try:
             self.channel.send(json.dumps({"id": message_id, "method": method, "params": params or {}}))
             deadline = time.monotonic() + 15
             while time.monotonic() < deadline:
                 message = json.loads(self.channel.recv())
+                event_name = message.get("method")
+                if event_name:
+                    events[event_name] += 1
+                if event_name == "Page.javascriptDialogOpening":
+                    dialogs.append({"type": message["params"].get("type")})
+                if event_name == "Network.loadingFailed" and message["params"].get("type") == "Document":
+                    loading_errors.append(message["params"].get("errorText"))
                 if message.get("method") == "Network.responseReceived":
                     event = message["params"]
                     if event.get("type") == "Document":
@@ -142,11 +159,14 @@ class HltvBrowser(HttpCache):
                     if "error" in message:
                         raise FetchError("Chrome protocol error: " + str(message["error"]))
                     return message.get("result", {})
-        except FetchError:
+        except FetchError as error:
+            remember_failure(error)
             raise
         except Exception as error:
-            raise FetchError("Chrome connection failed: " + str(error)) from error
-        raise FetchError("Chrome protocol response timed out")
+            remember_failure(error)
+            raise FetchError("Chrome connection failed during " + method + ": " + str(error)) from error
+        remember_failure("protocol response timed out")
+        raise FetchError("Chrome protocol response timed out during " + method)
 
     def get(self, url, *, refresh=False):
         parsed = urlsplit(url)

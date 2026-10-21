@@ -1,45 +1,43 @@
-# Collection plan
+# Data collection plan
 
-Current design decisions: 2026-10-21. This is a plan and readiness record; it does not start a collection job. Follow the [runbook](runbook.md) for execution and the [contract](contract.md) for field meanings.
+Current decisions: 2026-10-22. Follow the project priorities in [the Agent entry point](../README.md). Use the existing data to build and evaluate a prediction baseline; further collection should answer a concrete modeling need.
 
-## Source selection
+## Current dataset
 
-| Modeling layer | Default source | Required observations |
-|---|---|---|
-| Team baseline | HLTV match pages | Opponents, date, event, format, series result, map scores, vetoes, and LAN/online context when available |
-| Player map performance | The same HLTV match pages | Historical lineup and stable IDs, per-map K-D, ADR, KAST, Rating, rounds, and source-specific supplementary columns |
-| Advanced features | Select fields already present, then fetch additional pages only as needed | HLTV CT/T mapstats, BO3 player aggregates and game/round summaries, or selectively parsed demos |
+Canonical JSONL lives in `data/datasets/`, grouped by source family and UTC month. Analysis reads it directly. `data/processed/history.sqlite3` is the local collector work database; raw HTTP cache, run reports, and stage snapshots are also local.
 
-Reuse results and player records from one HLTV match-page request. There is currently no demonstrated first-layer information requirement that makes a duplicate BO3 crawl mandatory. BO3's structured batch list can be useful if a future team-only historical window is much larger than the player-data window; this is an efficiency option, not evidence of superior prediction data.
+| Records | HLTV | BO3 sample | Valve rankings |
+|---|---:|---:|---:|
+| Matches | 9,928 | 12 | — |
+| Player statistics, series and map | 320,225 | 190 | — |
+| Dated ranking entries | — | — | 4,792 |
 
-BO3 remains an optional supplement, fallback candidate, and source for controlled comparisons. Its existing player-stat response already includes fields such as `first_kills`, `first_death`, `trade_kills`, `trade_death`, `clutches`, `multikills`, and `utility_value`. These are retained in `source_metrics` without an extra request when that response is collected. Their definitions and predictive value still need validation.
+Active observations are from 2026: matches start January 3–October 20, rankings run January 5–October 5. The H1 rebuild replaced the older HLTV imports. All 985 previous match/player observations remain in separate `legacy_replacements.jsonl` archives, with their original Rating semantics. They are not mixed into current training rows. 2025 data remains only in the original Cologne inputs and local rollback material.
 
-The layers describe modeling priorities, not separate passes that throw away other fields. Retain useful fields delivered in an existing response. Do not concatenate cross-site Rating/ADR/KAST observations into one player time series without resolving semantics and identities.
+January–June used fresh monthly result scans. June 10–October 20 used frozen candidates plus refreshed recent pages and date boundaries. These checks account for the selected candidates; later provider corrections are possible. At this checkpoint no collection job is left running or scheduled.
 
-Valve's dated VRS snapshots are a separate external ranking reference, not a second source required to reproduce match results. Their use in the model remains subject to evaluation.
+## Source choices
 
-## Readiness
-
-| Component | Current state |
+| Modeling need | Source and scope |
 |---|---|
-| HLTV result discovery and match pages | Implemented and tested on live bounded samples, including BO1/BO3/BO5 and Default map awards |
-| HLTV series and per-map `Both` player tables | Implemented, source-ID based, cached, replayable, and quality-checked |
-| HLTV CT/T advanced mapstats | Real page retrieved and cached; production parser/automatic collection not implemented |
-| BO3 result/detail/player-stat flow | Implemented; some matches lack parsed demo/player data |
-| BO3 raw round/game responses | Optional `--rounds` path works; no complete normalized event stream |
-| BO3 lightweight list-only backfill | Possible API strategy, not an implemented CLI mode |
-| Valve latest/historical rankings | Implemented with pinned commit references |
-| Demo event/tick parsing | Optional future work; no integrated demo parser or guaranteed demo availability |
-| Cross-source match/player mapping | Not implemented; same real matches can exist under two sources |
-| Historical backfill | Not complete; live tests and result-list scans are not a full detail/player backfill |
-| Singapore stage models and registered rosters | Not finalized; no stage prediction has been published |
+| Team strength, maps and BP | HLTV match pages: dated opponents, series results, map scores, vetoes, actual lineups and event context |
+| Player performance and stability | The same pages' series/per-map `Both` tables: K-D, ADR, KAST, Rating and source metrics |
+| External ranking baseline | Dated Valve VRS entries with source commits and lineups |
+| A specific advanced feature or fallback | BO3 or additional HLTV pages, only when needed for an experiment |
 
-The [HLTV experiment](../research/hltv_collection_2026-10-20.md) records the small live sample, raw response evidence, source differences, and browser constraints. The [rating research](../research/ratings_comparison_2026-10-20.md) does not establish a predictive winner between HLTV and BO3.
+One HLTV match page supplies the first two layers. A second complete BO3 crawl is not part of the current plan. The BO3 sample and its extra fields are available for comparisons; cross-source matches and rating scales must be resolved before combining data. CT/T and demo/round parsers are not implemented and are not prerequisites for the baseline.
 
-## Before a large collection run
+## Limits that affect modeling
 
-Choose the historical window and meaningful competition scope based on the modeling task. Retain enough opponents to estimate strength rather than restricting every match to a provisional Major roster. Keep missing-data and forfeit flags so the model can select appropriate training rows later.
+- 9,762 HLTV matches have complete player tables. Of the 166 incomplete records, 160 have no played maps and six have verified missing map statistics. Exclude Default/forfeit map awards from played-map training.
+- Verified gaps: `hltv:2390404` (Nuke), `2390814` (Overpass), `2390818` (Nuke), `2391632` (Mirage), `2391887` (Ancient), and `2392111` (Inferno). The two older full maps for `2390814` and `2390818` remain in their archives; using them requires preserving their distinct observation/Rating context.
+- Current historical pages may contain recalculated Rating values. A date-filtered export does not reconstruct exactly what was knowable at the past cutoff.
+- Provider IDs are source-specific. The 12 BO3 sample matches may overlap HLTV; no automatic cross-source merge is performed.
 
-Use a bounded live sample and cached replay to check current upstream structure, identities, fields, and speed. Existing timing probes are stored under `data/raw/diagnostics/`; they are dated observations, not runtime guarantees. Scale match details, extra mapstats pages, BO3 round requests, and demo parsing separately when estimating cost.
+See the [data contract](contract.md) for field meanings and the [runbook](runbook.md) for collection, safe pause, verification, and export commands.
 
-Do not select an annual window or launch multiple full-source crawls just to fill directories. Preserve the shared raw cache and versioned schema across Majors; freeze a distinct manifest for each stage prediction.
+## Next work and evidence
+
+Build the time-ordered team baseline described in the [modeling guide](../modeling.md), then measure whether map, roster, and player features improve held-out probabilities. Refresh recent results when preparing an actual stage prediction; freeze the data used for that prediction.
+
+The [collection audit](../../../data/reports/collection_audit_2026-10-22.json) records the pre-JSONL cleanup checkpoint. The [JSONL migration audit](../../../data/reports/jsonl_migration_2026-10-22.json) records lossless export/restoration. Both describe their audited state; the current paths are listed above. Detailed completed work is in the [collection history](../research/collection_history_2026-10-22.md); consult it for a relevant gap, parser issue, or coverage question.
