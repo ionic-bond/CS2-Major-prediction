@@ -6,6 +6,8 @@ This is the technical entry point. Human-facing material lives in the repository
 
 This is a small personal project whose goal is better Pick'Em predictions. Prefer a clear working baseline, useful data, and measured improvements in probability estimates. Spend engineering effort where it helps that goal.
 
+Keep continuous numerical information continuous throughout calculations. Do not replace it with bins, tiers, threshold flags, or hard sample-size gates. Grouping and rounding are for presentation only; see the [modeling guide](modeling.md) for numerical modeling constraints.
+
 Use the simplest structure that meets today's needs. Add layers, abstractions, dependencies, or defensive machinery only for a concrete observed problem. Future version directories, general compatibility systems, and speculative extensibility can wait until needed; a small later migration is acceptable. Keep the checks that prevent losing collected data or drawing invalid statistical conclusions.
 
 Current decisions belong in the short task documents below. Completed experiments and operational history belong in `research/` or local run reports; consult them when investigating the relevant issue.

@@ -3,6 +3,7 @@
 ## Project priorities
 
 - This is a personal prediction project. Put effort into data quality, time-ordered evaluation, probability calibration, and maximizing the chance of passing Pick'Em.
+- Preserve continuous numerical information throughout calculations. Do not bin it into tiers, threshold labels, or hard sample-size gates; grouping and rounding are for display only. Genuinely categorical source facts and official competition rules retain their actual meaning.
 - Keep the structure direct and sized to the work needed now. Add a directory, abstraction, dependency, or safeguard only when it solves a concrete current problem; name that problem when proposing it.
 - Do not prebuild version directories, compatibility frameworks, extension points, or long-term infrastructure for hypothetical needs. Handle an actual incompatible change when it occurs; a small migration later is acceptable.
 - Keep checks that protect collected data or prediction validity, such as atomic match writes, source semantics, cutoff handling, and reproducible inputs. Scale verification to the actual change.

@@ -8,6 +8,13 @@ These are design constraints, not an implemented or validated Singapore model. T
 
 Start with the smallest working baseline and improve it using held-out evidence. Add model components, data collection, or infrastructure when they answer a specific prediction question; the stages below are experiments to prioritize, not a checklist of systems to build in advance.
 
+## Continuous numerical modeling
+
+- Preserve continuous information and available precision in feature construction, fitting, calibration, prediction, and Pick'Em optimization. Do not discretize numerical values into bins, tiers, threshold flags, or descriptive labels. Display-only grouping or rounding must not feed back into calculations or model selection.
+- Use justified continuous transformations, smooth time weighting, and continuous shrinkage. Small samples should produce gradually stronger shrinkage or greater uncertainty, not an arbitrary sample-count switch. Do not add step bonuses for a chosen recent-period cutoff. Free weights, decay rates, and shrinkage strengths need a stated statistical rationale or time-ordered held-out evidence.
+- Keep genuinely categorical facts, such as map identity, BO1/BO3 format, and observed wins/losses, and official competition rules as defined. Time cutoffs for information availability and temporal evaluation are information boundaries, not substitutes for continuous recency features.
+- Reliability diagrams may group predictions for display. Fit and assess probability models using the underlying numerical predictions; do not use display bins as calibration inputs or selection criteria.
+
 ## Build evidence in stages
 
 1. Establish a team-level baseline using dated results, opposition strength, format, maps, and LAN/online context when known.
