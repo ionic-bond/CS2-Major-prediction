@@ -1,6 +1,6 @@
 # Data collection plan
 
-Current decisions: 2026-10-22. Follow the project priorities in [the Agent entry point](../README.md). Use the existing data to build and evaluate a prediction baseline; further collection should answer a concrete modeling need.
+Current decisions: 2026-11-19. Follow the project priorities in [the Agent entry point](../README.md). Use the existing data to build and evaluate the Singapore unified model; further collection should answer a concrete modeling need.
 
 ## Current dataset
 
@@ -8,11 +8,11 @@ Canonical JSONL lives in `data/datasets/`, grouped by source family and UTC mont
 
 | Records | HLTV | BO3 sample | Valve rankings |
 |---|---:|---:|---:|
-| Matches | 9,928 | 12 | — |
-| Player statistics, series and map | 320,225 | 190 | — |
+| Matches | 10,316 | 12 | — |
+| Player statistics, series and map | 333,450 | 190 | — |
 | Dated ranking entries | — | — | 4,792 |
 
-Active observations are from 2026: matches start January 3–October 20, rankings run January 5–October 5. The H1 rebuild replaced the older HLTV imports. All 985 previous match/player observations remain in separate `legacy_replacements.jsonl` archives, with their original Rating semantics. They are not mixed into current training rows. 2025 data remains only in the original Cologne inputs and local rollback material.
+Active observations are from 2026: matches start January 3–November 2, rankings run January 5–October 5. The H1 rebuild replaced the older HLTV imports. All 985 previous match/player observations remain in separate `legacy_replacements.jsonl` archives, with their original Rating semantics. They are not mixed into current training rows. 2025 data remains only in the original Cologne inputs and local rollback material.
 
 January–June used fresh monthly result scans. June 10–October 20 used frozen candidates plus refreshed recent pages and date boundaries. These checks account for the selected candidates; later provider corrections are possible. At this checkpoint no collection job is left running or scheduled.
 
@@ -38,6 +38,8 @@ See the [data contract](contract.md) for field meanings and the [runbook](runboo
 
 ## Next work and evidence
 
-Build the time-ordered team baseline described in the [modeling guide](../modeling.md), then measure whether map, roster, and player features improve held-out probabilities. Refresh recent results when preparing an actual stage prediction; freeze the data used for that prediction.
+Build the unified map-outcome model described in the [modeling guide](../modeling.md) and the [implementation plan](../research/singapore_model_implementation_plan_2026-11-19.md). Preserve match date, data-availability date, LAN and event context, actual five-player lineups, and the 2026-11-02 VRS cutoff marker so the recent, long-term, and LAN/Major states can be recomputed together. Refresh recent results when preparing an actual stage prediction and freeze the data used for that prediction.
+
+The current dataset is sufficient for a runnable baseline and a population volatility estimate. It contains only the 2026 historical window and one Major event in the canonical HLTV rows, so final cross-Major calibration requires importing the relevant earlier Major windows with the same schema. The model implementation must report this limitation instead of presenting the first fit as a validated final model.
 
 The [collection audit](../../../data/reports/collection_audit_2026-10-22.json) records the pre-JSONL cleanup checkpoint. The [JSONL migration audit](../../../data/reports/jsonl_migration_2026-10-22.json) records lossless export/restoration. Both describe their audited state; the current paths are listed above. Detailed completed work is in the [collection history](../research/collection_history_2026-10-22.md); consult it for a relevant gap, parser issue, or coverage question.

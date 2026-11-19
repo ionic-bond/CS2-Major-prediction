@@ -1,0 +1,213 @@
+<div id="time-decay-functions" class="tdf-root">
+  <style>
+    #time-decay-functions {
+      color: var(--foreground);
+      font: 400 14px/1.4 var(--font-family, system-ui, sans-serif);
+      width: 100%;
+    }
+    #time-decay-functions .tdf-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    #time-decay-functions label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    #time-decay-functions output {
+      min-width: 48px;
+      font-variant-numeric: tabular-nums;
+    }
+    #time-decay-functions input[type="range"] {
+      width: 150px;
+    }
+    #time-decay-functions .tdf-plots {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    #time-decay-functions svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+    #time-decay-functions .tdf-axis,
+    #time-decay-functions .tdf-grid {
+      stroke: var(--border);
+      stroke-width: 1;
+      shape-rendering: crispEdges;
+    }
+    #time-decay-functions .tdf-grid {
+      opacity: .45;
+    }
+    #time-decay-functions text {
+      fill: var(--foreground);
+      font-size: 12px;
+    }
+    #time-decay-functions .tdf-muted {
+      fill: var(--muted-foreground);
+    }
+    #time-decay-functions .tdf-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    #time-decay-functions .tdf-line {
+      fill: none;
+      stroke-width: 2;
+    }
+    #time-decay-functions .tdf-line.tdf-selected {
+      stroke-width: 3;
+    }
+    #time-decay-functions .tdf-legend-line {
+      stroke-width: 3;
+    }
+    @media (max-width: 620px) {
+      #time-decay-functions .tdf-plots {
+        grid-template-columns: 1fr;
+      }
+      #time-decay-functions input[type="range"] {
+        width: 130px;
+      }
+    }
+  </style>
+
+  <div class="tdf-controls">
+    <label>Selected half-life <output id="tdf-half-life-value">90 days</output>
+      <input id="tdf-half-life" type="range" min="30" max="180" step="15" value="90" aria-label="Selected half-life in days">
+    </label>
+    <label>Replacement retention <output id="tdf-rho-value">0.70</output>
+      <input id="tdf-rho" type="range" min="0.50" max="0.90" step="0.05" value="0.70" aria-label="Retention per replaced player">
+    </label>
+  </div>
+
+  <div class="tdf-plots">
+    <svg id="tdf-time-chart" role="img" aria-label="Exponential historical time decay curves"></svg>
+    <svg id="tdf-roster-chart" role="img" aria-label="Roster replacement retention curves"></svg>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById('time-decay-functions');
+      const timeSvg = document.getElementById('tdf-time-chart');
+      const rosterSvg = document.getElementById('tdf-roster-chart');
+      const halfLifeInput = document.getElementById('tdf-half-life');
+      const rhoInput = document.getElementById('tdf-rho');
+      const halfLifeValue = document.getElementById('tdf-half-life-value');
+      const rhoValue = document.getElementById('tdf-rho-value');
+      const lineColors = ['var(--viz-series-1)', 'var(--viz-series-2)', 'var(--viz-series-3)', 'var(--viz-series-4)'];
+      const halfLives = [30, 60, 90, 180];
+      const rhos = [0.60, 0.70, 0.80];
+
+      function svgElement(name, attributes, text) {
+        const element = document.createElementNS('http://www.w3.org/2000/svg', name);
+        Object.entries(attributes || {}).forEach(([key, value]) => element.setAttribute(key, value));
+        if (text !== undefined) element.textContent = text;
+        return element;
+      }
+
+      function clear(svg, width, height) {
+        svg.replaceChildren();
+        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        svg.append(svgElement('title', {}, svg.getAttribute('aria-label')));
+      }
+
+      function linePath(points) {
+        return points.map((point, index) => `${index ? 'L' : 'M'}${point[0].toFixed(2)},${point[1].toFixed(2)}`).join(' ');
+      }
+
+      function drawTimeChart() {
+        const width = Math.max(320, root.clientWidth / 2 - 10);
+        const height = 320;
+        const margin = {top: 34, right: 18, bottom: 46, left: 48};
+        const x0 = margin.left;
+        const x1 = width - margin.right;
+        const y0 = margin.top;
+        const y1 = height - margin.bottom;
+        const sx = days => x0 + days / 365 * (x1 - x0);
+        const sy = value => y1 - value * (y1 - y0);
+        clear(timeSvg, width, height);
+        timeSvg.append(svgElement('text', {x: x0, y: 18, class: 'tdf-title'}, 'Historical time decay'));
+
+        [0, 0.25, 0.5, 0.75, 1].forEach(value => {
+          const y = sy(value);
+          timeSvg.append(svgElement('line', {x1: x0, x2: x1, y1: y, y2: y, class: 'tdf-grid'}));
+          timeSvg.append(svgElement('text', {x: x0 - 8, y: y + 4, 'text-anchor': 'end', class: 'tdf-muted'}, value.toFixed(2)));
+        });
+        [0, 90, 180, 270, 365].forEach(days => {
+          const x = sx(days);
+          timeSvg.append(svgElement('line', {x1: x, x2: x, y1: y0, y2: y1, class: 'tdf-grid'}));
+          timeSvg.append(svgElement('text', {x, y: y1 + 20, 'text-anchor': 'middle', class: 'tdf-muted'}, String(days)));
+        });
+        timeSvg.append(svgElement('line', {x1: x0, x2: x1, y1: y1, y2: y1, class: 'tdf-axis'}));
+        timeSvg.append(svgElement('line', {x1: x0, x2: x0, y1: y0, y2: y1, class: 'tdf-axis'}));
+        timeSvg.append(svgElement('text', {x: (x0 + x1) / 2, y: height - 8, 'text-anchor': 'middle', class: 'tdf-muted'}, 'Days since match'));
+        timeSvg.append(svgElement('text', {x: 14, y: (y0 + y1) / 2, transform: `rotate(-90 14 ${(y0 + y1) / 2})`, 'text-anchor': 'middle', class: 'tdf-muted'}, 'Weight'));
+
+        const selected = Number(halfLifeInput.value);
+        halfLives.forEach((halfLife, index) => {
+          const points = [];
+          for (let days = 0; days <= 365; days += 5) points.push([sx(days), sy(Math.pow(2, -days / halfLife))]);
+          const path = svgElement('path', {d: linePath(points), class: `tdf-line ${halfLife === selected ? 'tdf-selected' : ''}`, stroke: lineColors[index]});
+          timeSvg.append(path);
+          const labelY = sy(Math.pow(2, -355 / halfLife));
+          timeSvg.append(svgElement('text', {x: x1 - 2, y: labelY - 5, 'text-anchor': 'end', class: 'tdf-muted'}, `H=${halfLife}d`));
+        });
+      }
+
+      function drawRosterChart() {
+        const width = Math.max(320, root.clientWidth / 2 - 10);
+        const height = 320;
+        const margin = {top: 34, right: 18, bottom: 46, left: 48};
+        const x0 = margin.left;
+        const x1 = width - margin.right;
+        const y0 = margin.top;
+        const y1 = height - margin.bottom;
+        const sx = replacements => x0 + replacements / 5 * (x1 - x0);
+        const sy = value => y1 - value * (y1 - y0);
+        clear(rosterSvg, width, height);
+        rosterSvg.append(svgElement('text', {x: x0, y: 18, class: 'tdf-title'}, 'Lineup retention (same rule for all changes)'));
+        [0, 0.25, 0.5, 0.75, 1].forEach(value => {
+          const y = sy(value);
+          rosterSvg.append(svgElement('line', {x1: x0, x2: x1, y1: y, y2: y, class: 'tdf-grid'}));
+          rosterSvg.append(svgElement('text', {x: x0 - 8, y: y + 4, 'text-anchor': 'end', class: 'tdf-muted'}, value.toFixed(2)));
+        });
+        for (let replacements = 0; replacements <= 5; replacements += 1) {
+          const x = sx(replacements);
+          rosterSvg.append(svgElement('line', {x1: x, x2: x, y1: y0, y2: y1, class: 'tdf-grid'}));
+          rosterSvg.append(svgElement('text', {x, y: y1 + 20, 'text-anchor': 'middle', class: 'tdf-muted'}, String(replacements)));
+        }
+        rosterSvg.append(svgElement('line', {x1: x0, x2: x1, y1: y1, y2: y1, class: 'tdf-axis'}));
+        rosterSvg.append(svgElement('line', {x1: x0, x2: x0, y1: y0, y2: y1, class: 'tdf-axis'}));
+        rosterSvg.append(svgElement('text', {x: (x0 + x1) / 2, y: height - 8, 'text-anchor': 'middle', class: 'tdf-muted'}, 'Players replaced'));
+        rosterSvg.append(svgElement('text', {x: 14, y: (y0 + y1) / 2, transform: `rotate(-90 14 ${(y0 + y1) / 2})`, 'text-anchor': 'middle', class: 'tdf-muted'}, 'Weight'));
+
+        const selected = Number(rhoInput.value);
+        rhos.forEach((rho, index) => {
+          const points = [];
+          for (let replacements = 0; replacements <= 5; replacements += 1) points.push([sx(replacements), sy(Math.pow(rho, replacements))]);
+          rosterSvg.append(svgElement('path', {d: linePath(points), class: `tdf-line ${Math.abs(rho - selected) < 0.001 ? 'tdf-selected' : ''}`, stroke: lineColors[index]}));
+          rosterSvg.append(svgElement('text', {x: x1 - 2, y: sy(Math.pow(rho, 5)) - 5, 'text-anchor': 'end', class: 'tdf-muted'}, `r=${rho.toFixed(2)}`));
+        });
+      }
+
+      function draw() {
+        const halfLife = Number(halfLifeInput.value);
+        const rho = Number(rhoInput.value);
+        halfLifeValue.textContent = `${halfLife} days`;
+        rhoValue.textContent = rho.toFixed(2);
+        drawTimeChart();
+        drawRosterChart();
+      }
+
+      halfLifeInput.addEventListener('input', draw);
+      rhoInput.addEventListener('input', draw);
+      new ResizeObserver(draw).observe(root);
+      draw();
+    })();
+  </script>
+</div>
