@@ -1,0 +1,1 @@
+"""Singapore Major prediction artifacts."""

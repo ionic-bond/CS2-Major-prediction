@@ -2,7 +2,10 @@
   "event": "2026_singapore",
   "name": "PGL Major Singapore 2026",
   "shared_data": "../data",
-  "participants_status": "unconfirmed",
-  "teams": [],
-  "stage_snapshots": {}
+  "stage_snapshots": {
+    "stage1": {
+      "config": "stage1/stage.json",
+      "result": "stage1/result.json"
+    }
+  }
 }

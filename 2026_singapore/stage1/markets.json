@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "source": "polymarket_gamma",
+  "snapshot_at": "2026-11-19T17:07:01Z",
+  "lambda_match": 0.25,
+  "note": "Current first-round BO1 snapshots. The 0.25 logit weight is a conservative provisional prior because this repository has no frozen historical match-market outcomes for fitting.",
+  "markets": [
+    {
+      "team1_id": "hltv:4411",
+      "team2_id": "hltv:12376",
+      "market_probability": 0.565,
+      "lambda_match": 0.25,
+      "market_id": "6928142",
+      "market_slug": "cs2-nip-m80-2026-11-24",
+      "outcome_prices": [0.565, 0.435],
+      "snapshot_at": "2026-11-19T17:05:01.846977Z"
+    },
+    {
+      "team1_id": "hltv:12467",
+      "team2_id": "hltv:13926",
+      "market_probability": 0.635,
+      "lambda_match": 0.25,
+      "market_id": "6928143",
+      "market_slug": "cs2-pv-dendel-2026-11-24",
+      "outcome_prices": [0.635, 0.365],
+      "snapshot_at": "2026-11-19T17:07:01.411874Z"
+    },
+    {
+      "team1_id": "hltv:7175",
+      "team2_id": "hltv:9455",
+      "market_probability": 0.66,
+      "lambda_match": 0.25,
+      "market_id": "6928141",
+      "market_slug": "cs2-hero-imp11-2026-11-24",
+      "outcome_prices": [0.66, 0.34],
+      "snapshot_at": "2026-11-19T17:07:01.411874Z"
+    },
+    {
+      "team1_id": "hltv:6667",
+      "team2_id": "hltv:12257",
+      "market_probability": 0.655,
+      "lambda_match": 0.25,
+      "market_id": "6928140",
+      "market_slug": "cs2-faze-wc1-2026-11-24",
+      "outcome_prices": [0.655, 0.345],
+      "snapshot_at": "2026-11-19T17:07:01.411874Z"
+    },
+    {
+      "team1_id": "hltv:5973",
+      "team2_id": "hltv:12878",
+      "market_probability": 0.555,
+      "lambda_match": 0.25,
+      "market_id": "6928144",
+      "market_slug": "cs2-tl1-gosh-2026-11-24",
+      "market_outcome_team2": "GOSH (BC.Game)",
+      "outcome_prices": [0.555, 0.445],
+      "snapshot_at": "2026-11-19T17:07:01.411874Z"
+    },
+    {
+      "team1_id": "hltv:11251",
+      "team2_id": "hltv:12774",
+      "market_probability": 0.565,
+      "lambda_match": 0.25,
+      "market_id": "6928139",
+      "market_slug": "cs2-ef1-fly-2026-11-24",
+      "outcome_prices": [0.565, 0.435],
+      "snapshot_at": "2026-11-19T17:07:01.411874Z"
+    },
+    {
+      "team1_id": "hltv:8474",
+      "team2_id": "hltv:12646",
+      "market_probability": 0.81,
+      "lambda_match": 0.25,
+      "market_id": "6928137",
+      "market_slug": "cs2-100t-cw-2026-11-24",
+      "outcome_prices": [0.81, 0.19],
+      "snapshot_at": "2026-11-19T17:07:01.411874Z"
+    },
+    {
+      "team1_id": "hltv:9996",
+      "team2_id": "hltv:8840",
+      "market_probability": 0.62,
+      "lambda_match": 0.25,
+      "market_id": "6928138",
+      "market_slug": "cs2-9z-lvg-2026-11-24",
+      "outcome_prices": [0.62, 0.38],
+      "snapshot_at": "2026-11-19T16:57:02.270082Z"
+    }
+  ]
+}

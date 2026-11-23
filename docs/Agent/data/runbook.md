@@ -48,7 +48,7 @@ python -m data.pipeline --offline sync-hltv --since 2026-10-20 --until 2026-10-2
 
 Use `--until` as an explicit UTC date boundary. Refresh recent matches to incorporate delayed statistics or corrections. `--max-matches` limits attempted matches and `--max-pages` limits list scanning; hitting a bound is not a completed historical backfill.
 
-HLTV uses the collector's own persistent browser profile under `data/raw/browser/hltv/profile/`, an ordinary hidden browser window, direct networking by default, and at least a two-second request interval. It does not import a personal browser profile or account. `--browser` selects the executable; `--browser-proxy direct/system/environment` selects proxy behavior. Windows sandbox IPC errors and upstream HTTP verification failures are distinct; use an environment allowed to launch the browser. The earlier failed headless test also changed proxy settings and does not establish that headless operation is impossible.
+HLTV uses the collector's own persistent browser profile under `data/raw/browser/hltv/profile/`, an ordinary hidden browser window, direct networking by default, and at least a two-second request interval. It does not import a personal browser profile or account. `--browser` selects the executable; `--browser-profile` can place the isolated profile on another writable volume; `--browser-proxy direct/system/environment` selects proxy behavior. On a Windows environment that denies the browser network sandbox, `--browser-no-sandbox` can be used with that isolated profile for the collection process. Windows sandbox IPC errors and upstream HTTP verification failures are distinct; use an environment allowed to launch the browser. The earlier failed headless test also changed proxy settings and does not establish that headless operation is impossible.
 
 Commands close their browser on completion, failure, or interruption. Verification pages are explicit failures and are not successful empty results. The collector prefers actual HTTP response bodies and marks a rendered-DOM fallback in `representation`. Run collection commands sharing one data root sequentially.
 
@@ -74,11 +74,22 @@ For individually verified upstream gaps, add repeated `--allow-partial-legacy hl
 
 When the user requests active monitoring, keep the command in a tracked tool session and wait in 30–60 second intervals. Read the database for committed progress and inspect the final report on exit, including browser cleanup. An independently launched OS process can outlive a conversation turn; its exit does not by itself wake the assistant. Do not imply that a returned final answer leaves ongoing assistant supervision in place.
 
-For this rebuild the user subsequently requested ten-minute progress inspections/summaries. Short tool waits may be grouped into that cadence without polling the database each minute. Still handle process exit/errors and user pauses early; retain the active native session handle. This is active-turn monitoring, not a deployed scheduler.
-
 Current production scope is match-page series/map `Both` scoreboards, including traditional and economic-adjusted columns kept separately. The advanced mapstats page was fetched successfully but its CT/T tables are not yet integrated into production collection. See the [dated access experiment](../research/hltv_collection_2026-10-20.md).
 
 ## Optional sources
+
+### Polymarket market history
+
+The offline market normalizer and public CLOB price-history collector live in `data/pipeline/polymarket.py`. It resolves Gamma market metadata, fetches both binary token histories, and writes paired time-bucket snapshots. Run it only with an explicit market manifest and output path:
+
+```powershell
+python -m data.pipeline.polymarket `
+  --market-file 2026_singapore/stage1/markets.json `
+  --output data/reports/runs/singapore-stage1-market-refresh.json `
+  --interval max --bucket-seconds 3600 --refresh
+```
+
+The example writes a new collection under local run reports. The published Stage 1 forecast uses its frozen input. Preserve the response hashes and record unknown historical depth or spread when the source omits those fields. [Frozen Stage 1 odds](../../../2026_singapore/stage1/market_history.json)
 
 ```powershell
 # BO3 and Valve connectivity probe; this does not probe HLTV browser access.

@@ -2,7 +2,7 @@
 
 用比赛数据、概率模型和赛事模拟，研究怎样填写 CS2 Major Pick'Em，才能提高通行证竞猜过关的概率。
 
-当前正在准备新加坡 Major 的数据与模型，尚未发布各阶段预测。参赛队、注册阵容、种子和竞猜规则确认后，再生成对应阶段的方案。
+新加坡 Major 第一阶段竞猜已定稿。阶段页收录填法、独立模拟结果、首轮赔率和分地图胜率。[新加坡 Stage 1 预测](2026_singapore/stage1/README.md)
 
 ## 大概的方法
 
@@ -18,7 +18,7 @@
 
 | 赛事与阶段 | 推荐组合简记 | 当时模型估计的过关率 | 实际结果 |
 |---|---|---:|---|
-| 2026 Singapore | 准备中，尚无阶段预测 | — | — |
+| [2026 Singapore Stage 1](2026_singapore/stage1/README.md) | 3-0 选 HEROIC、100 Thieves。3-1/3-2 选 Eternal Fire、PARIVISION、NiP、Liquid、FaZe、9z。0-3 选 Chinggis Warriors、Lynn Vision | 25.64% | 待赛后记录 |
 | [2026 Cologne Stage 1](2026_cologne/stage1/README.md) | GL、BB 3-0；B8、HR、TL、LQ、BG、MB 3-1/3-2；TdU、GG 0-3 | 38.0% | 5 分，达标 |
 | [2026 Cologne Stage 2](2026_cologne/stage2/README.md) | SP、G2 3-0；FT、LG、AS、9z、BG、MT 3-1/3-2；FQ、M8 0-3 | 40.4% | 5 分，达标 |
 | [2026 Cologne Stage 3](2026_cologne/stage3/README.md) | VIT、SP 3-0；NAVI、FAL、FUR、AUR、MOUZ、LEG 3-1/3-2；B8、MON 0-3 | 36.4% | 4 分，未达标 |
@@ -41,6 +41,6 @@ docs/Agent/            Agent 工作所需的采集说明、研究与设计资料
 AGENTS.md              Agent 文档入口和项目约定
 ```
 
-规范数据保存在 `data/datasets/` 并随 Git 共享，分析环境可直接读取；原始响应、SQLite 工作库和阶段快照保存在本地。采集操作与算法研究细节由 Agent 工作文档维护；需要讨论某个设计时，再单独整理面向人的说明。
+规范数据保存在 `data/datasets/` 并随 Git 共享，分析环境可直接读取。原始响应、SQLite 工作库和采集快照保存在本地。各阶段目录保存正式模型说明、配套图表和结果，共用的采集手册和研究记录在 `docs/Agent/`。
 
 这是一个个人预测项目，结构和工具以当前需要为准，主要精力放在数据质量、模型验证和竞猜过关率上。有实际需求时再扩展。

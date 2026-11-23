@@ -1,0 +1,31 @@
+{
+  "stage": "PGL Major Singapore 2026 Stage 1",
+  "cutoff": "2026-11-24T04:00:00Z",
+  "map_pool": [
+    "Ancient",
+    "Anubis",
+    "Cache",
+    "Dust2",
+    "Inferno",
+    "Mirage",
+    "Nuke"
+  ],
+  "teams": [
+    {"id": "hltv:4411", "name": "Ninjas in Pyjamas", "seed": 1, "players": ["hltv:23372", "hltv:20878", "hltv:19899", "hltv:10994", "hltv:14148"]},
+    {"id": "hltv:12467", "name": "PARIVISION", "seed": 2, "players": ["hltv:22471", "hltv:23685", "hltv:13776", "hltv:12732", "hltv:8528"]},
+    {"id": "hltv:7175", "name": "HEROIC", "seed": 3, "players": ["hltv:21163", "hltv:21983", "hltv:13666", "hltv:20119", "hltv:21239"]},
+    {"id": "hltv:6667", "name": "FaZe", "seed": 4, "players": ["hltv:9960", "hltv:22383", "hltv:22866", "hltv:10394", "hltv:21972"]},
+    {"id": "hltv:5973", "name": "Liquid", "seed": 5, "players": ["hltv:8738", "hltv:11617", "hltv:11630", "hltv:24203", "hltv:8520"]},
+    {"id": "hltv:11251", "name": "Eternal Fire", "seed": 6, "players": ["hltv:22361", "hltv:20968", "hltv:20123", "hltv:16811", "hltv:21452"]},
+    {"id": "hltv:8474", "name": "100 Thieves", "seed": 7, "players": ["hltv:7592", "hltv:8183", "hltv:23397", "hltv:22695", "hltv:21816"]},
+    {"id": "hltv:9996", "name": "9z", "seed": 8, "players": ["hltv:22613", "hltv:14737", "hltv:14736", "hltv:20394", "hltv:12092"]},
+    {"id": "hltv:12376", "name": "M80", "seed": 9, "players": ["hltv:21665", "hltv:22921", "hltv:16599", "hltv:20104", "hltv:15370"]},
+    {"id": "hltv:13926", "name": "DENDELE", "seed": 10, "players": ["hltv:21170", "hltv:21221", "hltv:22911", "hltv:20558", "hltv:21921"]},
+    {"id": "hltv:9455", "name": "Imperial", "seed": 11, "players": ["hltv:12822", "hltv:20183", "hltv:22965", "hltv:22564", "hltv:10566"]},
+    {"id": "hltv:12257", "name": "Wildcard", "seed": 12, "players": ["hltv:18838", "hltv:17353", "hltv:8311", "hltv:17378", "hltv:20018"]},
+    {"id": "hltv:12878", "name": "BC.Game", "seed": 13, "players": ["hltv:20903", "hltv:7998", "hltv:9032", "hltv:21001", "hltv:18545"]},
+    {"id": "hltv:12774", "name": "FlyQuest", "seed": 14, "players": ["hltv:11140", "hltv:18214", "hltv:17384", "hltv:4679", "hltv:11139"]},
+    {"id": "hltv:12646", "name": "Chinggis Warriors", "seed": 15, "players": ["hltv:18638", "hltv:19537", "hltv:25510", "hltv:19229", "hltv:21428"]},
+    {"id": "hltv:8840", "name": "Lynn Vision", "seed": 16, "players": ["hltv:20254", "hltv:18744", "hltv:16551", "hltv:22922", "hltv:23100"]}
+  ]
+}

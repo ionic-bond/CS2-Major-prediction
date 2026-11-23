@@ -1,64 +1,10 @@
 # Modeling and evaluation guide
 
-## Objective
+## Singapore Stage 1
 
-Maximize `P(total Pick'Em score >= the event's passing threshold)` under the event's actual scoring and slot rules. Expected score is a secondary quantity. Match prediction accuracy and the marginal advancement probability of each team do not determine the best joint Pick'Em allocation.
+The stage folder contains the full forecast specification. It records the frozen inputs, weights, roster and player features, market overlay, pairing and veto rules, search scope, seeds and re-run commands. [Stage 1 model and commands](../../2026_singapore/stage1/model.md) · [Published results](../../2026_singapore/stage1/README.md)
 
-These are design constraints, not an implemented or validated Singapore model. The historical Cologne implementations remain untouched.
-
-Start with the smallest working baseline and improve it using held-out evidence. Add model components, data collection, or infrastructure when they answer a specific prediction question; the stages below are experiments to prioritize, not a checklist of systems to build in advance.
-
-## Singapore unified model decision
-
-Singapore will use one joint map-outcome model with three connected strength signals. Parameter fitting and time-ordered checks belong to this same model structure. They do not create separate production model versions.
-
-The match-time score for team `A` on map `m` is represented as:
-
-```text
-score(A, m, t) = recent(A, m, t)
-               + lambda_long * long(A, m, t)
-               + lambda_lan_major * lan_major(A, m, t)
-               + style(A, opponent, m, t)
-```
-
-- `recent` uses all available historical maps with an initial half-life of 75 days.
-- `long` uses all available historical maps with an initial half-life of 365 days. This carries durable team and player strength into the prediction.
-- `lan_major` uses LAN and Major evidence with a long memory. It represents performance in high-pressure events and receives continuous event-information weighting.
-- `style` contains map-specific and opponent-specific interaction terms. It is part of the same outcome model rather than a post-hoc adjustment.
-
-Every historical observation receives the same roster-continuity factor for temporary and permanent changes:
-
-```text
-roster_weight = rho ** replaced_players
-```
-
-The factor applies to the observation's contribution to the relevant state. A substitute lowers the relevance of that lineup's result while preserving the normal evidence from the team's other lineups.
-
-The starting temporal mixture is 0.60 recent and 0.40 long-term. The equivalent observation curve is:
-
-```text
-time_weight(d) = 0.60 * 2 ** (-d / 75)
-               + 0.40 * 2 ** (-d / 365)
-```
-
-For the Singapore VRS cutoff, use the 2026-11-02 standings date as `vrs_cutoff` and keep the date in the frozen prediction manifest. Matches after that date and before the Major begins receive a configurable factor `delta_vrs_post_cutoff` in the `long` and `lan_major` states. They remain fully available to `recent`, because they are direct evidence about current form. The initial value is 0.60.
-
-The cutoff factor is an information-timing feature. It does not remove observations and it does not alter the meaning of the match date. A Singapore Major match itself is high-value event evidence and follows the event-state rules for that stage.
-
-Initial values are working priors. Select decay, state weights, event-information scaling, roster retention, and cutoff discount with rolling time-ordered evaluation while preserving this unified structure.
-
-## Implementation plan
-
-The complete implementation record is in [the Singapore model implementation plan](research/singapore_model_implementation_plan_2026-11-19.md). The production path will keep the following decisions together.
-
-- Fit one weighted, regularized map-outcome model over all available teams. Opponent strength is estimated jointly with team strength, so an out-of-stage opponent still contributes through the same parameter system.
-- Build match probabilities from map abilities and an empirical veto model. Do not treat a BO3 series probability as another single-map conversion.
-- Add lagged player Rating 3.0, the actual five-player lineup, a strongly shrunk five-player residual, team-system continuity, and map-specific opponent style terms. Keep the features continuous and preserve unknown values.
-- Estimate a team-stage latent state from residual volatility. Draw it once per team in each complete Swiss simulation so repeated matches share the same stage condition.
-- Use a global `lambda_match` learned from time-ordered historical Major match markets. Apply it only where a valid market snapshot exists. A Stage 1 prediction uses one frozen stage-lock cutoff for all opening matches.
-- If a Stage 2 advancement market appears, calibrate the simulated advancement margins with a separate `lambda_stage2`. It does not replace individual match probabilities.
-- Generate complete Swiss outcomes with the official pairing and format rules, retain the full simulation rows, and optimize the actual Pick'Em passing probability rather than independent team rankings.
-- Select parameters with rolling event-level evaluation using log loss, Brier score, calibration, and Pick'Em passing probability. A model component enters the final path only after it improves time-ordered evidence.
+The research record summarizes the earlier model, calibration, market and simulator comparisons. [Stage 1 findings](research/singapore_stage1_findings_2026-11-24.md)
 
 ## Continuous numerical modeling
 
@@ -70,7 +16,7 @@ The complete implementation record is in [the Singapore model implementation pla
 ## Build evidence in stages
 
 1. Establish a team-level baseline using dated results, opposition strength, format, maps, and LAN/online context when known.
-2. Test the incremental value of actual lineups, roster continuity, player mean performance, and recent form. Team results already encode some player strength; roster changes and limited team samples can still make player data useful.
+2. Test the incremental value of actual lineups, roster continuity, team-relative player performance for roster changes, and recent form. Team results already encode much of fixed-lineup player strength.
 3. Test residual player/team variance and persistent form only after controlling for opposition, map, role when available, environment, and sample size. Shrink uncertain variance estimates. KAST measures round contribution/survival, not consistency across matches.
 4. Add veto behavior and advanced statistics when they answer a concrete modeling question and improve time-ordered held-out performance. Availability alone does not justify a feature.
 

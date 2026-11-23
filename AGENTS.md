@@ -12,9 +12,9 @@
 ## Documentation routing
 
 - Start with [docs/Agent/README.md](docs/Agent/README.md), then read only the documents relevant to the task.
-- The root README and future stage READMEs are the human-facing surface: overview, recommendations, BP summaries, matchup probability tables, and post-event results. Put commands, implementation details, research evidence, and working notes under `docs/Agent/`.
+- Use the root README and stage pages for recommendations, matchup tables, and results. Keep stage-specific model details, figures and supporting Markdown in the same stage directory. Stage Markdown links to local stage material and external sources.
 - Leave `2026_cologne/` unchanged unless the user explicitly requests changes there. Its documents and models are historical references, not the specification for Singapore.
-- Keep current decisions in the data collection plan and modeling guide; keep dated experiments in `docs/Agent/research/`. Do not treat an old research report as a newer design decision.
+- Keep shared collection, evaluation and maintenance guidance under `docs/Agent/`. Keep current stage decisions with the stage's model document. Summarize completed experiments and their evidence in `docs/Agent/research/`.
 
 ## Repository paths and commands
 

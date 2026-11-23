@@ -66,7 +66,11 @@ def parser():
                 command.add_argument("--allow-partial-legacy", action="append", metavar="HLTV_ID",
                                      help="经核实源站缺表的指定比赛允许部分替换，例如 hltv:123；须同时使用 --replace-legacy")
                 command.add_argument("--browser", type=Path, help="Chrome/Edge 可执行文件，默认自动寻找")
+                command.add_argument("--browser-profile", type=Path,
+                                     help="浏览器独立 profile 目录，默认使用 data/raw/browser/hltv/profile")
                 command.add_argument("--headless", action="store_true", help="尝试无头模式；默认使用已验证的普通隐藏窗口")
+                command.add_argument("--browser-no-sandbox", action="store_true",
+                                     help="为受限 Windows 环境关闭浏览器沙箱；仅用于独立采集 profile")
                 command.add_argument("--browser-proxy", choices=("direct", "system", "environment"), default="direct")
                 command.add_argument("--page-wait", type=positive_int, default=45, help="每页等待上限秒数")
                 command.add_argument("--stop-file", type=Path,
@@ -112,7 +116,8 @@ def main(argv=None):
     if args.command == "sync-hltv":
         http = HltvBrowser(root, offline=args.offline, interval=max(2, args.interval), timeout=args.timeout,
                            retries=0, browser=args.browser, headless=args.headless, proxy=args.browser_proxy,
-                           page_wait=args.page_wait)
+                           page_wait=args.page_wait, profile=args.browser_profile,
+                           no_sandbox=args.browser_no_sandbox)
     report = {"schema_version": 1, "command": args.command, "started_at": utc_now(), "status": "running"}
     if hasattr(args, "since"):
         report["window"] = {"since": args.since, "until": args.until, "timezone": "UTC"}

@@ -41,12 +41,15 @@ def browser_binary(path=None):
 class HltvBrowser(HttpCache):
     """One owned browser per run. No personal profiles, credentials or cookies are imported."""
 
-    def __init__(self, *args, browser=None, headless=False, proxy="direct", page_wait=45, **kwargs):
+    def __init__(self, *args, browser=None, headless=False, proxy="direct", page_wait=45, profile=None,
+                 no_sandbox=False, **kwargs):
         super().__init__(*args, **kwargs)
         self.binary = browser
         self.headless = headless
         self.proxy = proxy
         self.page_wait = page_wait
+        self.profile = Path(profile).resolve() if profile else None
+        self.no_sandbox = no_sandbox
         self.process = None
         self.channel = None
         self.log = None
@@ -74,7 +77,7 @@ class HltvBrowser(HttpCache):
         except ImportError as error:
             raise FetchError("HLTV browser needs optional dependencies: pip install -r data/pipeline/requirements-hltv.txt") from error
         binary = browser_binary(self.binary)
-        profile = self.root / "raw" / "browser" / "hltv" / "profile"
+        profile = self.profile or (self.root / "raw" / "browser" / "hltv" / "profile")
         profile.mkdir(parents=True, exist_ok=True)
         log_path = profile.parent / ("browser-" + str(time.time_ns()) + ".log")
         self.log = log_path.open("w", encoding="utf-8")
@@ -84,6 +87,8 @@ class HltvBrowser(HttpCache):
         command = [binary, "--remote-debugging-port=" + str(port), "--remote-debugging-address=127.0.0.1",
                    "--user-data-dir=" + str(profile.resolve()), "--no-first-run", "--no-default-browser-check",
                    "--disable-component-update", "--disable-background-networking", "about:blank"]
+        if self.no_sandbox:
+            command.insert(1, "--no-sandbox")
         if self.headless:
             command.insert(1, "--headless=new")
         else:
