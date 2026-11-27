@@ -1,0 +1,1774 @@
+{
+  "schema_version": 1,
+  "source": "polymarket_clob_prices_history",
+  "collected_at": "2026-11-27T17:59:00+00:00",
+  "start_ts": null,
+  "end_ts": null,
+  "interval": "max",
+  "fidelity": null,
+  "bucket_seconds": 3600,
+  "market_file": "Z:\\Program\\Github\\CS2-Major-prediction\\2026_singapore\\stage2\\markets.json",
+  "markets": [
+    {
+      "market_id": "7390710",
+      "market_slug": "cs2-fut-fly-2026-11-27",
+      "team1_id": "hltv:13286",
+      "team2_id": "hltv:12774",
+      "yes_token_id": "10698644648178957841365420480641082917492822617175350860284747258162358147400",
+      "no_token_id": "85354539061399968812190631747418610354235513300857893268525207900726989176946",
+      "snapshot_at": "2026-11-27T12:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.685,
+      "no_price": 0.295,
+      "market_probability": 0.6989795918367347,
+      "price_pair_complete": true,
+      "liquidity": "231557.1388",
+      "volume": "55964.782122000004",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=10698644648178957841365420480641082917492822617175350860284747258162358147400&interval=max",
+        "sha256": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af",
+        "fetched_at": "2026-11-27T17:58:26+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=85354539061399968812190631747418610354235513300857893268525207900726989176946&interval=max",
+        "sha256": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637",
+        "fetched_at": "2026-11-27T17:58:28+00:00"
+      }
+    },
+    {
+      "market_id": "7390710",
+      "market_slug": "cs2-fut-fly-2026-11-27",
+      "team1_id": "hltv:13286",
+      "team2_id": "hltv:12774",
+      "yes_token_id": "10698644648178957841365420480641082917492822617175350860284747258162358147400",
+      "no_token_id": "85354539061399968812190631747418610354235513300857893268525207900726989176946",
+      "snapshot_at": "2026-11-27T13:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.675,
+      "no_price": 0.325,
+      "market_probability": 0.675,
+      "price_pair_complete": true,
+      "liquidity": "231557.1388",
+      "volume": "55964.782122000004",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=10698644648178957841365420480641082917492822617175350860284747258162358147400&interval=max",
+        "sha256": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af",
+        "fetched_at": "2026-11-27T17:58:26+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=85354539061399968812190631747418610354235513300857893268525207900726989176946&interval=max",
+        "sha256": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637",
+        "fetched_at": "2026-11-27T17:58:28+00:00"
+      }
+    },
+    {
+      "market_id": "7390710",
+      "market_slug": "cs2-fut-fly-2026-11-27",
+      "team1_id": "hltv:13286",
+      "team2_id": "hltv:12774",
+      "yes_token_id": "10698644648178957841365420480641082917492822617175350860284747258162358147400",
+      "no_token_id": "85354539061399968812190631747418610354235513300857893268525207900726989176946",
+      "snapshot_at": "2026-11-27T14:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.685,
+      "no_price": 0.315,
+      "market_probability": 0.685,
+      "price_pair_complete": true,
+      "liquidity": "231557.1388",
+      "volume": "55964.782122000004",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=10698644648178957841365420480641082917492822617175350860284747258162358147400&interval=max",
+        "sha256": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af",
+        "fetched_at": "2026-11-27T17:58:26+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=85354539061399968812190631747418610354235513300857893268525207900726989176946&interval=max",
+        "sha256": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637",
+        "fetched_at": "2026-11-27T17:58:28+00:00"
+      }
+    },
+    {
+      "market_id": "7390710",
+      "market_slug": "cs2-fut-fly-2026-11-27",
+      "team1_id": "hltv:13286",
+      "team2_id": "hltv:12774",
+      "yes_token_id": "10698644648178957841365420480641082917492822617175350860284747258162358147400",
+      "no_token_id": "85354539061399968812190631747418610354235513300857893268525207900726989176946",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.705,
+      "no_price": 0.295,
+      "market_probability": 0.705,
+      "price_pair_complete": true,
+      "liquidity": "231557.1388",
+      "volume": "55964.782122000004",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=10698644648178957841365420480641082917492822617175350860284747258162358147400&interval=max",
+        "sha256": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af",
+        "fetched_at": "2026-11-27T17:58:26+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=85354539061399968812190631747418610354235513300857893268525207900726989176946&interval=max",
+        "sha256": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637",
+        "fetched_at": "2026-11-27T17:58:28+00:00"
+      }
+    },
+    {
+      "market_id": "7390710",
+      "market_slug": "cs2-fut-fly-2026-11-27",
+      "team1_id": "hltv:13286",
+      "team2_id": "hltv:12774",
+      "yes_token_id": "10698644648178957841365420480641082917492822617175350860284747258162358147400",
+      "no_token_id": "85354539061399968812190631747418610354235513300857893268525207900726989176946",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.715,
+      "no_price": 0.285,
+      "market_probability": 0.715,
+      "price_pair_complete": true,
+      "liquidity": "231557.1388",
+      "volume": "55964.782122000004",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=10698644648178957841365420480641082917492822617175350860284747258162358147400&interval=max",
+        "sha256": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af",
+        "fetched_at": "2026-11-27T17:58:26+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=85354539061399968812190631747418610354235513300857893268525207900726989176946&interval=max",
+        "sha256": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637",
+        "fetched_at": "2026-11-27T17:58:28+00:00"
+      }
+    },
+    {
+      "market_id": "7390710",
+      "market_slug": "cs2-fut-fly-2026-11-27",
+      "team1_id": "hltv:13286",
+      "team2_id": "hltv:12774",
+      "yes_token_id": "10698644648178957841365420480641082917492822617175350860284747258162358147400",
+      "no_token_id": "85354539061399968812190631747418610354235513300857893268525207900726989176946",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.735,
+      "no_price": 0.265,
+      "market_probability": 0.735,
+      "price_pair_complete": true,
+      "liquidity": "231557.1388",
+      "volume": "55964.782122000004",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=10698644648178957841365420480641082917492822617175350860284747258162358147400&interval=max",
+        "sha256": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af",
+        "fetched_at": "2026-11-27T17:58:26+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=85354539061399968812190631747418610354235513300857893268525207900726989176946&interval=max",
+        "sha256": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637",
+        "fetched_at": "2026-11-27T17:58:28+00:00"
+      }
+    },
+    {
+      "market_id": "7390707",
+      "market_slug": "cs2-nemi1-nip-2026-11-27",
+      "team1_id": "hltv:7969",
+      "team2_id": "hltv:4411",
+      "yes_token_id": "40127954939746396550500994206307047323393631843393280194394129685371529764658",
+      "no_token_id": "26253018058550057120228767581197093784247851588515735232564272171567252572267",
+      "snapshot_at": "2026-11-27T12:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.595,
+      "no_price": 0.405,
+      "market_probability": 0.595,
+      "price_pair_complete": true,
+      "liquidity": "91362.2339",
+      "volume": "12424.822707",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=40127954939746396550500994206307047323393631843393280194394129685371529764658&interval=max",
+        "sha256": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6",
+        "fetched_at": "2026-11-27T17:58:31+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=26253018058550057120228767581197093784247851588515735232564272171567252572267&interval=max",
+        "sha256": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d",
+        "fetched_at": "2026-11-27T17:58:34+00:00"
+      }
+    },
+    {
+      "market_id": "7390707",
+      "market_slug": "cs2-nemi1-nip-2026-11-27",
+      "team1_id": "hltv:7969",
+      "team2_id": "hltv:4411",
+      "yes_token_id": "40127954939746396550500994206307047323393631843393280194394129685371529764658",
+      "no_token_id": "26253018058550057120228767581197093784247851588515735232564272171567252572267",
+      "snapshot_at": "2026-11-27T13:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.525,
+      "no_price": 0.475,
+      "market_probability": 0.525,
+      "price_pair_complete": true,
+      "liquidity": "91362.2339",
+      "volume": "12424.822707",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=40127954939746396550500994206307047323393631843393280194394129685371529764658&interval=max",
+        "sha256": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6",
+        "fetched_at": "2026-11-27T17:58:31+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=26253018058550057120228767581197093784247851588515735232564272171567252572267&interval=max",
+        "sha256": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d",
+        "fetched_at": "2026-11-27T17:58:34+00:00"
+      }
+    },
+    {
+      "market_id": "7390707",
+      "market_slug": "cs2-nemi1-nip-2026-11-27",
+      "team1_id": "hltv:7969",
+      "team2_id": "hltv:4411",
+      "yes_token_id": "40127954939746396550500994206307047323393631843393280194394129685371529764658",
+      "no_token_id": "26253018058550057120228767581197093784247851588515735232564272171567252572267",
+      "snapshot_at": "2026-11-27T14:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.525,
+      "no_price": 0.475,
+      "market_probability": 0.525,
+      "price_pair_complete": true,
+      "liquidity": "91362.2339",
+      "volume": "12424.822707",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=40127954939746396550500994206307047323393631843393280194394129685371529764658&interval=max",
+        "sha256": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6",
+        "fetched_at": "2026-11-27T17:58:31+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=26253018058550057120228767581197093784247851588515735232564272171567252572267&interval=max",
+        "sha256": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d",
+        "fetched_at": "2026-11-27T17:58:34+00:00"
+      }
+    },
+    {
+      "market_id": "7390707",
+      "market_slug": "cs2-nemi1-nip-2026-11-27",
+      "team1_id": "hltv:7969",
+      "team2_id": "hltv:4411",
+      "yes_token_id": "40127954939746396550500994206307047323393631843393280194394129685371529764658",
+      "no_token_id": "26253018058550057120228767581197093784247851588515735232564272171567252572267",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.515,
+      "no_price": 0.485,
+      "market_probability": 0.515,
+      "price_pair_complete": true,
+      "liquidity": "91362.2339",
+      "volume": "12424.822707",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=40127954939746396550500994206307047323393631843393280194394129685371529764658&interval=max",
+        "sha256": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6",
+        "fetched_at": "2026-11-27T17:58:31+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=26253018058550057120228767581197093784247851588515735232564272171567252572267&interval=max",
+        "sha256": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d",
+        "fetched_at": "2026-11-27T17:58:34+00:00"
+      }
+    },
+    {
+      "market_id": "7390707",
+      "market_slug": "cs2-nemi1-nip-2026-11-27",
+      "team1_id": "hltv:7969",
+      "team2_id": "hltv:4411",
+      "yes_token_id": "40127954939746396550500994206307047323393631843393280194394129685371529764658",
+      "no_token_id": "26253018058550057120228767581197093784247851588515735232564272171567252572267",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.52,
+      "no_price": 0.48,
+      "market_probability": 0.52,
+      "price_pair_complete": true,
+      "liquidity": "91362.2339",
+      "volume": "12424.822707",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=40127954939746396550500994206307047323393631843393280194394129685371529764658&interval=max",
+        "sha256": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6",
+        "fetched_at": "2026-11-27T17:58:31+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=26253018058550057120228767581197093784247851588515735232564272171567252572267&interval=max",
+        "sha256": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d",
+        "fetched_at": "2026-11-27T17:58:34+00:00"
+      }
+    },
+    {
+      "market_id": "7390707",
+      "market_slug": "cs2-nemi1-nip-2026-11-27",
+      "team1_id": "hltv:7969",
+      "team2_id": "hltv:4411",
+      "yes_token_id": "40127954939746396550500994206307047323393631843393280194394129685371529764658",
+      "no_token_id": "26253018058550057120228767581197093784247851588515735232564272171567252572267",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.525,
+      "no_price": 0.475,
+      "market_probability": 0.525,
+      "price_pair_complete": true,
+      "liquidity": "91362.2339",
+      "volume": "12424.822707",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=40127954939746396550500994206307047323393631843393280194394129685371529764658&interval=max",
+        "sha256": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6",
+        "fetched_at": "2026-11-27T17:58:31+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=26253018058550057120228767581197093784247851588515735232564272171567252572267&interval=max",
+        "sha256": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d",
+        "fetched_at": "2026-11-27T17:58:34+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T09:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.535,
+      "no_price": 0.465,
+      "market_probability": 0.535,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T10:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.555,
+      "no_price": 0.445,
+      "market_probability": 0.555,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T11:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.54,
+      "no_price": 0.46,
+      "market_probability": 0.54,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T12:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.54,
+      "no_price": 0.46,
+      "market_probability": 0.54,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T13:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.535,
+      "no_price": 0.465,
+      "market_probability": 0.535,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T14:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.535,
+      "no_price": 0.465,
+      "market_probability": 0.535,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.545,
+      "no_price": 0.455,
+      "market_probability": 0.545,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.535,
+      "no_price": 0.465,
+      "market_probability": 0.535,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389439",
+      "market_slug": "cs2-g2-tl1-2026-11-28",
+      "team1_id": "hltv:5995",
+      "team2_id": "hltv:5973",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.555,
+      "no_price": 0.445,
+      "market_probability": 0.555,
+      "price_pair_complete": true,
+      "liquidity": "241561.1262",
+      "volume": "8542.553904",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+        "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+        "fetched_at": "2026-11-27T17:58:36+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+        "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+        "fetched_at": "2026-11-27T17:58:37+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T09:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.53,
+      "no_price": 0.47,
+      "market_probability": 0.53,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T10:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.54,
+      "no_price": 0.46,
+      "market_probability": 0.54,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T11:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.545,
+      "no_price": 0.455,
+      "market_probability": 0.545,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T12:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.545,
+      "no_price": 0.455,
+      "market_probability": 0.545,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T13:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.54,
+      "no_price": 0.46,
+      "market_probability": 0.54,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T14:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.54,
+      "no_price": 0.46,
+      "market_probability": 0.54,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.535,
+      "no_price": 0.465,
+      "market_probability": 0.535,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.535,
+      "no_price": 0.465,
+      "market_probability": 0.535,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389436",
+      "market_slug": "cs2-one6-ef1-2026-11-28",
+      "team1_id": "hltv:10621",
+      "team2_id": "hltv:11251",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.535,
+      "no_price": 0.465,
+      "market_probability": 0.535,
+      "price_pair_complete": true,
+      "liquidity": "53604.1538",
+      "volume": "16188.466500999997",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+        "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+        "fetched_at": "2026-11-27T17:58:42+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+        "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+        "fetched_at": "2026-11-27T17:58:43+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T09:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.655,
+      "no_price": 0.345,
+      "market_probability": 0.655,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T10:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.655,
+      "no_price": 0.345,
+      "market_probability": 0.655,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T11:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.66,
+      "no_price": 0.34,
+      "market_probability": 0.66,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T12:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.635,
+      "no_price": 0.365,
+      "market_probability": 0.635,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T13:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.635,
+      "no_price": 0.365,
+      "market_probability": 0.635,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T14:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.635,
+      "no_price": 0.365,
+      "market_probability": 0.635,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.635,
+      "no_price": 0.365,
+      "market_probability": 0.635,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.645,
+      "no_price": 0.355,
+      "market_probability": 0.645,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7389447",
+      "market_slug": "cs2-navi-prv-2026-11-28",
+      "team1_id": "hltv:4608",
+      "team2_id": "hltv:12467",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.645,
+      "no_price": 0.355,
+      "market_probability": 0.645,
+      "price_pair_complete": true,
+      "liquidity": "113619.9515",
+      "volume": "7110.634306000001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+        "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+        "fetched_at": "2026-11-27T17:58:48+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+        "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+        "fetched_at": "2026-11-27T17:58:49+00:00"
+      }
+    },
+    {
+      "market_id": "7390723",
+      "market_slug": "cs2-ast10-imp11-2026-11-28",
+      "team1_id": "hltv:6665",
+      "team2_id": "hltv:9455",
+      "yes_token_id": "7560514472910604071026135341786584064506254692221868851075493470273918381525",
+      "no_token_id": "68364203513725219205024837783422377808464072933294395110971035349333897414653",
+      "snapshot_at": "2026-11-27T12:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.56,
+      "no_price": 0.44,
+      "market_probability": 0.56,
+      "price_pair_complete": true,
+      "liquidity": "165772.6286",
+      "volume": "85778.26793100001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=7560514472910604071026135341786584064506254692221868851075493470273918381525&interval=max",
+        "sha256": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0",
+        "fetched_at": "2026-11-27T17:58:51+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=68364203513725219205024837783422377808464072933294395110971035349333897414653&interval=max",
+        "sha256": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36",
+        "fetched_at": "2026-11-27T17:58:52+00:00"
+      }
+    },
+    {
+      "market_id": "7390723",
+      "market_slug": "cs2-ast10-imp11-2026-11-28",
+      "team1_id": "hltv:6665",
+      "team2_id": "hltv:9455",
+      "yes_token_id": "7560514472910604071026135341786584064506254692221868851075493470273918381525",
+      "no_token_id": "68364203513725219205024837783422377808464072933294395110971035349333897414653",
+      "snapshot_at": "2026-11-27T13:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.57,
+      "no_price": 0.43,
+      "market_probability": 0.57,
+      "price_pair_complete": true,
+      "liquidity": "165772.6286",
+      "volume": "85778.26793100001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=7560514472910604071026135341786584064506254692221868851075493470273918381525&interval=max",
+        "sha256": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0",
+        "fetched_at": "2026-11-27T17:58:51+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=68364203513725219205024837783422377808464072933294395110971035349333897414653&interval=max",
+        "sha256": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36",
+        "fetched_at": "2026-11-27T17:58:52+00:00"
+      }
+    },
+    {
+      "market_id": "7390723",
+      "market_slug": "cs2-ast10-imp11-2026-11-28",
+      "team1_id": "hltv:6665",
+      "team2_id": "hltv:9455",
+      "yes_token_id": "7560514472910604071026135341786584064506254692221868851075493470273918381525",
+      "no_token_id": "68364203513725219205024837783422377808464072933294395110971035349333897414653",
+      "snapshot_at": "2026-11-27T14:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.57,
+      "no_price": 0.43,
+      "market_probability": 0.57,
+      "price_pair_complete": true,
+      "liquidity": "165772.6286",
+      "volume": "85778.26793100001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=7560514472910604071026135341786584064506254692221868851075493470273918381525&interval=max",
+        "sha256": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0",
+        "fetched_at": "2026-11-27T17:58:51+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=68364203513725219205024837783422377808464072933294395110971035349333897414653&interval=max",
+        "sha256": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36",
+        "fetched_at": "2026-11-27T17:58:52+00:00"
+      }
+    },
+    {
+      "market_id": "7390723",
+      "market_slug": "cs2-ast10-imp11-2026-11-28",
+      "team1_id": "hltv:6665",
+      "team2_id": "hltv:9455",
+      "yes_token_id": "7560514472910604071026135341786584064506254692221868851075493470273918381525",
+      "no_token_id": "68364203513725219205024837783422377808464072933294395110971035349333897414653",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.575,
+      "no_price": 0.425,
+      "market_probability": 0.575,
+      "price_pair_complete": true,
+      "liquidity": "165772.6286",
+      "volume": "85778.26793100001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=7560514472910604071026135341786584064506254692221868851075493470273918381525&interval=max",
+        "sha256": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0",
+        "fetched_at": "2026-11-27T17:58:51+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=68364203513725219205024837783422377808464072933294395110971035349333897414653&interval=max",
+        "sha256": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36",
+        "fetched_at": "2026-11-27T17:58:52+00:00"
+      }
+    },
+    {
+      "market_id": "7390723",
+      "market_slug": "cs2-ast10-imp11-2026-11-28",
+      "team1_id": "hltv:6665",
+      "team2_id": "hltv:9455",
+      "yes_token_id": "7560514472910604071026135341786584064506254692221868851075493470273918381525",
+      "no_token_id": "68364203513725219205024837783422377808464072933294395110971035349333897414653",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.555,
+      "no_price": 0.445,
+      "market_probability": 0.555,
+      "price_pair_complete": true,
+      "liquidity": "165772.6286",
+      "volume": "85778.26793100001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=7560514472910604071026135341786584064506254692221868851075493470273918381525&interval=max",
+        "sha256": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0",
+        "fetched_at": "2026-11-27T17:58:51+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=68364203513725219205024837783422377808464072933294395110971035349333897414653&interval=max",
+        "sha256": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36",
+        "fetched_at": "2026-11-27T17:58:52+00:00"
+      }
+    },
+    {
+      "market_id": "7390723",
+      "market_slug": "cs2-ast10-imp11-2026-11-28",
+      "team1_id": "hltv:6665",
+      "team2_id": "hltv:9455",
+      "yes_token_id": "7560514472910604071026135341786584064506254692221868851075493470273918381525",
+      "no_token_id": "68364203513725219205024837783422377808464072933294395110971035349333897414653",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.565,
+      "no_price": 0.435,
+      "market_probability": 0.565,
+      "price_pair_complete": true,
+      "liquidity": "165772.6286",
+      "volume": "85778.26793100001",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=7560514472910604071026135341786584064506254692221868851075493470273918381525&interval=max",
+        "sha256": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0",
+        "fetched_at": "2026-11-27T17:58:51+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=68364203513725219205024837783422377808464072933294395110971035349333897414653&interval=max",
+        "sha256": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36",
+        "fetched_at": "2026-11-27T17:58:52+00:00"
+      }
+    },
+    {
+      "market_id": "7394612",
+      "market_slug": "cs2-mglz-lvg-2026-11-28",
+      "team1_id": "hltv:6248",
+      "team2_id": "hltv:8840",
+      "yes_token_id": "24739654860588008688122466666223032508884947836169187891553213973609803055629",
+      "no_token_id": "105334676463954104849858171350304058700215817363270402856290512693396285287066",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.695,
+      "no_price": 0.305,
+      "market_probability": 0.695,
+      "price_pair_complete": true,
+      "liquidity": "38023.3814",
+      "volume": "20201.906574",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=24739654860588008688122466666223032508884947836169187891553213973609803055629&interval=max",
+        "sha256": "3740a1e7a2643efcebb939eb14bb98931fc9fe551b592eea4a241942d83646e8",
+        "fetched_at": "2026-11-27T17:58:55+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=105334676463954104849858171350304058700215817363270402856290512693396285287066&interval=max",
+        "sha256": "4c9b65cffe7c0ec644160915004fa9f12c2b1ee0ad94340b88a48327c53533a4",
+        "fetched_at": "2026-11-27T17:58:57+00:00"
+      }
+    },
+    {
+      "market_id": "7394612",
+      "market_slug": "cs2-mglz-lvg-2026-11-28",
+      "team1_id": "hltv:6248",
+      "team2_id": "hltv:8840",
+      "yes_token_id": "24739654860588008688122466666223032508884947836169187891553213973609803055629",
+      "no_token_id": "105334676463954104849858171350304058700215817363270402856290512693396285287066",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.705,
+      "no_price": 0.295,
+      "market_probability": 0.705,
+      "price_pair_complete": true,
+      "liquidity": "38023.3814",
+      "volume": "20201.906574",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=24739654860588008688122466666223032508884947836169187891553213973609803055629&interval=max",
+        "sha256": "3740a1e7a2643efcebb939eb14bb98931fc9fe551b592eea4a241942d83646e8",
+        "fetched_at": "2026-11-27T17:58:55+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=105334676463954104849858171350304058700215817363270402856290512693396285287066&interval=max",
+        "sha256": "4c9b65cffe7c0ec644160915004fa9f12c2b1ee0ad94340b88a48327c53533a4",
+        "fetched_at": "2026-11-27T17:58:57+00:00"
+      }
+    },
+    {
+      "market_id": "7394612",
+      "market_slug": "cs2-mglz-lvg-2026-11-28",
+      "team1_id": "hltv:6248",
+      "team2_id": "hltv:8840",
+      "yes_token_id": "24739654860588008688122466666223032508884947836169187891553213973609803055629",
+      "no_token_id": "105334676463954104849858171350304058700215817363270402856290512693396285287066",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.675,
+      "no_price": 0.325,
+      "market_probability": 0.675,
+      "price_pair_complete": true,
+      "liquidity": "38023.3814",
+      "volume": "20201.906574",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=24739654860588008688122466666223032508884947836169187891553213973609803055629&interval=max",
+        "sha256": "3740a1e7a2643efcebb939eb14bb98931fc9fe551b592eea4a241942d83646e8",
+        "fetched_at": "2026-11-27T17:58:55+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=105334676463954104849858171350304058700215817363270402856290512693396285287066&interval=max",
+        "sha256": "4c9b65cffe7c0ec644160915004fa9f12c2b1ee0ad94340b88a48327c53533a4",
+        "fetched_at": "2026-11-27T17:58:57+00:00"
+      }
+    },
+    {
+      "market_id": "7394609",
+      "market_slug": "cs2-mibr-100t-2026-11-28",
+      "team1_id": "hltv:9215",
+      "team2_id": "hltv:8474",
+      "yes_token_id": "57493262546406540001657238914708617777480777982408048503309561864594195421862",
+      "no_token_id": "79817631958231179647422694905895115730980360617974799835943548004409742590129",
+      "snapshot_at": "2026-11-27T15:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.475,
+      "no_price": 0.525,
+      "market_probability": 0.475,
+      "price_pair_complete": true,
+      "liquidity": "134275.1069",
+      "volume": "1729.9982019999998",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=57493262546406540001657238914708617777480777982408048503309561864594195421862&interval=max",
+        "sha256": "ae75a4ce0d794b328176510ded078008a1c51a7dd0ec1fb4918337a1119322ea",
+        "fetched_at": "2026-11-27T17:58:59+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=79817631958231179647422694905895115730980360617974799835943548004409742590129&interval=max",
+        "sha256": "da1076e78e762e6e7f92cd98f7fcefe427fed6569b2aea5ded6ec7d0cb191c00",
+        "fetched_at": "2026-11-27T17:59:00+00:00"
+      }
+    },
+    {
+      "market_id": "7394609",
+      "market_slug": "cs2-mibr-100t-2026-11-28",
+      "team1_id": "hltv:9215",
+      "team2_id": "hltv:8474",
+      "yes_token_id": "57493262546406540001657238914708617777480777982408048503309561864594195421862",
+      "no_token_id": "79817631958231179647422694905895115730980360617974799835943548004409742590129",
+      "snapshot_at": "2026-11-27T16:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.485,
+      "no_price": 0.515,
+      "market_probability": 0.485,
+      "price_pair_complete": true,
+      "liquidity": "134275.1069",
+      "volume": "1729.9982019999998",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=57493262546406540001657238914708617777480777982408048503309561864594195421862&interval=max",
+        "sha256": "ae75a4ce0d794b328176510ded078008a1c51a7dd0ec1fb4918337a1119322ea",
+        "fetched_at": "2026-11-27T17:58:59+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=79817631958231179647422694905895115730980360617974799835943548004409742590129&interval=max",
+        "sha256": "da1076e78e762e6e7f92cd98f7fcefe427fed6569b2aea5ded6ec7d0cb191c00",
+        "fetched_at": "2026-11-27T17:59:00+00:00"
+      }
+    },
+    {
+      "market_id": "7394609",
+      "market_slug": "cs2-mibr-100t-2026-11-28",
+      "team1_id": "hltv:9215",
+      "team2_id": "hltv:8474",
+      "yes_token_id": "57493262546406540001657238914708617777480777982408048503309561864594195421862",
+      "no_token_id": "79817631958231179647422694905895115730980360617974799835943548004409742590129",
+      "snapshot_at": "2026-11-27T17:00:00+00:00",
+      "time_bucket": "3600s",
+      "yes_price": 0.485,
+      "no_price": 0.515,
+      "market_probability": 0.485,
+      "price_pair_complete": true,
+      "liquidity": "134275.1069",
+      "volume": "1729.9982019999998",
+      "spread": 0.01,
+      "source": "polymarket_clob_prices_history",
+      "yes_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=57493262546406540001657238914708617777480777982408048503309561864594195421862&interval=max",
+        "sha256": "ae75a4ce0d794b328176510ded078008a1c51a7dd0ec1fb4918337a1119322ea",
+        "fetched_at": "2026-11-27T17:58:59+00:00"
+      },
+      "no_source": {
+        "url": "https://clob.polymarket.com/prices-history?market=79817631958231179647422694905895115730980360617974799835943548004409742590129&interval=max",
+        "sha256": "da1076e78e762e6e7f92cd98f7fcefe427fed6569b2aea5ded6ec7d0cb191c00",
+        "fetched_at": "2026-11-27T17:59:00+00:00"
+      }
+    }
+  ],
+  "resolved_markets": [
+    {
+      "market_id": "7390710",
+      "yes_token_id": "10698644648178957841365420480641082917492822617175350860284747258162358147400",
+      "no_token_id": "85354539061399968812190631747418610354235513300857893268525207900726989176946",
+      "yes_points": 35,
+      "no_points": 35,
+      "paired_points": 6
+    },
+    {
+      "market_id": "7390707",
+      "yes_token_id": "40127954939746396550500994206307047323393631843393280194394129685371529764658",
+      "no_token_id": "26253018058550057120228767581197093784247851588515735232564272171567252572267",
+      "yes_points": 34,
+      "no_points": 34,
+      "paired_points": 6
+    },
+    {
+      "market_id": "7389439",
+      "yes_token_id": "49189993896213440594345928451119166412139497985403409701249788338122942918843",
+      "no_token_id": "5649760245882870047931651244814693792681826336102735272108442224407394564414",
+      "yes_points": 51,
+      "no_points": 51,
+      "paired_points": 9
+    },
+    {
+      "market_id": "7389436",
+      "yes_token_id": "89614350746983905960738553366692683472569631060214565016574841052708527828558",
+      "no_token_id": "103373448324745660811053651973722527992822623553714163570161629482205250804259",
+      "yes_points": 51,
+      "no_points": 51,
+      "paired_points": 9
+    },
+    {
+      "market_id": "7389447",
+      "yes_token_id": "92673350283990137077111580963595190822368224456024676074718627307696828377406",
+      "no_token_id": "55365571735323372530211201657571448295778500707251141189607988856474515223625",
+      "yes_points": 51,
+      "no_points": 51,
+      "paired_points": 9
+    },
+    {
+      "market_id": "7390723",
+      "yes_token_id": "7560514472910604071026135341786584064506254692221868851075493470273918381525",
+      "no_token_id": "68364203513725219205024837783422377808464072933294395110971035349333897414653",
+      "yes_points": 34,
+      "no_points": 34,
+      "paired_points": 6
+    },
+    {
+      "market_id": "7394612",
+      "yes_token_id": "24739654860588008688122466666223032508884947836169187891553213973609803055629",
+      "no_token_id": "105334676463954104849858171350304058700215817363270402856290512693396285287066",
+      "yes_points": 16,
+      "no_points": 16,
+      "paired_points": 3
+    },
+    {
+      "market_id": "7394609",
+      "yes_token_id": "57493262546406540001657238914708617777480777982408048503309561864594195421862",
+      "no_token_id": "79817631958231179647422694905895115730980360617974799835943548004409742590129",
+      "yes_points": 16,
+      "no_points": 16,
+      "paired_points": 3
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7390710",
+      "fetched_at": "2026-11-27T17:58:22+00:00",
+      "status": 200,
+      "sha256": "8f9b794c4daa301c7be46f38b588cb6dbf34be3568a16060abdbb8fb71819a37",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "8f9b794c4daa301c7be46f38b588cb6dbf34be3568a16060abdbb8fb71819a37.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=10698644648178957841365420480641082917492822617175350860284747258162358147400&interval=max",
+      "fetched_at": "2026-11-27T17:58:26+00:00",
+      "status": 200,
+      "sha256": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:26 GMT",
+      "body_file": "b5b90aa6560b608d49706bc71268848c02c7f5ff084537ebb736847249ec42af.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=85354539061399968812190631747418610354235513300857893268525207900726989176946&interval=max",
+      "fetched_at": "2026-11-27T17:58:28+00:00",
+      "status": 200,
+      "sha256": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:29 GMT",
+      "body_file": "b66013102ffaeb1603d1ac67da7b31c069c2313fd63bf9e4e520615b88273637.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7390707",
+      "fetched_at": "2026-11-27T17:58:30+00:00",
+      "status": 200,
+      "sha256": "437d427147943912ec721e88f70fc35f3fe8087eb98711036fd62be60ed1043f",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "437d427147943912ec721e88f70fc35f3fe8087eb98711036fd62be60ed1043f.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=40127954939746396550500994206307047323393631843393280194394129685371529764658&interval=max",
+      "fetched_at": "2026-11-27T17:58:31+00:00",
+      "status": 200,
+      "sha256": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:32 GMT",
+      "body_file": "0380eac682c36c154072b9b450d30fa20717b898312589391cd3be098e0fa9e6.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=26253018058550057120228767581197093784247851588515735232564272171567252572267&interval=max",
+      "fetched_at": "2026-11-27T17:58:34+00:00",
+      "status": 200,
+      "sha256": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:35 GMT",
+      "body_file": "2cb0c7dd26fa2b184680b853ee2c2bdb55ad885ae16ba1a1398648aaba4c983d.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7389439",
+      "fetched_at": "2026-11-27T17:58:35+00:00",
+      "status": 200,
+      "sha256": "54d4ea642c4cf577d8d831ae30648b1cc990abb4a3f5bc85392760a04616e346",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "54d4ea642c4cf577d8d831ae30648b1cc990abb4a3f5bc85392760a04616e346.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=49189993896213440594345928451119166412139497985403409701249788338122942918843&interval=max",
+      "fetched_at": "2026-11-27T17:58:36+00:00",
+      "status": 200,
+      "sha256": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:37 GMT",
+      "body_file": "0c6a7ae082181ac9d3b13a45ad16dd16203d2adc1bf95f69d4c2185f0c2a65ee.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=5649760245882870047931651244814693792681826336102735272108442224407394564414&interval=max",
+      "fetched_at": "2026-11-27T17:58:37+00:00",
+      "status": 200,
+      "sha256": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:38 GMT",
+      "body_file": "471a278a57bd00b1dd7fdac1e9d21f78c4122a5213e7a609b8b9d6715015841b.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7389436",
+      "fetched_at": "2026-11-27T17:58:39+00:00",
+      "status": 200,
+      "sha256": "18f19198ba52be3890eb48bd3cedcb0e052c715cf334da54d14df92e4d46621b",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "18f19198ba52be3890eb48bd3cedcb0e052c715cf334da54d14df92e4d46621b.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=89614350746983905960738553366692683472569631060214565016574841052708527828558&interval=max",
+      "fetched_at": "2026-11-27T17:58:42+00:00",
+      "status": 200,
+      "sha256": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:42 GMT",
+      "body_file": "169e4bf1f70aa5ac705ecb3c66149336a87446c9248ad2a83509e3f7375d3609.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=103373448324745660811053651973722527992822623553714163570161629482205250804259&interval=max",
+      "fetched_at": "2026-11-27T17:58:43+00:00",
+      "status": 200,
+      "sha256": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:43 GMT",
+      "body_file": "cdc7f9c8498d319e9cab9c9af99d8a350f4eb8476b4572c8bcd288d0c2762451.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7389447",
+      "fetched_at": "2026-11-27T17:58:46+00:00",
+      "status": 200,
+      "sha256": "4b7520b435a584ee9477eedf19fe682fdc7d9cb30c4536b51213bde5f79c6c6e",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "4b7520b435a584ee9477eedf19fe682fdc7d9cb30c4536b51213bde5f79c6c6e.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=92673350283990137077111580963595190822368224456024676074718627307696828377406&interval=max",
+      "fetched_at": "2026-11-27T17:58:48+00:00",
+      "status": 200,
+      "sha256": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:48 GMT",
+      "body_file": "b454923c46e4b9b34a2c6530c1196457bcbc030fcf7a0de8e5296564087d35b5.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=55365571735323372530211201657571448295778500707251141189607988856474515223625&interval=max",
+      "fetched_at": "2026-11-27T17:58:49+00:00",
+      "status": 200,
+      "sha256": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:49 GMT",
+      "body_file": "33eebdda6d0a8193c8a1912f06d539c9d9c59ce8a5b43558d0f00b02fe0acaf5.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7390723",
+      "fetched_at": "2026-11-27T17:58:50+00:00",
+      "status": 200,
+      "sha256": "3effa20d39dc58372103f6b49436c5c8e0245ccb03196c236675ee4695c095a3",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "3effa20d39dc58372103f6b49436c5c8e0245ccb03196c236675ee4695c095a3.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=7560514472910604071026135341786584064506254692221868851075493470273918381525&interval=max",
+      "fetched_at": "2026-11-27T17:58:51+00:00",
+      "status": 200,
+      "sha256": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:52 GMT",
+      "body_file": "1a9afa25b3ef7f7cee920358cba7690897121e2290f8ee6c5b8161f4dc9bfda0.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=68364203513725219205024837783422377808464072933294395110971035349333897414653&interval=max",
+      "fetched_at": "2026-11-27T17:58:52+00:00",
+      "status": 200,
+      "sha256": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:53 GMT",
+      "body_file": "a3f926fbe16d7e2577b8db87659c461e7db27ed01abc223a74f6e9e0f747cc36.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7394612",
+      "fetched_at": "2026-11-27T17:58:53+00:00",
+      "status": 200,
+      "sha256": "bd074f23188588c366f3bc42d35f5f534bcf7d261b1a948c922b92c671ed6300",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "bd074f23188588c366f3bc42d35f5f534bcf7d261b1a948c922b92c671ed6300.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=24739654860588008688122466666223032508884947836169187891553213973609803055629&interval=max",
+      "fetched_at": "2026-11-27T17:58:55+00:00",
+      "status": 200,
+      "sha256": "3740a1e7a2643efcebb939eb14bb98931fc9fe551b592eea4a241942d83646e8",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:55 GMT",
+      "body_file": "3740a1e7a2643efcebb939eb14bb98931fc9fe551b592eea4a241942d83646e8.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=105334676463954104849858171350304058700215817363270402856290512693396285287066&interval=max",
+      "fetched_at": "2026-11-27T17:58:57+00:00",
+      "status": 200,
+      "sha256": "4c9b65cffe7c0ec644160915004fa9f12c2b1ee0ad94340b88a48327c53533a4",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:58:57 GMT",
+      "body_file": "4c9b65cffe7c0ec644160915004fa9f12c2b1ee0ad94340b88a48327c53533a4.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/7394609",
+      "fetched_at": "2026-11-27T17:58:58+00:00",
+      "status": 200,
+      "sha256": "acc2308b20e53011c37e0604f1c9e01b09561fbaf08b53d90ce303ba5ac952b4",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "body_file": "acc2308b20e53011c37e0604f1c9e01b09561fbaf08b53d90ce303ba5ac952b4.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=57493262546406540001657238914708617777480777982408048503309561864594195421862&interval=max",
+      "fetched_at": "2026-11-27T17:58:59+00:00",
+      "status": 200,
+      "sha256": "ae75a4ce0d794b328176510ded078008a1c51a7dd0ec1fb4918337a1119322ea",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:59:00 GMT",
+      "body_file": "ae75a4ce0d794b328176510ded078008a1c51a7dd0ec1fb4918337a1119322ea.body",
+      "cache_hit": false
+    },
+    {
+      "url": "https://clob.polymarket.com/prices-history?market=79817631958231179647422694905895115730980360617974799835943548004409742590129&interval=max",
+      "fetched_at": "2026-11-27T17:59:00+00:00",
+      "status": 200,
+      "sha256": "da1076e78e762e6e7f92cd98f7fcefe427fed6569b2aea5ded6ec7d0cb191c00",
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": "Fri, 27 Nov 2026 17:59:01 GMT",
+      "body_file": "da1076e78e762e6e7f92cd98f7fcefe427fed6569b2aea5ded6ec7d0cb191c00.body",
+      "cache_hit": false
+    }
+  ],
+  "note": "Prices-history supplies paired token prices. Historical order-book depth and spread are not reconstructed."
+}

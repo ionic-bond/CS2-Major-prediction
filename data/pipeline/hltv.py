@@ -113,7 +113,12 @@ def parse_match(body, url, metadata):
         if not teams[side]["name"] or scores[side] is None:
             raise ValueError("HLTV finished match participant name or score missing")
     veto_boxes = root.select(".veto-box")
-    description = text(veto_boxes[0]) if veto_boxes else ""
+    # Current HLTV pages render the map veto as ``real-veto-only`` and the
+    # Best-of/LAN information in the other veto-box.  Keep the selectors
+    # explicit so either ordering remains correctly normalized.
+    veto_detail = root.select_one(".veto-box.real-veto-only")
+    info_box = next((box for box in veto_boxes if box is not veto_detail), None)
+    description = text(info_box or veto_detail) if (info_box or veto_detail) else ""
     best = re.search(r"Best of ([135])\b", description, re.I)
     best_of = int(best.group(1)) if best else None
     if re.search(r"Best of \d+", description, re.I) and best is None:
@@ -175,8 +180,8 @@ def parse_match(body, url, metadata):
               "is_lan": False if "(Online)" in description else True if "(LAN)" in description else None,
               "source_description": description,
               "vetoes": [{"order": index, "source_text": line.strip()} for index, line in
-                          enumerate(veto_boxes[-1].get_text("\n", strip=True).splitlines(), 1)
-                          if re.match(r"\d+\.\s", line.strip())] if len(veto_boxes) > 1 else [],
+                          enumerate(veto_detail.get_text("\n", strip=True).splitlines(), 1)
+                          if re.match(r"\d+\.\s", line.strip())] if veto_detail else [],
               "issues": issues, "provenance": provenance, "collection_scope": "match_page_scoreboards"}
     rows = []
     missing = []

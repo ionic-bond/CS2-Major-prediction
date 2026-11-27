@@ -1,0 +1,13 @@
+{
+  "source": "polymarket_gamma",
+  "markets": [
+    {"market_id": "7390710", "market_slug": "cs2-fut-fly-2026-11-27", "outcomes": ["FUT Esports", "FlyQuest"], "team1_id": "hltv:13286", "team2_id": "hltv:12774"},
+    {"market_id": "7390707", "market_slug": "cs2-nemi1-nip-2026-11-27", "outcomes": ["Nemiga", "NIP"], "team1_id": "hltv:7969", "team2_id": "hltv:4411"},
+    {"market_id": "7389439", "market_slug": "cs2-g2-tl1-2026-11-28", "outcomes": ["G2", "Liquid"], "team1_id": "hltv:5995", "team2_id": "hltv:5973"},
+    {"market_id": "7389436", "market_slug": "cs2-one6-ef1-2026-11-28", "outcomes": ["THE ONE", "Eternal Fire"], "team1_id": "hltv:10621", "team2_id": "hltv:11251"},
+    {"market_id": "7389447", "market_slug": "cs2-navi-prv-2026-11-28", "outcomes": ["Natus Vincere", "PARIVISION"], "team1_id": "hltv:4608", "team2_id": "hltv:12467"},
+    {"market_id": "7390723", "market_slug": "cs2-ast10-imp11-2026-11-28", "outcomes": ["Astralis", "Imperial"], "team1_id": "hltv:6665", "team2_id": "hltv:9455"},
+    {"market_id": "7394612", "market_slug": "cs2-mglz-lvg-2026-11-28", "outcomes": ["TheMongolz", "Lynn Vision"], "team1_id": "hltv:6248", "team2_id": "hltv:8840"},
+    {"market_id": "7394609", "market_slug": "cs2-mibr-100t-2026-11-28", "outcomes": ["MIBR", "100 Thieves"], "team1_id": "hltv:9215", "team2_id": "hltv:8474"}
+  ]
+}

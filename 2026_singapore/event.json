@@ -6,6 +6,10 @@
     "stage1": {
       "config": "stage1/stage.json",
       "result": "stage1/result.json"
+    },
+    "stage2": {
+      "config": "stage2/stage.json",
+      "result": "stage2/result.json"
     }
   }
 }

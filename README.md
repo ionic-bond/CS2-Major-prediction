@@ -2,7 +2,7 @@
 
 用比赛数据、概率模型和赛事模拟，研究怎样填写 CS2 Major Pick'Em，才能提高通行证竞猜过关的概率。
 
-新加坡 Major 第一阶段竞猜已定稿。阶段页收录填法、独立模拟结果、首轮赔率和分地图胜率。[新加坡 Stage 1 预测](2026_singapore/stage1/README.md)
+新加坡 Major Stage 2 预测已完成。阶段页收录填法、独立模拟结果、首轮赔率和分地图胜率。 [新加坡 Stage 2 预测](2026_singapore/stage2/README.md) · [新加坡 Stage 1 预测](2026_singapore/stage1/README.md)
 
 ## 大概的方法
 
@@ -18,7 +18,8 @@
 
 | 赛事与阶段 | 推荐组合简记 | 当时模型估计的过关率 | 实际结果 |
 |---|---|---:|---|
-| [2026 Singapore Stage 1](2026_singapore/stage1/README.md) | 3-0 选 HEROIC、100 Thieves。3-1/3-2 选 Eternal Fire、PARIVISION、NiP、Liquid、FaZe、9z。0-3 选 Chinggis Warriors、Lynn Vision | 25.64% | 待赛后记录 |
+| [2026 Singapore Stage 1](2026_singapore/stage1/README.md) | 3-0 选 HEROIC、100 Thieves。3-1/3-2 选 Eternal Fire、PARIVISION、NiP、Liquid、FaZe、9z。0-3 选 Chinggis Warriors、Lynn Vision | 25.64% | 3 分，未达标 |
+| [2026 Singapore Stage 2](2026_singapore/stage2/README.md) | 3-0 选 NAVI、The MongolZ。3-1/3-2 选 FlyQuest、FUT、NiP、Liquid、Nemiga、100 Thieves。0-3 选 Lynn Vision、Imperial | 18.37% | 待赛后记录 |
 | [2026 Cologne Stage 1](2026_cologne/stage1/README.md) | GL、BB 3-0；B8、HR、TL、LQ、BG、MB 3-1/3-2；TdU、GG 0-3 | 38.0% | 5 分，达标 |
 | [2026 Cologne Stage 2](2026_cologne/stage2/README.md) | SP、G2 3-0；FT、LG、AS、9z、BG、MT 3-1/3-2；FQ、M8 0-3 | 40.4% | 5 分，达标 |
 | [2026 Cologne Stage 3](2026_cologne/stage3/README.md) | VIT、SP 3-0；NAVI、FAL、FUR、AUR、MOUZ、LEG 3-1/3-2；B8、MON 0-3 | 36.4% | 4 分，未达标 |
